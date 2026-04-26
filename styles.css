@@ -1,0 +1,45 @@
+:root {
+  --bg: #f7f2ef;
+  --text: #2b1f1d;
+  --muted: #fff;
+  --accent: #7f6966;
+  --line: #e8ddda;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+.narrow { width: min(780px, 92%); }
+.site-header { position: sticky; top: 0; background: color-mix(in srgb, var(--bg), white 28%); backdrop-filter: blur(4px); border-bottom: 1px solid var(--line); }
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+.brand { font-family: "Cormorant Garamond", serif; font-size: 1.7rem; color: var(--text); text-decoration: none; font-weight: 700; }
+nav a { margin-left: 1rem; color: var(--text); text-decoration: none; font-size: .95rem; }
+.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: center; padding: 5rem 0 3rem; }
+.hero img { width: 100%; border-radius: 10px; min-height: 520px; object-fit: cover; }
+h1, h2, h3 { font-family: "Cormorant Garamond", serif; line-height: 1.15; margin-top: 0; }
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; color: var(--accent); font-weight: 600; }
+.section { padding: 4rem 0; }
+.muted { background: var(--muted); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.btn { background: var(--accent); color: #fff; padding: .8rem 1.2rem; border-radius: 999px; text-decoration: none; display: inline-block; margin-top: .7rem; }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1.2rem; }
+.posts { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+.posts article { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+.center { text-align: center; }
+.actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+.site-footer { border-top: 1px solid var(--line); padding: 1.2rem 0; background: #fff; }
+.footer-wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .92rem; }
+@media (max-width: 850px) {
+  .hero, .grid-two, .cards, .posts { grid-template-columns: 1fr; }
+  nav { display:none; }
+  .hero { padding-top: 2.5rem; }
+}
