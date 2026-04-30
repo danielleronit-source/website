@@ -199,11 +199,7 @@
   }
 
   .eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 1px;
-    background: var(--terracotta);
+    content: none;
   }
 
   h1 {
@@ -268,10 +264,51 @@
   }
 
   /* ── FOR WHO ── */
+  .for-who {
+    background: linear-gradient(135deg, #FFF9FB 0%, #F9EEF2 58%, #F4E5EB 100%);
+    border-top: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .for-who::before {
+    content: '';
+    position: absolute;
+    top: 5rem;
+    bottom: 5rem;
+    left: max(2rem, calc((100vw - 1100px) / 2 + 1.75rem));
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(196,82,122,0.42), transparent);
+  }
+
   .section {
     padding: 6rem 5rem;
     max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .for-who .section {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1.25fr);
+    gap: 4.5rem;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-intro {
+    padding-left: 2rem;
+  }
+
+  .section-intro h2 {
+    margin-bottom: 1.25rem;
+  }
+
+  .section-copy {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 320px;
   }
 
   .section-label {
@@ -295,27 +332,50 @@
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
   }
 
   .card {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.75rem;
+    background: rgba(255,249,251,0.82);
+    border: 1px solid rgba(26,8,16,0.1);
+    border-radius: 8px;
+    padding: 1.65rem;
+    min-height: 230px;
+    box-shadow: 0 22px 55px rgba(26,8,16,0.07);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-top: 3px solid rgba(196,82,122,0.22);
+    pointer-events: none;
   }
 
   .card-icon {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(196,82,122,0.12);
+    color: var(--terracotta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
   }
 
   .card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .card p {
@@ -528,6 +588,12 @@
     .hero-right { padding: 2rem 1.5rem 3rem; }
     .hero-right .event-card { padding: 1.5rem; }
     .section, .learn-section { padding: 4rem 1.5rem; }
+    .for-who::before { display: none; }
+    .for-who .section { grid-template-columns: 1fr; gap: 2rem; }
+    .section-intro { padding-left: 0; }
+    .section-copy { max-width: none; }
+    .cards { grid-template-columns: 1fr; }
+    .card { min-height: auto; }
     .story-section { padding: 4rem 1.5rem; }
     .story-inner { grid-template-columns: 1fr; gap: 3rem; }
     .learn-grid { grid-template-columns: 1fr; }
@@ -595,28 +661,31 @@
 </section>
 
 <!-- ── FOR WHO ── -->
-<section>
+<section class="for-who">
   <div class="section">
-    <div class="section-label">Is this for you?</div>
-    <h2>You'll feel right at home if<br>any of these sound <em>familiar</em></h2>
+    <div class="section-intro">
+      <div class="section-label">Is this for you?</div>
+      <h2>You'll feel right at home if any of these sound <em>familiar</em></h2>
+      <p class="section-copy">If English disappears the second the spotlight hits, you're not behind. You're probably dealing with the exact freeze response this webinar was made to untangle.</p>
+    </div>
     <div class="cards">
       <div class="card">
-        <div class="card-icon">🧠</div>
+        <div class="card-icon">01</div>
         <h3>You know the words</h3>
         <p>Your English is actually good — but the moment you need to speak, something shuts down.</p>
       </div>
       <div class="card">
-        <div class="card-icon">😶</div>
+        <div class="card-icon">02</div>
         <h3>You go blank mid-sentence</h3>
         <p>You translate in your head, lose your train of thought, and end up saying less than you meant to.</p>
       </div>
       <div class="card">
-        <div class="card-icon">😬</div>
+        <div class="card-icon">03</div>
         <h3>You're scared of sounding stupid</h3>
         <p>You worry about your accent, your grammar, what people will think. So you stay quiet instead.</p>
       </div>
       <div class="card">
-        <div class="card-icon">🔁</div>
+        <div class="card-icon">04</div>
         <h3>You've tried classes before</h3>
         <p>Grammar drills and vocabulary lists didn't fix the real problem — the block is not in your brain, it's in your nervous system.</p>
       </div>
