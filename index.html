@@ -1,167 +1,733 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Danielle Ronit | Your Own Light</title>
-    <meta
-      name="description"
-      content="Trauma-informed IEMT and somatic support to help you shift deep patterns and feel like yourself again."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#">Danielle Ronit</a>
-        <nav>
-          <a href="#about">About</a>
-          <a href="#work">Work With Me</a>
-          <a href="#posts">Blog</a>
-          <a href="#contact">Contact</a>
-        </nav>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fluent & Fearless — Free Webinar</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FDF6F8;
+    --warm-white: #FFF9FB;
+    --deep: #1A0810;
+    --gold: #C4527A;
+    --gold-light: #E88FAD;
+    --terracotta: #B03A6B;
+    --sage: #8F6B7A;
+    --muted: #7A6268;
+    --border: rgba(26,8,16,0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--deep);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left {
+    padding: 5rem 4rem 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-right {
+    background: var(--deep);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 60%, rgba(196,82,122,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(176,58,107,0.15) 0%, transparent 50%);
+  }
+
+  .hebrew-bg {
+    position: absolute;
+    font-size: 18rem;
+    font-family: 'Playfair Display', serif;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    user-select: none;
+    letter-spacing: -0.05em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .hero-right-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3rem;
+  }
+
+  .webinar-badge {
+    display: inline-block;
+    border: 1px solid rgba(196,82,122,0.5);
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+  }
+
+  .event-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(4px);
+  }
+
+  .event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-title em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .event-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+  }
+
+  .event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .event-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+  }
+
+  .event-meta-item .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(196,82,122,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: var(--gold);
+    color: var(--deep);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 24px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .cta-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  .spots-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  /* ── HERO LEFT ── */
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--terracotta);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-desc {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hebrew-accent {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.1em;
+  }
+
+  .trust-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .trust-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1;
+  }
+
+  .trust-label {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 40px;
+    background: var(--border);
+    align-self: center;
+  }
+
+  /* ── FOR WHO ── */
+  .section {
+    padding: 6rem 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    letter-spacing: -0.02em;
+  }
+
+  h2 em { font-style: italic; color: var(--gold); }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+
+  .card-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .card p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+
+  /* ── STORY ── */
+  .story-section {
+    background: var(--deep);
+    color: #fff;
+    padding: 6rem 5rem;
+  }
+
+  .story-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .story-left .section-label { color: rgba(255,255,255,0.4); }
+
+  .story-left h2 { color: #fff; margin-bottom: 1.5rem; }
+
+  .story-text {
+    font-size: 15px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.9;
+    margin-bottom: 1.25rem;
+  }
+
+  .story-text strong { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+  .quote-block {
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .quote-block p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+  }
+
+  .story-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .insight-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .insight-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(196,82,122,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .insight-card h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .insight-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* ── WHAT YOU LEARN ── */
+  .learn-section { padding: 6rem 5rem; max-width: 1100px; margin: 0 auto; }
+
+  .learn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .learn-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--warm-white);
+  }
+
+  .learn-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2rem;
+    text-align: center;
+  }
+
+  .learn-item h4 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .learn-item p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ── REGISTER ── */
+  .register-section {
+    background: var(--warm-white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 6rem 5rem;
+    text-align: center;
+  }
+
+  .register-inner { max-width: 560px; margin: 0 auto; }
+
+  .register-inner h2 { margin-bottom: 0.75rem; }
+
+  .register-inner p {
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    font-size: 15px;
+  }
+
+  .form-group { margin-bottom: 1rem; text-align: left; }
+
+  .form-group label {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--deep);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus { border-color: var(--gold); }
+
+  .form-submit {
+    width: 100%;
+    background: var(--deep);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 24px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s, transform 0.15s;
+  }
+
+  .form-submit:hover { background: #2e2010; transform: translateY(-1px); }
+
+  .free-note {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 3rem 5rem;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 3rem 1.5rem 2rem; }
+    .hero-right { padding: 2rem 1.5rem 3rem; }
+    .hero-right .event-card { padding: 1.5rem; }
+    .section, .learn-section { padding: 4rem 1.5rem; }
+    .story-section { padding: 4rem 1.5rem; }
+    .story-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .learn-grid { grid-template-columns: 1fr; }
+    .register-section { padding: 4rem 1.5rem; }
+    footer { padding: 2rem 1.5rem; }
+    .trust-row { gap: 1rem; }
+    h1 { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Free Live Webinar</div>
+    <h1>You know English.<br>So why do you <em>freeze</em>?</h1>
+    <p class="hero-desc">
+      Join Danielle — California-born English confidence coach, <span class="hebrew-accent">עם לב ישראלי</span> — for a free live session on why smart women get stuck mid-sentence, and what to do about it.
+    </p>
+    <div class="trust-row">
+      <div class="trust-item">
+        <span class="trust-num">140+</span>
+        <span class="trust-label">Women reached</span>
       </div>
-    </header>
+      <div class="divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">100%</span>
+        <span class="trust-label">Free to attend</span>
+      </div>
+      <div class="divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">Live</span>
+        <span class="trust-label">Interactive session</span>
+      </div>
+    </div>
+  </div>
 
-    <main>
-      <section class="hero container">
-        <div>
-          <p class="eyebrow">Your Own Light</p>
-          <h1>
-            You don't have to stay stuck.<br />
-            Real change is possible — and it doesn't have to be this hard.
-          </h1>
-          <p>
-            If you're exhausted from trying to change and still ending up in the same place,
-            that's useful information. It means the pattern lives somewhere your efforts
-            haven't reached yet. That's where we go.
-          </p>
-          <a class="btn" href="https://calendly.com" target="_blank" rel="noreferrer">Book Your Free Intro Call</a>
-        </div>
-        <img
-          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
-          alt="Danielle portrait"
-        />
-      </section>
-
-      <section class="section muted">
-        <div class="container narrow">
-          <h2>Something in you already knows it's time</h2>
-          <p>
-            You've done the reading. You've tried the habits. You've looked at yourself honestly.
-            And still, something keeps pulling you back: the same reactions, the same loops,
-            the same feeling of being your own obstacle.
-          </p>
-        </div>
-      </section>
-
-      <section class="section container grid-two">
-        <article>
-          <h3>This might be why</h3>
-          <p>
-            Unresolved trauma doesn't always look dramatic. Sometimes it shows up as anxiety,
-            numbing, overthinking, self-sabotage, people-pleasing, or feeling blocked no matter
-            how hard you try.
-          </p>
-          <p>
-            These are not personality flaws. They're signals that point to a deeper source.
-          </p>
-        </article>
-        <article>
-          <h3>What's possible</h3>
-          <ul>
-            <li>You stop reacting and start choosing.</li>
-            <li>Automatic patterns begin to loosen.</li>
-            <li>You feel steadier and trust yourself again.</li>
-            <li>Happiness stops feeling like something you need to earn.</li>
-            <li>You feel like yourself — maybe for the first time in a long time.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section id="about" class="section muted">
-        <div class="container narrow">
-          <p class="eyebrow">About me</p>
-          <h2>I've been in the stuck place too.</h2>
-          <p>
-            I'm Danielle. For a long time I didn't know what it felt like to be okay in my own
-            skin. I outsourced my sense of self in every direction — relationships, substances,
-            achievement — and still kept ending up in the same place.
-          </p>
-          <p>
-            I'm now a certified IEMT practitioner with training in trauma awareness, somatic work,
-            and parts work. I support people who are done reaching outside themselves for relief
-            and are ready for real, lasting change.
-          </p>
-        </div>
-      </section>
-
-      <section id="work" class="section container">
-        <p class="eyebrow">Work with me</p>
-        <h2>Ways we can work together</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Private Sessions</h3>
-            <p>1:1 online sessions using IEMT, somatic work, and parts work to shift patterns at the source.</p>
-          </article>
-          <article class="card">
-            <h3>Retreats</h3>
-            <p>Immersive, supported experiences designed for deep and lasting transformation.</p>
-          </article>
-          <article class="card">
-            <h3>Women's Circles</h3>
-            <p>A space to be witnessed, held, and reminded that you are not alone.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="posts" class="section muted">
-        <div class="container">
-          <p class="eyebrow">Recent posts</p>
-          <h2>Mindfulness, travel, and everything in between</h2>
-          <div class="posts">
-            <article>
-              <h3>I Quit Weed and Three Months Later, My Teenage Self Showed Up</h3>
-              <p>4 days ago · 2 min read</p>
-            </article>
-            <article>
-              <h3>Control Or Love?</h3>
-              <p>6 days ago · 2 min read</p>
-            </article>
-            <article>
-              <h3>They Crossed Your Boundary — Now What?</h3>
-              <p>May 6, 2025 · 2 min read</p>
-            </article>
+  <div class="hero-right">
+    <div class="hebrew-bg">ביטחון</div>
+    <div class="hero-right-content">
+      <div class="webinar-badge">Fluent &amp; Fearless</div>
+      <div class="event-card">
+        <div class="event-title"><em>Free</em> Live Webinar</div>
+        <div class="event-subtitle">English Confidence for Women</div>
+        <div class="event-meta">
+          <div class="event-meta-item">
+            <div class="icon">📅</div>
+            <span>Date TBA — spots are limited</span>
+          </div>
+          <div class="event-meta-item">
+            <div class="icon">🕐</div>
+            <span>60 minutes live + Q&amp;A</span>
+          </div>
+          <div class="event-meta-item">
+            <div class="icon">💻</div>
+            <span>Online — join from anywhere</span>
           </div>
         </div>
-      </section>
-
-      <section id="contact" class="section container narrow center">
-        <h2>You don't have to figure it out before reaching out</h2>
-        <p>
-          The first step is a free intro call. We'll look at what's been coming up for you and
-          whether this work is the right next step.
-        </p>
-        <div class="actions">
-          <a class="btn" href="https://calendly.com" target="_blank" rel="noreferrer">Book Intro Call</a>
-          <a class="btn ghost" href="https://wa.me" target="_blank" rel="noreferrer">Message on WhatsApp</a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-wrap">
-        <p>Danielle Ronit · danielleronit@gmail.com</p>
-        <p>© <span id="year"></span> Danielle Ronit</p>
+        <a href="#register" class="cta-btn">Save My Spot →</a>
+        <p class="spots-note">Free. No credit card. Just show up.</p>
       </div>
-    </footer>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
-  </body>
+<!-- ── FOR WHO ── -->
+<section>
+  <div class="section">
+    <div class="section-label">Is this for you?</div>
+    <h2>You'll feel right at home if<br>any of these sound <em>familiar</em></h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>You know the words</h3>
+        <p>Your English is actually good — but the moment you need to speak, something shuts down.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">😶</div>
+        <h3>You go blank mid-sentence</h3>
+        <p>You translate in your head, lose your train of thought, and end up saying less than you meant to.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">😬</div>
+        <h3>You're scared of sounding stupid</h3>
+        <p>You worry about your accent, your grammar, what people will think. So you stay quiet instead.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔁</div>
+        <h3>You've tried classes before</h3>
+        <p>Grammar drills and vocabulary lists didn't fix the real problem — the block is not in your brain, it's in your nervous system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STORY ── -->
+<section class="story-section">
+  <div class="story-inner">
+    <div class="story-left">
+      <div class="section-label">Meet Danielle</div>
+      <h2>I've been<br>exactly <em>where<br>you are</em></h2>
+      <p class="story-text">
+        I grew up in California, and at 21 I moved to Israel — knowing how to read and write Hebrew, but barely able to speak it.
+      </p>
+      <div class="quote-block">
+        <p>"I'd smile politely because I hadn't caught what they said. I was translating every sentence in my head. Sound familiar?"</p>
+      </div>
+      <p class="story-text">
+        The fix wasn't more grammar. It was <strong>understanding that the block isn't about knowledge — it's about fear.</strong> Years later, living as a digital nomad in Thailand, I started teaching English differently. Not just language — but confidence, presence, and the tools to rewire the nervous system response that makes you freeze.
+      </p>
+    </div>
+    <div class="story-right">
+      <div class="insight-card">
+        <div class="insight-icon">🧬</div>
+        <div>
+          <h4>It's a nervous system response</h4>
+          <p>Getting "stuck" isn't a language problem. It's your body going into a mild stress response. We can work with that.</p>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">👁️</div>
+        <div>
+          <h4>Eye movement therapy</h4>
+          <p>1:1 sessions using eye movement techniques to address the root of the freeze response — not just the surface symptoms.</p>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">🗣️</div>
+        <div>
+          <h4>Real conversations, not drills</h4>
+          <p>Group lessons built around deep conversation and mindfulness tools — so you practice speaking in a safe, supportive space.</p>
+        </div>
+      </div>
+      <div class="insight-card">
+        <div class="insight-icon">✨</div>
+        <div>
+          <h4>Confidence in every conversation</h4>
+          <p>The goal isn't perfect English. It's feeling like yourself — fully expressed — in any room, in any language.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT YOU'LL LEARN ── -->
+<section>
+  <div class="learn-section">
+    <div class="section-label">The webinar</div>
+    <h2>What you'll walk away with</h2>
+    <div class="learn-grid">
+      <div class="learn-item">
+        <div class="learn-num">1</div>
+        <div>
+          <h4>Why you freeze — and it's not what you think</h4>
+          <p>The real reason smart, capable women go blank in English (and why more studying won't fix it).</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">2</div>
+        <div>
+          <h4>A live mindfulness tool you can use immediately</h4>
+          <p>A simple technique to calm your nervous system before and during conversations.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">3</div>
+        <div>
+          <h4>The confidence framework behind Fluent &amp; Fearless</h4>
+          <p>A peek inside the course methodology — group practice, deep conversation, and eye movement therapy.</p>
+        </div>
+      </div>
+      <div class="learn-item">
+        <div class="learn-num">4</div>
+        <div>
+          <h4>Your next step — whatever it looks like</h4>
+          <p>Whether you join the course or not, you'll leave with clarity on what's actually keeping you stuck.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REGISTER ── -->
+<section class="register-section" id="register">
+  <div class="register-inner">
+    <div class="section-label">Save your spot</div>
+    <h2>Join the free <em>webinar</em></h2>
+    <p>Spots are limited to keep it intimate. Drop your details and I'll send you everything you need.</p>
+    <div class="form-group">
+      <label>First name</label>
+      <input type="text" placeholder="Your name" />
+    </div>
+    <div class="form-group">
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com" />
+    </div>
+    <button class="form-submit">Yes, save my spot →</button>
+    <p class="free-note">✦ Completely free &nbsp;·&nbsp; No spam, ever</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Danielle · Fluent &amp; Fearless · English Confidence Coaching</p>
+</footer>
+
+</body>
 </html>
