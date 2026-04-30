@@ -33,21 +33,24 @@
 
   /* ── HERO ── */
   .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
   }
 
   .hero-left {
-    padding: 5rem 4rem 5rem 5rem;
+    padding: 5rem 5rem 4rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
     z-index: 2;
   }
+
+  .hero-left .hero-desc { max-width: 560px; }
+  .hero-left .trust-row { justify-content: center; }
 
   .hero-right {
     background: var(--deep);
@@ -56,6 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 4rem 5rem 5rem;
   }
 
   .hero-right::before {
@@ -84,7 +88,9 @@
     position: relative;
     z-index: 2;
     text-align: center;
-    padding: 3rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
   }
 
   .webinar-badge {
@@ -518,7 +524,6 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
     .hero-left { padding: 3rem 1.5rem 2rem; }
     .hero-right { padding: 2rem 1.5rem 3rem; }
     .hero-right .event-card { padding: 1.5rem; }
@@ -571,7 +576,7 @@
         <div class="event-meta">
           <div class="event-meta-item">
             <div class="icon">📅</div>
-            <span>Date TBA — spots are limited</span>
+            <span>Sunday, May 10 · 8:00 PM Israel Time</span>
           </div>
           <div class="event-meta-item">
             <div class="icon">🕐</div>
@@ -726,7 +731,7 @@
 </section>
 
 <footer>
-  <p>© 2025 Danielle · Fluent &amp; Fearless · English Confidence Coaching</p>
+  <p>© 2026 Danielle · Fluent &amp; Fearless · English Confidence Coaching</p>
 </footer>
 
 </body>
