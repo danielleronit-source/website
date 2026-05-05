@@ -8,14 +8,18 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --cream: #FAF7F2;
-    --warm-white: #FFFDF9;
-    --sand: #E8DFD0;
-    --terracotta: #C17E5A;
-    --deep: #2C2218;
-    --mid: #6B5744;
-    --light-mid: #9C8472;
-    --accent: #D4956A;
+    --cream: #FFF9F1;
+    --warm-white: #FFFDF8;
+    --sand: #D9DFD2;
+    --rose: #D94F70;
+    --coral: #FF6B57;
+    --apricot: #F4B05E;
+    --sage: #99A68A;
+    --terracotta: var(--coral);
+    --deep: #4C342B;
+    --mid: #725D52;
+    --light-mid: var(--sage);
+    --accent: var(--apricot);
   }
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--cream); color: var(--deep); overflow-x: hidden; }
@@ -24,8 +28,8 @@
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 1.25rem 2.5rem;
     display: flex; justify-content: space-between; align-items: center;
-    background: rgba(250,247,242,0.95); backdrop-filter: blur(8px);
-    border-bottom: 0.5px solid rgba(193,126,90,0.2);
+    background: rgba(255,249,241,0.95); backdrop-filter: blur(8px);
+    border-bottom: 0.5px solid rgba(153,166,138,0.28);
   }
   .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--deep); letter-spacing: 0.03em; }
   .nav-cta {
@@ -33,7 +37,7 @@
     color: white; text-decoration: none; background: var(--terracotta);
     padding: 0.65rem 1.5rem; border-radius: 2px; transition: background 0.2s;
   }
-  .nav-cta:hover { background: var(--accent); }
+  .nav-cta:hover { background: var(--rose); }
 
   /* HERO — split */
   .hero {
@@ -77,7 +81,7 @@
     transition: all 0.2s; width: fit-content;
     border: none; cursor: pointer; font-family: 'DM Sans', sans-serif;
   }
-  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(193,126,90,0.3); }
+  .btn-primary:hover { background: var(--rose); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(217,79,112,0.24); }
   .hero-right { position: relative; overflow: hidden; }
   .hero-img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, var(--cream) 0%, transparent 15%); }
@@ -117,7 +121,7 @@
   }
   .eyebrow::before { content: ''; width: 24px; height: 1px; background: currentColor; }
   .eyebrow-light { color: rgba(255,255,255,0.5); }
-  .eyebrow-gold { color: #C8A96E; }
+  .eyebrow-gold { color: var(--accent); }
 
   .h2 {
     font-family: 'Cormorant Garamond', serif;
@@ -126,7 +130,7 @@
   }
   .h2 em { font-style: italic; color: var(--terracotta); }
   .h2-light { color: white; }
-  .h2-light em { color: #D4956A; }
+  .h2-light em { color: var(--accent); }
 
   .body { font-size: 1.05rem; line-height: 1.95; color: var(--mid); }
   .body p { margin-bottom: 1.25rem; }
@@ -151,7 +155,7 @@
     border-radius: 3px; background: rgba(255,255,255,0.03);
     transition: border-color 0.2s, background 0.2s;
   }
-  .ity-item:hover { border-color: rgba(212,149,106,0.3); background: rgba(212,149,106,0.05); }
+  .ity-item:hover { border-color: rgba(244,176,94,0.35); background: rgba(244,176,94,0.06); }
   .ity-item::before { content: '—'; color: var(--accent); display: block; margin-bottom: 0.5rem; font-size: 0.85rem; }
 
   /* PILLARS */
@@ -165,7 +169,7 @@
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
     background: linear-gradient(to right, var(--terracotta), var(--accent));
   }
-  .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(92,68,53,0.1); }
+  .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(76,52,43,0.1); }
   .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 5rem; font-weight: 300; color: var(--sand); line-height: 1; margin-bottom: 0.75rem; }
   .pillar-title { font-family: 'Cormorant Garamond', serif; font-size: 1.75rem; font-weight: 400; color: var(--deep); margin-bottom: 1rem; }
   .pillar-desc { font-size: 0.9rem; line-height: 1.75; color: var(--mid); }
@@ -173,7 +177,7 @@
   /* ABOUT */
   .about-wrap { display: grid; grid-template-columns: 1fr 1fr; min-height: 680px; }
   .about-img-col { overflow: hidden; }
-  .about-img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(0.96); }
+  .about-img { width: 100%; height: 100%; object-fit: cover; object-position: 82% center; filter: saturate(0.96); }
   .about-text-col { background: var(--deep); padding: 6rem 5rem; display: flex; flex-direction: column; justify-content: center; }
 
   /* LEARN */
@@ -183,7 +187,7 @@
     padding: 2rem; border: 0.5px solid rgba(255,255,255,0.08); border-radius: 3px;
     background: rgba(255,255,255,0.03); transition: border-color 0.2s;
   }
-  .learn-item:hover { border-color: rgba(212,149,106,0.25); }
+  .learn-item:hover { border-color: rgba(244,176,94,0.3); }
   .learn-num { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 300; color: var(--accent); line-height: 1; text-align: center; }
   .learn-content strong { display: block; font-size: 0.95rem; font-weight: 500; color: white; margin-bottom: 0.4rem; }
   .learn-content p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.5); }
@@ -194,17 +198,40 @@
     background: white; padding: 2.25rem; border-radius: 3px; border: 0.5px solid var(--sand);
     display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s;
   }
-  .testi-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(92,68,53,0.09); }
+  .testi-card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(76,52,43,0.09); }
   .testi-mark { font-family: 'Cormorant Garamond', serif; font-size: 3rem; color: var(--accent); line-height: 0.8; margin-bottom: 0.75rem; }
   .testi-quote { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; line-height: 1.7; color: var(--deep); flex: 1; margin-bottom: 1.5rem; }
   .testi-name { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); }
   .testi-location { font-size: 0.72rem; color: var(--light-mid); margin-top: 0.2rem; }
+  .video-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; margin-top: 3rem; }
+  .video-card {
+    background: white; border: 0.5px solid var(--sand); border-radius: 3px;
+    overflow: hidden; box-shadow: 0 10px 28px rgba(76,52,43,0.06);
+  }
+  .video-card iframe, .video-cover { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }
+  .video-cover {
+    position: relative; cursor: pointer; background-size: cover; background-position: center;
+  }
+  .video-cover::before { content: ''; position: absolute; inset: 0; background: rgba(76,52,43,0.22); }
+  .video-play {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: 72px; height: 52px; border-radius: 14px; background: #FF0000;
+    box-shadow: 0 10px 28px rgba(76,52,43,0.22);
+  }
+  .video-play::before {
+    content: ''; position: absolute; left: 29px; top: 15px;
+    border-left: 18px solid white; border-top: 11px solid transparent; border-bottom: 11px solid transparent;
+  }
+  .video-title {
+    padding: 1.1rem 1.25rem 1.25rem; font-size: 0.88rem; line-height: 1.45;
+    font-weight: 500; color: var(--deep);
+  }
 
   /* FORM */
   .form-section { background: var(--deep); padding: 8rem 2rem; text-align: center; position: relative; overflow: hidden; }
   .form-section::before {
     content: ''; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at center, rgba(193,126,90,0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(244,176,94,0.16) 0%, transparent 70%);
   }
   .form-content { position: relative; z-index: 2; max-width: 480px; margin: 0 auto; }
   .form-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 300; color: white; line-height: 1.15; margin-bottom: 0.75rem; }
@@ -225,7 +252,7 @@
     background: var(--terracotta); color: white; border: none; border-radius: 2px;
     cursor: pointer; transition: all 0.2s; margin-top: 0.5rem;
   }
-  .form-submit:hover { background: var(--accent); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(193,126,90,0.35); }
+  .form-submit:hover { background: var(--rose); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(217,79,112,0.28); }
   .form-note { font-size: 0.76rem; color: rgba(255,255,255,0.28); margin-top: 1.25rem; line-height: 1.6; }
 
   footer { background: var(--deep); border-top: 0.5px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.22); text-align: center; padding: 2rem; font-size: 0.7rem; letter-spacing: 0.12em; }
@@ -242,6 +269,7 @@
     .about-img-col { height: 50vh; }
     .about-text-col { padding: 3.5rem 1.5rem; }
     .testi-grid { grid-template-columns: 1fr; }
+    .video-grid { grid-template-columns: 1fr; }
     .stats { flex-wrap: wrap; }
     .stat { padding: 2rem 2rem; min-width: 50%; }
     nav { padding: 1rem 1.25rem; }
@@ -279,7 +307,7 @@
 
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
-  <p class="strip-label">Real sessions · Real women · Real shifts</p>
+  <p class="strip-label">Real sessions · Men &amp; women welcome · Real shifts</p>
   <div class="strip-track">
     <img class="strip-photo-wide" src="assets/photos/gallery-01-water-circle.png" alt="Women gathered in water">
     <img class="strip-photo-portrait" src="assets/photos/gallery-03-indoor-session.jpg" alt="Indoor workshop session">
@@ -357,12 +385,12 @@
       <div class="pillar-card">
         <div class="pillar-num">01</div>
         <h3 class="pillar-title">Recognize</h3>
-        <p class="pillar-desc">Learn to recognize what you're actually feeling — all the different layers underneath the reaching. Separate the sensation from the story. Understand the patterns that have been running on autopilot.</p>
+        <p class="pillar-desc">Learn to recognize what you're actually feeling — all the deeper emotional layers underneath the reaching. Separate the sensation from the story. Understand the patterns that have been running on autopilot.</p>
       </div>
       <div class="pillar-card">
         <div class="pillar-num">02</div>
         <h3 class="pillar-title">Release</h3>
-        <p class="pillar-desc">Go to the root of where the pain, pattern, or block actually lives — and release it at the level of the nervous system. This is where real change happens. Not in the mind, but in the body.</p>
+        <p class="pillar-desc">Go to the root of where the pain, pattern, or block actually lives — and release it at the level of the nervous system. As the unresolved emotions soften, the overarousal that often fuels anxiety can begin to reduce.</p>
       </div>
       <div class="pillar-card">
         <div class="pillar-num">03</div>
@@ -376,7 +404,7 @@
 <!-- ABOUT -->
 <div class="about-wrap">
   <div class="about-img-col">
-    <img class="about-img" src="assets/photos/danielle-portrait.jpg" alt="Danielle Ronit">
+    <img class="about-img" src="assets/photos/danielle-rock.jpg" alt="Danielle Ronit sitting on a rock overlooking the ocean">
   </div>
   <div class="about-text-col">
     <p class="eyebrow eyebrow-light">About Danielle</p>
@@ -426,13 +454,13 @@
   <div class="inner-wide">
     <div style="text-align:center;">
       <p class="eyebrow" style="justify-content:center;">What They Say</p>
-      <h2 class="h2" style="text-align:center;">Real shifts. <em>Real women.</em></h2>
+      <h2 class="h2" style="text-align:center;">Real shifts. <em>Real people.</em></h2>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-mark">"</div>
         <p class="testi-quote">I worked with so many different therapists and approaches, and I feel this is very, very special. I could feel very safe with everything I was expressing — my memories, my traumas, everything that was coming through. These sessions are more valuable than you can actually expect.</p>
-        <p class="testi-name">Basia, 35</p><p class="testi-location">Koh Phangan</p>
+        <p class="testi-name">Basia</p><p class="testi-location">Detox Coach &amp; Retreat Leader</p>
       </div>
       <div class="testi-card">
         <div class="testi-mark">"</div>
@@ -444,15 +472,33 @@
         <p class="testi-quote">It's different than talk therapy. We're working with past memories that are still causing reactions in my nervous system. After we worked with one memory, it became less important — it didn't strike a chord anymore. Danielle's ability to hold space while keeping it emotionally neutral made me feel really safe.</p>
         <p class="testi-name">Ash</p><p class="testi-location">Yoga Teacher & Retreat Leader</p>
       </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
-        <p class="testi-quote">I felt super safe, that I have a lot of space, and that I'm seen — that what I bring up has space. Something calmed down. It was much less overwhelming. I felt like I actually worked on what I wanted to work on.</p>
-        <p class="testi-name">Lihi, 22</p><p class="testi-location">Copenhagen</p>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TESTIMONIALS -->
+<section class="sec sec-cream">
+  <div class="inner-wide">
+    <div style="text-align:center;">
+      <p class="eyebrow" style="justify-content:center;">Video Testimonials</p>
+      <h2 class="h2" style="text-align:center;">Stories in <em>their own words.</em></h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <button class="video-cover" type="button" data-video="sabPVAsCln4" data-start="9" aria-label="Play video testimonial 1" style="background-image:url('https://img.youtube.com/vi/sabPVAsCln4/hqdefault.jpg');"><span class="video-play" aria-hidden="true"></span></button>
+        <p class="video-title">“I Feel More Clear and Grounded — Even My Partner Noticed” | Client Testimonial</p>
       </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
-        <p class="testi-quote">After the first session, I felt really clear. Super grounded. Even my partner noticed — he said, 'Something about you is different. You're just super calm.' I've become less attached to my emotions. More like — this is going to pass.</p>
-        <p class="testi-name">Julia</p><p class="testi-location">Private Client</p>
+      <div class="video-card">
+        <button class="video-cover" type="button" data-video="w8qCvP4GhTQ" aria-label="Play video testimonial 2" style="background-image:url('https://img.youtube.com/vi/w8qCvP4GhTQ/hqdefault.jpg');"><span class="video-play" aria-hidden="true"></span></button>
+        <p class="video-title">When Overwhelming Memories Become Lighter and Less Frequent | Client Testimonial</p>
+      </div>
+      <div class="video-card">
+        <button class="video-cover" type="button" data-video="WuSipm2z1jw" aria-label="Play video testimonial 3" style="background-image:url('https://img.youtube.com/vi/WuSipm2z1jw/hqdefault.jpg');"><span class="video-play" aria-hidden="true"></span></button>
+        <p class="video-title">From Procrastination to Taking Action on Her Own Projects | Client Testimonial</p>
+      </div>
+      <div class="video-card">
+        <button class="video-cover" type="button" data-video="hT__j4sdNNQ" aria-label="Play video testimonial 4" style="background-image:url('https://img.youtube.com/vi/hT__j4sdNNQ/hqdefault.jpg');"><span class="video-play" aria-hidden="true"></span></button>
+        <p class="video-title">From Imposter Syndrome to Trusting Herself as She Follows Her Dreams | Client Testimonial</p>
       </div>
     </div>
   </div>
@@ -474,5 +520,21 @@
 </section>
 
 <footer>© 2025 Danielle Ronit · Your Own Light</footer>
+<script>
+  document.querySelectorAll('.video-cover').forEach((cover) => {
+    cover.addEventListener('click', () => {
+      const videoId = cover.dataset.video;
+      const params = new URLSearchParams({ autoplay: '1', rel: '0', modestbranding: '1', playsinline: '1' });
+      if (cover.dataset.start) params.set('start', cover.dataset.start);
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube.com/embed/${videoId}?${params.toString()}`;
+      iframe.title = cover.getAttribute('aria-label') || 'Video testimonial';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      cover.replaceWith(iframe);
+    });
+  });
+</script>
 </body>
 </html>
