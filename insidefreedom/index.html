@@ -238,6 +238,7 @@
   .form-title em { font-style: italic; color: var(--accent); }
   .form-detail { font-size: 0.72rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 3rem; }
   .form-wrap { display: flex; flex-direction: column; gap: 1rem; }
+  .ghl-form-frame { width: 100%; height: 432px; }
   .form-wrap input {
     width: 100%; padding: 1.1rem 1.4rem; font-size: 0.95rem;
     font-family: 'DM Sans', sans-serif; font-weight: 300;
@@ -253,7 +254,14 @@
     cursor: pointer; transition: all 0.2s; margin-top: 0.5rem;
   }
   .form-submit:hover { background: var(--rose); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(217,79,112,0.28); }
+  .form-submit:disabled { opacity: 0.65; cursor: wait; transform: none; }
   .form-note { font-size: 0.76rem; color: rgba(255,255,255,0.28); margin-top: 1.25rem; line-height: 1.6; }
+  .form-status {
+    min-height: 1.4rem; font-size: 0.82rem; line-height: 1.5; color: rgba(255,255,255,0.72);
+    margin-top: 0.25rem;
+  }
+  .form-status.success { color: var(--accent); }
+  .form-status.error { color: #FFB8AD; }
 
   footer { background: var(--deep); border-top: 0.5px solid rgba(255,255,255,0.05); color: rgba(255,255,255,0.22); text-align: center; padding: 2rem; font-size: 0.7rem; letter-spacing: 0.12em; }
 
@@ -459,7 +467,7 @@
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-mark">"</div>
-        <p class="testi-quote">I worked with so many different therapists and approaches, and I feel this is very, very special. I could feel very safe with everything I was expressing — my memories, my traumas, everything that was coming through. These sessions are more valuable than you can actually expect.</p>
+        <p class="testi-quote">I worked with so many different therapists and approaches, and I feel this is very, very special. I could feel very safe with everything I was experiencing — my memories, my traumas, everything that was coming through. These sessions are more valuable than you can actually expect.</p>
         <p class="testi-name">Basia</p><p class="testi-location">Detox Coach &amp; Retreat Leader</p>
       </div>
       <div class="testi-card">
@@ -471,6 +479,21 @@
         <div class="testi-mark">"</div>
         <p class="testi-quote">It's different than talk therapy. We're working with past memories that are still causing reactions in my nervous system. After we worked with one memory, it became less important — it didn't strike a chord anymore. Danielle's ability to hold space while keeping it emotionally neutral made me feel really safe.</p>
         <p class="testi-name">Ash</p><p class="testi-location">Yoga Teacher & Retreat Leader</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">I felt super safe, that I have a lot of space, and that I'm seen — that what I bring up has space. Something calmed down. It was much less overwhelming. I felt like I actually worked on what I wanted to work on.</p>
+        <p class="testi-name">Lihi, 22</p><p class="testi-location">Copenhagen</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">After the first session, I felt really clear. Super grounded. Even my partner noticed — he said, 'Something about you is different. You're just super calm.' I've become less attached to my emotions. More like — this is going to pass.</p>
+        <p class="testi-name">Anonymous Client</p><p class="testi-location">Private Session</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">I have noticed that I feel more relaxed overall. Less reactive to thoughts and experiences.</p>
+        <p class="testi-name">Kyle</p><p class="testi-location">Private Client</p>
       </div>
     </div>
   </div>
@@ -511,15 +534,31 @@
     <h2 class="form-title">Join me for<br><em>Inside Freedom</em></h2>
     <p class="form-detail">[Date] · [Time] · 75 Minutes · Free · Live on Zoom</p>
     <div class="form-wrap">
-      <input type="text" placeholder="Full name">
-      <input type="email" placeholder="Email address">
-      <button class="form-submit">Save My Spot →</button>
-      <p class="form-note">Can't make it live? Register anyway and I'll send you the replay.</p>
+      <div class="ghl-form-frame">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/VBC2PccoUv7bVlSJingX"
+          style="width:100%;height:100%;border:none;border-radius:0px"
+          id="inline-VBC2PccoUv7bVlSJingX"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Inside Freedom"
+          data-height="432"
+          data-layout-iframe-id="inline-VBC2PccoUv7bVlSJingX"
+          data-form-id="VBC2PccoUv7bVlSJingX"
+          title="Inside Freedom"
+        >
+        </iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>© 2025 Danielle Ronit · Your Own Light</footer>
+<footer>© 2026 Danielle Ronit · Your Own Light</footer>
 <script>
   document.querySelectorAll('.video-cover').forEach((cover) => {
     cover.addEventListener('click', () => {
@@ -535,6 +574,8 @@
       cover.replaceWith(iframe);
     });
   });
+
 </script>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
