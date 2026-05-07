@@ -203,6 +203,22 @@
   .testi-quote { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; line-height: 1.7; color: var(--deep); flex: 1; margin-bottom: 1.5rem; }
   .testi-name { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--terracotta); }
   .testi-location { font-size: 0.72rem; color: var(--light-mid); margin-top: 0.2rem; }
+  .client-notes .inner-wide { max-width: 980px; }
+  .client-notes .notes-header {
+    display: flex; align-items: end; justify-content: space-between; gap: 2rem;
+    border-bottom: 0.5px solid var(--sand); padding-bottom: 1.5rem;
+  }
+  .client-notes .notes-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--deep); line-height: 1.1; }
+  .client-notes .notes-title em { color: var(--terracotta); }
+  .client-notes .notes-sub { max-width: 300px; font-size: 0.86rem; line-height: 1.7; color: var(--mid); text-align: right; }
+  .client-notes .testi-grid { grid-template-columns: repeat(2,1fr); gap: 0; margin-top: 0; }
+  .client-notes .testi-card {
+    background: transparent; border: 0; border-bottom: 0.5px solid var(--sand);
+    border-radius: 0; box-shadow: none; padding: 2.4rem 2rem;
+  }
+  .client-notes .testi-card:nth-child(odd) { border-right: 0.5px solid var(--sand); }
+  .client-notes .testi-card:hover { transform: none; box-shadow: none; }
+  .client-notes .testi-quote { font-size: 1.12rem; }
   .video-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; margin-top: 3rem; }
   .video-card {
     background: white; border: 0.5px solid var(--sand); border-radius: 3px;
@@ -277,6 +293,10 @@
     .about-img-col { height: 50vh; }
     .about-text-col { padding: 3.5rem 1.5rem; }
     .testi-grid { grid-template-columns: 1fr; }
+    .client-notes .notes-header { display: block; }
+    .client-notes .notes-sub { text-align: left; margin-top: 1rem; }
+    .client-notes .testi-grid { grid-template-columns: 1fr; }
+    .client-notes .testi-card:nth-child(odd) { border-right: 0; }
     .video-grid { grid-template-columns: 1fr; }
     .stats { flex-wrap: wrap; }
     .stat { padding: 2rem 2rem; min-width: 50%; }
@@ -382,6 +402,33 @@
   </div>
 </section>
 
+<!-- FEATURED TESTIMONIALS -->
+<section class="sec sec-warm">
+  <div class="inner-wide">
+    <div style="text-align:center;">
+      <p class="eyebrow" style="justify-content:center;">What They Say</p>
+      <h2 class="h2" style="text-align:center;">Real shifts. <em>Real people.</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">I worked with so many different therapists and approaches, and I feel this is very, very special. I could feel very safe with everything I was experiencing — my memories, my traumas, everything that was coming through. These sessions are more valuable than you can actually expect.</p>
+        <p class="testi-name">Basia</p><p class="testi-location">Detox Coach &amp; Retreat Leader</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">After just one session, I felt such a noticeable shift. Danielle helped me get to the core of where that feeling came from and how deeply that belief had been living inside of me. Immediately afterward, I felt such a deep sense of peace and calm — and that shift continued to show up in the days after.</p>
+        <p class="testi-name">Miriam</p><p class="testi-location">Private Client</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">It's different than talk therapy. We're working with past memories that are still causing reactions in my nervous system. After we worked with one memory, it became less important — it didn't strike a chord anymore. Danielle's ability to hold space while keeping it emotionally neutral made me feel really safe.</p>
+        <p class="testi-name">Ash</p><p class="testi-location">Yoga Teacher & Retreat Leader</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PILLARS -->
 <section class="sec sec-warm">
   <div class="inner-wide">
@@ -457,43 +504,36 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="sec sec-warm">
+<!-- CLIENT NOTES -->
+<section class="sec sec-cream client-notes">
   <div class="inner-wide">
-    <div style="text-align:center;">
-      <p class="eyebrow" style="justify-content:center;">What They Say</p>
-      <h2 class="h2" style="text-align:center;">Real shifts. <em>Real people.</em></h2>
+    <div class="notes-header">
+      <div>
+        <p class="eyebrow">Client Notes</p>
+        <h2 class="notes-title">Small moments. <em>Real change.</em></h2>
+      </div>
+      <p class="notes-sub">A few quiet shifts clients noticed after doing this work.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="testi-mark">"</div>
-        <p class="testi-quote">I worked with so many different therapists and approaches, and I feel this is very, very special. I could feel very safe with everything I was experiencing — my memories, my traumas, everything that was coming through. These sessions are more valuable than you can actually expect.</p>
-        <p class="testi-name">Basia</p><p class="testi-location">Detox Coach &amp; Retreat Leader</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
-        <p class="testi-quote">After just one session, I felt such a noticeable shift. Danielle helped me get to the core of where that feeling came from and how deeply that belief had been living inside of me. Immediately afterward, I felt such a deep sense of peace and calm — and that shift continued to show up in the days after.</p>
-        <p class="testi-name">Miriam</p><p class="testi-location">Private Client</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
-        <p class="testi-quote">It's different than talk therapy. We're working with past memories that are still causing reactions in my nervous system. After we worked with one memory, it became less important — it didn't strike a chord anymore. Danielle's ability to hold space while keeping it emotionally neutral made me feel really safe.</p>
-        <p class="testi-name">Ash</p><p class="testi-location">Yoga Teacher & Retreat Leader</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
         <p class="testi-quote">I felt super safe, that I have a lot of space, and that I'm seen — that what I bring up has space. Something calmed down. It was much less overwhelming. I felt like I actually worked on what I wanted to work on.</p>
-        <p class="testi-name">Lihi, 22</p><p class="testi-location">Copenhagen</p>
+        <p class="testi-name">Lihi</p><p class="testi-location">Private Client</p>
       </div>
       <div class="testi-card">
         <div class="testi-mark">"</div>
         <p class="testi-quote">After the first session, I felt really clear. Super grounded. Even my partner noticed — he said, 'Something about you is different. You're just super calm.' I've become less attached to my emotions. More like — this is going to pass.</p>
-        <p class="testi-name">Anonymous Client</p><p class="testi-location">Private Session</p>
+        <p class="testi-name">Julia</p><p class="testi-location">Private Client</p>
       </div>
       <div class="testi-card">
         <div class="testi-mark">"</div>
         <p class="testi-quote">I have noticed that I feel more relaxed overall. Less reactive to thoughts and experiences.</p>
         <p class="testi-name">Kyle</p><p class="testi-location">Private Client</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">I feel like our session helped me get tension out, I'm feeling lighter.</p>
+        <p class="testi-name">Jess</p><p class="testi-location">Private Client</p>
       </div>
     </div>
   </div>
