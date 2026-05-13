@@ -105,10 +105,16 @@
   @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .strip-photo-wide { width: 380px; height: 240px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
   .strip-photo-portrait { width: 200px; height: 300px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
+  .strip-focus-left { object-position: 35% center; }
 
   /* SECTIONS */
   .sec { padding: 7rem 2rem; }
   .sec-dark { background: var(--deep); }
+  .experience-section {
+    background: linear-gradient(180deg, #5A3A31 0%, var(--deep) 100%);
+    border-top: 12px solid var(--cream);
+  }
+  .section-divider { height: 5rem; background: var(--cream); }
   .sec-warm { background: var(--warm-white); }
   .sec-cream { background: var(--cream); }
   .inner { max-width: 820px; margin: 0 auto; }
@@ -317,7 +323,7 @@
     <p class="hero-eyebrow">Free Live Workshop · Inside Freedom</p>
     <h1 class="hero-title">The freedom you've been<br>chasing is already <em>inside you.</em></h1>
     <p class="hero-sub">Let me show you how to access it — without years of therapy.</p>
-    <div class="hero-badge"><b>✦</b> Free · 75 Minutes · Live on Zoom · [Date] at [Time]</div>
+    <div class="hero-badge"><b>✦</b> Free · 75 Minutes · Live on Zoom · Sunday, May 24 at 10:00am PT</div>
     <a href="#register" class="btn-primary">Save My Spot →</a>
   </div>
   <div class="hero-right">
@@ -335,7 +341,7 @@
 
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
-  <p class="strip-label">Transformative sessions · Men &amp; women welcome · Real shifts</p>
+  <p class="strip-label">Transformative sessions · Real shifts · Men &amp; women welcome</p>
   <div class="strip-track">
     <img class="strip-photo-wide" src="assets/photos/gallery-01-water-circle.png" alt="Women gathered in water">
     <img class="strip-photo-portrait" src="assets/photos/gallery-03-indoor-session.jpg" alt="Indoor workshop session">
@@ -346,9 +352,8 @@
     <img class="strip-photo-wide" src="assets/photos/gallery-12-big-room.jpg" alt="Women gathered in a bright room">
     <img class="strip-photo-portrait" src="assets/photos/gallery-07-evening-lights.jpg" alt="Evening circle lights">
     <img class="strip-photo-wide" src="assets/photos/gallery-06-closeup-session.jpg" alt="Guided session close-up">
-    <img class="strip-photo-portrait" src="assets/photos/gallery-08-evening-circle.jpg" alt="Evening women's circle">
     <img class="strip-photo-wide" src="assets/photos/gallery-11-table-selfie.jpg" alt="Women's circle selfie">
-    <img class="strip-photo-portrait" src="assets/photos/gallery-09-studio-circle.jpg" alt="Studio circle session">
+    <img class="strip-photo-portrait strip-focus-left" src="assets/photos/gallery-09-studio-circle.jpg" alt="Studio circle session">
     <img class="strip-photo-portrait" src="assets/photos/gallery-13-drum-session.jpg" alt="Drum session portrait">
     <img class="strip-photo-wide" src="assets/photos/gallery-01-water-circle.png" alt="Women gathered in water">
     <img class="strip-photo-portrait" src="assets/photos/gallery-03-indoor-session.jpg" alt="Indoor workshop session">
@@ -359,9 +364,8 @@
     <img class="strip-photo-wide" src="assets/photos/gallery-12-big-room.jpg" alt="Women gathered in a bright room">
     <img class="strip-photo-portrait" src="assets/photos/gallery-07-evening-lights.jpg" alt="Evening circle lights">
     <img class="strip-photo-wide" src="assets/photos/gallery-06-closeup-session.jpg" alt="Guided session close-up">
-    <img class="strip-photo-portrait" src="assets/photos/gallery-08-evening-circle.jpg" alt="Evening women's circle">
     <img class="strip-photo-wide" src="assets/photos/gallery-11-table-selfie.jpg" alt="Women's circle selfie">
-    <img class="strip-photo-portrait" src="assets/photos/gallery-09-studio-circle.jpg" alt="Studio circle session">
+    <img class="strip-photo-portrait strip-focus-left" src="assets/photos/gallery-09-studio-circle.jpg" alt="Studio circle session">
     <img class="strip-photo-portrait" src="assets/photos/gallery-13-drum-session.jpg" alt="Drum session portrait">
   </div>
 </div>
@@ -474,8 +478,10 @@
   </div>
 </div>
 
+<div class="section-divider" aria-hidden="true"></div>
+
 <!-- WHAT YOU'LL LEARN -->
-<section class="sec sec-dark">
+<section class="sec sec-dark experience-section">
   <div class="inner">
     <p class="eyebrow eyebrow-light">What You'll Experience</p>
     <h2 class="h2 h2-light">By the end of this <em>75-minute session</em></h2>
@@ -573,7 +579,7 @@
   <div class="form-content">
     <p class="eyebrow eyebrow-gold" style="justify-content:center; margin-bottom:1.25rem;">Free Live Workshop</p>
     <h2 class="form-title">Join me for<br><em>Inside Freedom</em></h2>
-    <p class="form-detail">[Date] · [Time] · 75 Minutes · Free · Live on Zoom</p>
+    <p class="form-detail">Sunday, May 24 · 10:00am Pacific Time · 75 Minutes · Free · Live on Zoom</p>
     <div class="form-wrap">
       <div class="ghl-form-frame">
         <iframe
