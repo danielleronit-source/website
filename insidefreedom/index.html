@@ -41,25 +41,9 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
   html { scroll-behavior: smooth; }
   body { font-family: 'DM Sans', sans-serif; font-weight: 300; background: var(--cream); color: var(--deep); overflow-x: hidden; }
 
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 1.25rem 2.5rem;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(255,249,241,0.95); backdrop-filter: blur(8px);
-    border-bottom: 0.5px solid rgba(153,166,138,0.28);
-  }
-  .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--deep); letter-spacing: 0.03em; }
-  .nav-cta {
-    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
-    color: white; text-decoration: none; background: var(--terracotta);
-    padding: 0.65rem 1.5rem; border-radius: 2px; transition: background 0.2s;
-  }
-  .nav-cta:hover { background: var(--rose); }
-
   /* HERO — split */
   .hero {
     min-height: 100vh; display: grid; grid-template-columns: 55% 45%;
-    padding-top: 60px;
   }
   .hero-left {
     display: flex; flex-direction: column; justify-content: center;
@@ -84,10 +68,10 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
     max-width: 440px; margin-bottom: 2.5rem;
   }
   .hero-badge {
-    display: inline-flex; align-items: center; gap: 0.6rem;
+    display: inline-flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;
     font-size: 0.72rem; color: var(--light-mid); letter-spacing: 0.07em;
     border: 0.5px solid var(--sand); padding: 0.55rem 1.1rem;
-    border-radius: 100px; margin-bottom: 2.5rem; width: fit-content;
+    border-radius: 100px; margin-bottom: 2.5rem; width: fit-content; max-width: 100%; line-height: 1.5;
   }
   .hero-badge b { color: var(--terracotta); font-weight: 400; }
   .btn-primary {
@@ -275,7 +259,21 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
   .form-content { position: relative; z-index: 2; max-width: 480px; margin: 0 auto; }
   .form-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 300; color: white; line-height: 1.15; margin-bottom: 0.75rem; }
   .form-title em { font-style: italic; color: var(--accent); }
-  .form-detail { font-size: 0.72rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 3rem; }
+  .form-detail { font-size: 0.72rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 1.5rem; }
+  .timezone-grid {
+    display: grid; grid-template-columns: repeat(2,1fr); gap: 0.5rem;
+    margin: 0 auto 2.5rem; text-align: left;
+  }
+  .timezone-item {
+    border: 0.5px solid rgba(255,255,255,0.14); border-radius: 3px;
+    padding: 0.75rem 0.85rem; background: rgba(255,255,255,0.035);
+  }
+  .timezone-city {
+    display: block; font-size: 0.58rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 0.25rem;
+  }
+  .timezone-time { display: block; font-size: 0.86rem; color: rgba(255,255,255,0.72); }
+  .timezone-item:last-child { grid-column: 1 / -1; text-align: center; }
   .form-wrap { display: flex; flex-direction: column; gap: 1rem; }
   .ghl-form-frame { width: 100%; height: 432px; }
   .form-wrap input {
@@ -323,16 +321,10 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
     .video-grid { grid-template-columns: 1fr; }
     .stats { flex-wrap: wrap; }
     .stat { padding: 2rem 2rem; min-width: 50%; }
-    nav { padding: 1rem 1.25rem; }
   }
 </style>
 </head>
 <body>
-
-<nav>
-  <span class="nav-name">Danielle Ronit</span>
-  <a href="#register" class="nav-cta">Save Your Spot</a>
-</nav>
 
 <!-- HERO -->
 <section class="hero">
@@ -340,7 +332,7 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
     <p class="hero-eyebrow">Free Live Workshop · Inside Freedom</p>
     <h1 class="hero-title">The freedom you've been<br>chasing is already <em>inside you.</em></h1>
     <p class="hero-sub">Let me show you how to access it — without years of therapy.</p>
-    <div class="hero-badge"><b>✦</b> Free · 75 Minutes · Live on Zoom · Sunday, May 24 at 10:00am PT</div>
+    <div class="hero-badge"><b>✦</b> Free · 75 Minutes · Live on Zoom · Sunday, May 24 at 10:00am PT / 5:00pm GMT</div>
     <a href="#register" class="btn-primary">Save My Spot →</a>
   </div>
   <div class="hero-right">
@@ -446,6 +438,12 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
         <p class="testi-quote">It's different than talk therapy. We're working with past memories that are still causing reactions in my nervous system. After we worked with one memory, it became less important — it didn't strike a chord anymore. Danielle's ability to hold space while keeping it emotionally neutral made me feel really safe.</p>
         <p class="testi-name">Ash</p><p class="testi-location">Yoga Teacher & Retreat Leader</p>
       </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">A recent breakup was causing me a lot of anxiety and nervous system dysregulation. A friend recommended Danielle as a mentor and guide to support me through my healing journey.</p>
+        <p class="testi-quote">After only two sessions, I've been given practical tools to help regulate my nervous system, and I've noticed I feel more in tune with myself. My emotions feel less overwhelming, and I'm not as easily controlled by them. It's been a grounding and supportive experience so far, and I'm looking forward to continuing.</p>
+        <p class="testi-name">Anonymous Client</p><p class="testi-location">Private Client</p>
+      </div>
     </div>
   </div>
 </section>
@@ -489,8 +487,8 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
       <p>I used to need a drink to dance. A smoke to relax. Something outside of me to feel like myself.</p>
       <p>Then something happened at a festival in the desert that changed everything. Completely sober, in the middle of a guided dance experience, I felt the clearest, most euphoric high of my life. It stayed longer than any substance ever did. And something cracked open inside me.</p>
       <p>I realized that state — that freedom, that aliveness — was available from within. I made my whole life about learning how to generate it. And now I help others access it too.</p>
-      <p>For the past 10 years, I've lived in healing communities around the world, studying and experiencing different paths of inner freedom — from meditation, Kabbalah, yoga, embodiment, nervous system work, emotional healing, and deep spiritual practice.</p>
-      <p>I'm a certified IEMT practitioner with training in trauma awareness, nervous system work, and parts work. I've worked with 100+ people across workshops, women's circles, and private programs.</p>
+      <p>For the past 10 years, I've lived in healing communities around the world, studying and experiencing different paths of inner freedom — meditation, Kabbalah, yoga, embodiment, nervous system work, emotional healing, and deep spiritual practice.</p>
+      <p>I'm a certified IEMT practitioner with training in trauma awareness and nervous system work. I've worked with 100+ people across workshops, women's circles, and private programs.</p>
     </div>
   </div>
 </div>
@@ -506,22 +504,22 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
       <div class="learn-item">
         <div class="learn-num">1</div>
         <div class="learn-content">
-          <strong>Why you keep reaching outside yourself</strong>
-          <p>And what becomes available the moment you stop — not as a concept, but as something you actually feel in your body</p>
+          <strong>What the habit has been giving you</strong>
+          <p>The hidden needs underneath the reaching — like comfort, confidence, relief, safety, connection, or permission to check out for a while</p>
         </div>
       </div>
       <div class="learn-item">
         <div class="learn-num">2</div>
         <div class="learn-content">
           <strong>The three pillars of freedom from the inside out</strong>
-          <p>The exact framework I use with my private and group clients to go to the root of the reaching and rewire it at the level of the nervous system</p>
+          <p>How body tension and nervous system dysregulation keep the loop alive, and what begins to shift when your system can finally soften</p>
         </div>
       </div>
       <div class="learn-item">
         <div class="learn-num">3</div>
         <div class="learn-content">
-          <strong>A real taste of what that freedom actually feels like</strong>
-          <p>We'll start together with a short experience — in your body, not just your head</p>
+          <strong>A powerful tool you can use for the rest of your life</strong>
+          <p>A simple way to see what the behavior has been doing for you, shift your relationship to it, and begin creating that feeling from within</p>
         </div>
       </div>
     </div>
@@ -553,11 +551,6 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
         <div class="testi-mark">"</div>
         <p class="testi-quote">I have noticed that I feel more relaxed overall. Less reactive to thoughts and experiences.</p>
         <p class="testi-name">Kyle</p><p class="testi-location">Private Client</p>
-      </div>
-      <div class="testi-card">
-        <div class="testi-mark">"</div>
-        <p class="testi-quote">I feel like our session helped me get tension out, I'm feeling lighter.</p>
-        <p class="testi-name">Jess</p><p class="testi-location">Private Client</p>
       </div>
     </div>
   </div>
@@ -596,7 +589,14 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
   <div class="form-content">
     <p class="eyebrow eyebrow-gold" style="justify-content:center; margin-bottom:1.25rem;">Free Live Workshop</p>
     <h2 class="form-title">Join me for<br><em>Inside Freedom</em></h2>
-    <p class="form-detail">Sunday, May 24 · 10:00am Pacific Time · 75 Minutes · Free · Live on Zoom</p>
+    <p class="form-detail">Sunday, May 24 · 75 Minutes · Free · Live on Zoom</p>
+    <div class="timezone-grid" aria-label="Workshop times by city">
+      <div class="timezone-item"><span class="timezone-city">Los Angeles</span><span class="timezone-time">10:00 AM</span></div>
+      <div class="timezone-item"><span class="timezone-city">New York</span><span class="timezone-time">1:00 PM</span></div>
+      <div class="timezone-item"><span class="timezone-city">London</span><span class="timezone-time">6:00 PM</span></div>
+      <div class="timezone-item"><span class="timezone-city">Tel Aviv</span><span class="timezone-time">8:00 PM</span></div>
+      <div class="timezone-item"><span class="timezone-city">Bangkok</span><span class="timezone-time">12:00 AM, May 25</span></div>
+    </div>
     <div class="form-wrap">
       <div class="ghl-form-frame">
         <iframe
