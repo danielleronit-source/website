@@ -102,6 +102,7 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
   .photo-strip::before { left: 0; background: linear-gradient(to right, var(--warm-white), transparent); }
   .photo-strip::after { right: 0; background: linear-gradient(to left, var(--warm-white), transparent); }
   .strip-label { text-align: center; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: #000; margin-bottom: 2rem; }
+  .strip-mobile-line::before { content: ' · '; }
   .strip-track { display: flex; gap: 1rem; animation: slide 40s linear infinite; width: max-content; align-items: center; }
   @keyframes slide { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .strip-photo-wide { width: 380px; height: 240px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
@@ -246,7 +247,7 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
   }
   .client-notes .notes-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--deep); line-height: 1.1; }
   .client-notes .notes-title em { color: var(--terracotta); }
-  .client-notes .notes-sub { max-width: 300px; font-size: 0.86rem; line-height: 1.7; color: var(--mid); text-align: right; }
+  .client-notes .notes-sub { max-width: 300px; font-size: 0.86rem; line-height: 1.7; color: #000; text-align: right; }
   .client-notes .testi-grid { grid-template-columns: repeat(2,1fr); gap: 0; margin-top: 0; }
   .client-notes .testi-card {
     background: transparent; border: 0; border-bottom: 0.5px solid var(--sand);
@@ -341,6 +342,9 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
     .hero-left { padding: 3rem 1.5rem; }
     .hero-overlay { background: linear-gradient(to bottom, var(--cream) 0%, transparent 30%); }
     .photo-strip::before, .photo-strip::after { display: none; }
+    .strip-label { padding: 0 1.25rem; line-height: 1.8; }
+    .strip-label span { display: block; }
+    .strip-mobile-line::before { content: ''; }
     .mini-testimonials { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0 1.25rem; }
     .mini-testimonials img { height: 118px; }
     .pattern-intro { grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2.5rem; }
@@ -352,10 +356,19 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
     .about-img-col { height: 50vh; }
     .about-text-col { padding: 3.5rem 1.5rem; }
     .testi-grid { grid-template-columns: 1fr; }
-    .client-notes .notes-header { display: block; }
-    .client-notes .notes-sub { text-align: left; margin-top: 1rem; }
+    .client-notes { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+    .client-notes .notes-header { display: block; padding-bottom: 1rem; }
+    .client-notes .notes-sub { max-width: 100%; text-align: left; margin-top: 0.75rem; line-height: 1.45; }
     .client-notes .testi-grid { grid-template-columns: 1fr; }
+    .client-notes .testi-card { padding: 1.35rem 0; }
     .client-notes .testi-card:nth-child(odd) { border-right: 0; }
+    .client-notes .testi-mark { font-size: 2rem; margin-bottom: 0.35rem; }
+    .client-notes .testi-quote {
+      font-family: 'Inter', sans-serif; font-size: 0.95rem; font-style: normal;
+      line-height: 1.55; margin-bottom: 0.9rem;
+    }
+    .client-notes .testi-name { font-size: 0.64rem; }
+    .client-notes .testi-location { font-size: 0.68rem; }
     .video-grid { grid-template-columns: 1fr; }
     .stats { flex-wrap: wrap; }
     .stat { padding: 2rem 2rem; min-width: 50%; }
@@ -388,7 +401,7 @@ src="https://www.facebook.com/tr?id=2844452039231126&ev=PageView&noscript=1"
 
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
-  <p class="strip-label">Transformative sessions · Real shifts · Men &amp; women welcome</p>
+  <p class="strip-label"><span>Transformative sessions · Real shifts</span><span class="strip-mobile-line">Men &amp; women welcome</span></p>
   <div class="strip-track">
     <img class="strip-photo-wide" src="assets/photos/gallery-01-water-circle.png" alt="Women gathered in water">
     <img class="strip-photo-portrait" src="assets/photos/gallery-03-indoor-session.jpg" alt="Indoor workshop session">
