@@ -3,14 +3,287 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=/insidefreedom/">
   <title>Danielle Ronit</title>
-  <link rel="canonical" href="/insidefreedom/">
-  <script>
-    window.location.replace('/insidefreedom/');
-  </script>
+  <meta name="description" content="Choose from Danielle Ronit's current workshops and transformational programs.">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #241018;
+      --plum: #341120;
+      --rose: #b85a7a;
+      --blush: #f8edf1;
+      --cream: #fff9f3;
+      --gold: #c79855;
+      --green: #506d5a;
+      --muted: #75636a;
+      --line: rgba(36, 16, 24, 0.14);
+      --shadow: 0 22px 70px rgba(36, 16, 24, 0.12);
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(125deg, rgba(255,249,243,0.96), rgba(248,237,241,0.92)),
+        radial-gradient(circle at 12% 16%, rgba(184,90,122,0.22), transparent 28%),
+        radial-gradient(circle at 86% 78%, rgba(80,109,90,0.18), transparent 34%),
+        var(--cream);
+    }
+
+    main {
+      width: min(1120px, calc(100% - 40px));
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 56px 0;
+      display: grid;
+      align-content: center;
+      gap: 40px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.55fr);
+      gap: 40px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--rose);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      line-height: 0.95;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .intro p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.15rem);
+      line-height: 1.75;
+    }
+
+    .programs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .program {
+      --accent: var(--rose);
+      --accent-soft: rgba(184, 90, 122, 0.16);
+      --accent-line: rgba(184, 90, 122, 0.34);
+      min-height: 360px;
+      padding: 28px;
+      color: var(--ink);
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .program::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-top: 5px solid var(--accent);
+      pointer-events: none;
+    }
+
+    .program::after {
+      content: "";
+      position: absolute;
+      width: 170px;
+      height: 170px;
+      right: -64px;
+      top: -64px;
+      border: 1px solid var(--accent-line);
+      transform: rotate(18deg);
+      opacity: 0.7;
+    }
+
+    .program:hover,
+    .program:focus-visible {
+      border-color: var(--accent-line);
+      box-shadow: 0 28px 90px rgba(36, 16, 24, 0.18);
+      transform: translateY(-4px);
+      outline: none;
+    }
+
+    .program:nth-child(1) {
+      --accent: var(--rose);
+      --accent-soft: rgba(184, 90, 122, 0.16);
+      --accent-line: rgba(184, 90, 122, 0.34);
+    }
+
+    .program:nth-child(2) {
+      --accent: var(--gold);
+      --accent-soft: rgba(199, 152, 85, 0.16);
+      --accent-line: rgba(199, 152, 85, 0.42);
+    }
+
+    .program:nth-child(3) {
+      --accent: var(--green);
+      --accent-soft: rgba(80, 109, 90, 0.16);
+      --accent-line: rgba(80, 109, 90, 0.38);
+    }
+
+    .program-kicker {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 34px;
+      align-items: center;
+      padding: 7px 11px;
+      border: 1px solid var(--accent-line);
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .program-title {
+      margin: 42px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3vw, 2.7rem);
+      line-height: 1.04;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .program-text {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .program-action {
+      margin-top: 34px;
+      color: var(--plum);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .program-action span {
+      color: var(--accent);
+    }
+
+    footer {
+      color: rgba(36, 16, 24, 0.52);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        align-content: start;
+        padding: 42px 0;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .programs {
+        grid-template-columns: 1fr;
+      }
+
+      .program {
+        min-height: 260px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      main {
+        width: min(100% - 28px, 1120px);
+        padding: 32px 0;
+        gap: 28px;
+      }
+
+      .program {
+        min-height: 0;
+        padding: 24px;
+      }
+
+      .program-title {
+        margin-top: 34px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p>Taking you to <a href="/insidefreedom/">Inside Freedom</a>.</p>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Danielle Ronit</p>
+        <h1 id="page-title">Choose where you want to begin.</h1>
+      </div>
+      <p>Three doors into the same work: language confidence, emotional freedom, and deep personal transformation.</p>
+    </section>
+
+    <section class="programs" aria-label="Choose a program">
+      <a class="program" href="https://fluentandfearless.danielleronit.com">
+        <div>
+          <span class="program-kicker">English Confidence</span>
+          <h2 class="program-title">Fluent &amp; Fearless</h2>
+          <p class="program-text">English Confidence for Women.</p>
+        </div>
+        <div class="program-action">Visit <span>Fluent &amp; Fearless</span></div>
+      </a>
+
+      <a class="program" href="https://danielleronit.com/insidefreedom/">
+        <div>
+          <span class="program-kicker">Live Workshop</span>
+          <h2 class="program-title">Inside Freedom</h2>
+          <p class="program-text">A live workshop for inner clarity, release, and reconnection.</p>
+        </div>
+        <div class="program-action">Visit <span>Inside Freedom</span></div>
+      </a>
+
+      <a class="program" href="https://innersource.danielleronit.com">
+        <div>
+          <span class="program-kicker">12 Week Program</span>
+          <h2 class="program-title">Inner Source</h2>
+          <p class="program-text">A 12 week transformational program.</p>
+        </div>
+        <div class="program-action">Visit <span>Inner Source</span></div>
+      </a>
+    </section>
+
+    <footer>
+      <span>danielleronit.com</span>
+    </footer>
+  </main>
 </body>
 </html>
