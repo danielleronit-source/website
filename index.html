@@ -12,15 +12,18 @@
 
     :root {
       --ink: #241018;
+      --espresso: #190b0f;
       --plum: #341120;
       --rose: #b85a7a;
+      --rose-deep: #8c365b;
       --blush: #f8edf1;
       --cream: #fff9f3;
+      --shell: #fffdf9;
       --gold: #c79855;
       --green: #506d5a;
       --muted: #75636a;
       --line: rgba(36, 16, 24, 0.14);
-      --shadow: 0 22px 70px rgba(36, 16, 24, 0.12);
+      --shadow: 0 26px 80px rgba(36, 16, 24, 0.12);
     }
 
     html {
@@ -33,71 +36,119 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        linear-gradient(125deg, rgba(255,249,243,0.96), rgba(248,237,241,0.92)),
-        radial-gradient(circle at 12% 16%, rgba(184,90,122,0.22), transparent 28%),
-        radial-gradient(circle at 86% 78%, rgba(80,109,90,0.18), transparent 34%),
+        linear-gradient(120deg, rgba(255,253,249,0.94), rgba(249,237,241,0.94) 48%, rgba(246,239,226,0.9)),
+        radial-gradient(circle at 10% 14%, rgba(184,90,122,0.2), transparent 26%),
+        radial-gradient(circle at 86% 78%, rgba(80,109,90,0.16), transparent 34%),
         var(--cream);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    body::before {
+      width: 36vw;
+      height: 36vw;
+      min-width: 360px;
+      min-height: 360px;
+      right: -12vw;
+      top: -12vw;
+      border-radius: 50%;
+      border: 1px solid rgba(184,90,122,0.15);
+      box-shadow: inset 0 0 0 70px rgba(255,255,255,0.16);
+    }
+
+    body::after {
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(36,16,24,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(36,16,24,0.018) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.58), transparent 72%);
     }
 
     main {
-      width: min(1120px, calc(100% - 40px));
+      width: min(1160px, calc(100% - 48px));
       min-height: 100vh;
       margin: 0 auto;
-      padding: 56px 0;
+      padding: 68px 0 44px;
       display: grid;
       align-content: center;
-      gap: 40px;
+      gap: 46px;
     }
 
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.55fr);
-      gap: 40px;
-      align-items: end;
+      grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.55fr);
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      padding: 12px 0 4px;
+    }
+
+    .intro::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -18px;
+      width: 112px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--rose), transparent);
     }
 
     .eyebrow {
-      margin: 0 0 16px;
-      color: var(--rose);
+      margin: 0 0 18px;
+      color: var(--rose-deep);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 760px;
+      max-width: 720px;
       margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(3rem, 8vw, 6.4rem);
-      line-height: 0.95;
+      font-size: clamp(2.7rem, 7vw, 5.7rem);
+      line-height: 0.98;
       font-weight: 500;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.035em;
     }
 
     .intro p {
-      margin: 0 0 10px;
+      margin: 0;
       color: var(--muted);
-      font-size: clamp(1rem, 1.7vw, 1.15rem);
-      line-height: 1.75;
+      font-size: clamp(1rem, 1.45vw, 1.12rem);
+      line-height: 1.85;
+      padding: 24px 0 24px 28px;
+      border-left: 1px solid rgba(184,90,122,0.26);
     }
 
     .programs {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 22px;
     }
 
     .program {
       --accent: var(--rose);
       --accent-soft: rgba(184, 90, 122, 0.16);
       --accent-line: rgba(184, 90, 122, 0.34);
-      min-height: 360px;
-      padding: 28px;
+      --accent-glow: rgba(184, 90, 122, 0.12);
+      min-height: 430px;
+      padding: 32px;
       color: var(--ink);
-      background: rgba(255,255,255,0.72);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.88), rgba(255,249,251,0.7)),
+        var(--shell);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: var(--shadow);
       text-decoration: none;
       display: flex;
@@ -105,34 +156,37 @@
       justify-content: space-between;
       position: relative;
       overflow: hidden;
-      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      isolation: isolate;
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
     }
 
     .program::before {
       content: "";
       position: absolute;
       inset: 0;
-      border-top: 5px solid var(--accent);
+      border-top: 4px solid var(--accent);
       pointer-events: none;
     }
 
     .program::after {
       content: "";
       position: absolute;
-      width: 170px;
-      height: 170px;
-      right: -64px;
-      top: -64px;
+      width: 190px;
+      height: 190px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
       border: 1px solid var(--accent-line);
-      transform: rotate(18deg);
-      opacity: 0.7;
+      background: var(--accent-glow);
+      opacity: 0.78;
+      z-index: -1;
     }
 
     .program:hover,
     .program:focus-visible {
       border-color: var(--accent-line);
-      box-shadow: 0 28px 90px rgba(36, 16, 24, 0.18);
-      transform: translateY(-4px);
+      box-shadow: 0 34px 100px rgba(36, 16, 24, 0.18);
+      transform: translateY(-7px);
       outline: none;
     }
 
@@ -140,18 +194,28 @@
       --accent: var(--rose);
       --accent-soft: rgba(184, 90, 122, 0.16);
       --accent-line: rgba(184, 90, 122, 0.34);
+      --accent-glow: rgba(184, 90, 122, 0.13);
     }
 
     .program:nth-child(2) {
       --accent: var(--gold);
       --accent-soft: rgba(199, 152, 85, 0.16);
       --accent-line: rgba(199, 152, 85, 0.42);
+      --accent-glow: rgba(199, 152, 85, 0.14);
     }
 
     .program:nth-child(3) {
       --accent: var(--green);
       --accent-soft: rgba(80, 109, 90, 0.16);
       --accent-line: rgba(80, 109, 90, 0.38);
+      --accent-glow: rgba(80, 109, 90, 0.13);
+    }
+
+    .program:nth-child(4) {
+      --accent: var(--plum);
+      --accent-soft: rgba(52, 17, 32, 0.12);
+      --accent-line: rgba(52, 17, 32, 0.3);
+      --accent-glow: rgba(52, 17, 32, 0.1);
     }
 
     .program-kicker {
@@ -159,21 +223,21 @@
       width: fit-content;
       min-height: 34px;
       align-items: center;
-      padding: 7px 11px;
+      padding: 7px 12px;
       border: 1px solid var(--accent-line);
       background: var(--accent-soft);
       color: var(--accent);
       border-radius: 999px;
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .program-title {
-      margin: 42px 0 18px;
+      margin: 58px 0 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2rem, 3vw, 2.7rem);
+      font-size: clamp(2rem, 2.7vw, 2.85rem);
       line-height: 1.04;
       font-weight: 500;
       letter-spacing: -0.035em;
@@ -188,56 +252,114 @@
 
     .program-action {
       margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(36,16,24,0.1);
       color: var(--plum);
       font-size: 0.9rem;
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .program-action span {
       color: var(--accent);
     }
 
+    .program-action::after {
+      content: "→";
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fffdf9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: transform 220ms ease;
+    }
+
+    .program:hover .program-action::after,
+    .program:focus-visible .program-action::after {
+      transform: translateX(3px);
+    }
+
     footer {
       color: rgba(36, 16, 24, 0.52);
       font-size: 0.86rem;
+      padding-top: 2px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1040px) {
       main {
         align-content: start;
-        padding: 42px 0;
+        padding: 48px 0 34px;
+        gap: 34px;
       }
 
       .intro {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 22px;
+      }
+
+      .intro p {
+        max-width: 620px;
       }
 
       .programs {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
       }
 
       .program {
-        min-height: 260px;
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .programs {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 560px) {
+      body::before {
+        right: -220px;
+        top: -180px;
+      }
+
       main {
         width: min(100% - 28px, 1120px);
-        padding: 32px 0;
+        padding: 34px 0 28px;
         gap: 28px;
       }
 
+      .intro::before {
+        bottom: -8px;
+        width: 84px;
+      }
+
+      .intro p {
+        padding: 18px 0 18px 18px;
+      }
+
       .program {
-        min-height: 0;
+        min-height: 285px;
         padding: 24px;
       }
 
       .program-title {
-        margin-top: 34px;
+        margin-top: 44px;
+      }
+
+      .program-action {
+        align-items: flex-end;
       }
     }
   </style>
@@ -262,7 +384,7 @@
         <div class="program-action">Visit <span>Fluent &amp; Fearless</span></div>
       </a>
 
-      <a class="program" href="https://danielleronit.com/insidefreedom/">
+      <a class="program" href="https://innerfreedom.danielleronit.com/">
         <div>
           <span class="program-kicker">Live Workshop</span>
           <h2 class="program-title">Inside Freedom</h2>
@@ -278,6 +400,15 @@
           <p class="program-text">A 12 week transformational program.</p>
         </div>
         <div class="program-action">Visit <span>Inner Source</span></div>
+      </a>
+
+      <a class="program" href="https://www.danielleronit.com/IEMT">
+        <div>
+          <span class="program-kicker">Private Session</span>
+          <h2 class="program-title">IEMT</h2>
+          <p class="program-text">Private session with me.</p>
+        </div>
+        <div class="program-action">Visit <span>IEMT</span></div>
       </a>
     </section>
 
