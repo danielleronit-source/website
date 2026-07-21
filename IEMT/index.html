@@ -54,13 +54,15 @@
     <section id="what-is-iemt" class="text-section">
       <div class="narrow">
         <p class="eyebrow">What is IEMT?</p>
-        <h2>Integral Eye Movement Therapy</h2>
+        <h2>Integral Eye Movement Technique</h2>
         <p>IEMT is a practical method that uses guided eye movements, focused questions, and nervous system regulation to work with experiences from the past that are still affecting us today.</p>
         <p>When something difficult happens, especially when we do not have the support or resources to fully process it, the experience can remain emotionally active within us.</p>
         <p>Even years later, it may continue to influence our thoughts, emotions, beliefs, relationships, and automatic reactions.</p>
         <p>IEMT helps the brain update these past experiences, so they no longer create the same level of emotional intensity in the present.</p>
       </div>
     </section>
+
+    <section class="session-photo-band" aria-label="Danielle guiding an IEMT eye movement session"></section>
 
     <section class="image-band">
       <div class="narrow">
@@ -89,7 +91,7 @@
       </div>
     </section>
 
-    <section class="soft-section session-background">
+    <section class="soft-section">
       <div class="narrow center">
         <p class="eyebrow">What happens in a session?</p>
         <h2>A structured process, held gently.</h2>
@@ -126,6 +128,21 @@
         <p class="eyebrow">Real experiences</p>
         <h2>From people I’ve worked with</h2>
         <p>Everyone’s process is different, but many people notice meaningful changes in how they feel, react, and relate to the issue they came in with.</p>
+        <div class="quote-carousel" aria-label="Written testimonials">
+          <button class="quote-arrow quote-prev" type="button" aria-label="Previous testimonial">‹</button>
+          <div class="quote-slides">
+            <blockquote class="quote-slide is-active">
+              <p>"It's forcing me to have compassion for myself and understand why I am the way that I am and that it's not my fault."</p>
+            </blockquote>
+            <blockquote class="quote-slide">
+              <p>"A recent breakup was causing me a lot of anxiety and nervous system dysregulation. A friend recommended Danielle as a mentor and guide to support me through my healing journey. After only two sessions, I've noticed I feel more in tune with myself. My emotions feel less overwhelming, and I'm not as easily controlled by them. It's been a grounding and supportive experience so far, and I'm looking forward to continuing."</p>
+            </blockquote>
+            <blockquote class="quote-slide">
+              <p>"After just one session, I felt such a noticeable shift. Danielle helped me get to the core of where that feeling came from and how deeply that belief had been living inside of me. Immediately afterward, I felt such a deep sense of peace and calm, and that shift continued to show up in the days after."</p>
+            </blockquote>
+          </div>
+          <button class="quote-arrow quote-next" type="button" aria-label="Next testimonial">›</button>
+        </div>
         <div class="video-grid" aria-label="Video testimonials">
           <div class="video-card">
             <iframe src="https://www.youtube.com/embed/w8qCvP4GhTQ?origin=https%3A%2F%2Fdanielleronit.com&rel=0" title="IEMT video testimonial 1" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -169,5 +186,25 @@
     <span>Danielle Ronit</span>
     <a href="mailto:danielleronit@gmail.com">danielleronit@gmail.com</a>
   </footer>
+  <script>
+    const carousel = document.querySelector(".quote-carousel");
+
+    if (carousel) {
+      const slides = Array.from(carousel.querySelectorAll(".quote-slide"));
+      const previous = carousel.querySelector(".quote-prev");
+      const next = carousel.querySelector(".quote-next");
+      let activeIndex = 0;
+
+      const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          slide.classList.toggle("is-active", slideIndex === activeIndex);
+        });
+      };
+
+      previous.addEventListener("click", () => showSlide(activeIndex - 1));
+      next.addEventListener("click", () => showSlide(activeIndex + 1));
+    }
+  </script>
 </body>
 </html>
