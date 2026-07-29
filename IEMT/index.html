@@ -83,6 +83,7 @@
         <div>
           <p class="eyebrow">Why I offer this work</p>
           <h2>This work changed my life.</h2>
+          <p class="credential">Certified IEMT Practitioner</p>
           <p>I discovered IEMT after struggling with PTSD-related nightmares for two years, along with a period of severe sleep difficulties.</p>
           <p>After just one IEMT session, the nightmares stopped, and I was finally able to sleep again.</p>
           <p>That experience changed my life. The shift was so significant that I decided to study the method, become a certified IEMT practitioner, and begin offering sessions to others.</p>
@@ -172,6 +173,80 @@
       </div>
     </section>
 
+    <section class="faq-section">
+      <div class="faq-wrap">
+        <p class="eyebrow">Frequently Asked Questions</p>
+        <h2>Questions you might have before booking</h2>
+
+        <details class="faq-item">
+          <summary>What is the difference between EMDR and IEMT?</summary>
+          <div class="faq-answer">
+            <p>EMDR and IEMT are often compared because they both use eye movements, but they are very different methods.</p>
+            <p>EMDR usually focuses on a specific traumatic or distressing memory. During the process, you bring the memory to mind and work with the emotions, thoughts, beliefs, and physical sensations connected to it. EMDR may use eye movements, alternating hand taps, or sounds.</p>
+            <p>IEMT can also begin with a specific memory, but it may begin with an emotion, reaction, repeating pattern, or area where you feel stuck.</p>
+            <p>During IEMT, several connected memories and associations may naturally come up. Depending on the situation, this can bring greater clarity, self-understanding, or compassion. In other situations, it may create more distance from the memory, so it no longer has the same emotional effect in the present.</p>
+            <p>IEMT can also work with identity-level beliefs about ourselves and the world, including the unconscious conclusions we may have formed from past experiences.</p>
+            <p>You do not need to retell the entire story or share every detail out loud. IEMT uses specific eye-movement patterns to help reduce the emotional intensity connected to memories, beliefs, and patterns, so they have less influence over how you feel and react today.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What can I work on in an IEMT session?</summary>
+          <div class="faq-answer">
+            <p>IEMT can be used to work with many different emotional patterns and automatic reactions, including:</p>
+            <ul>
+              <li>Anxiety, fear, or emotional triggers</li>
+              <li>Difficult or distressing memories</li>
+              <li>Repetitive or obsessive thoughts</li>
+              <li>Sleep difficulties or insomnia connected to stress, anxiety, or emotional activation</li>
+              <li>Procrastination and avoidance</li>
+              <li>Low confidence or fear of judgment</li>
+              <li>Relationship patterns</li>
+              <li>Feelings of shame, guilt, anger, or rejection</li>
+              <li>Feeling emotionally stuck</li>
+              <li>Reactions that feel stronger than the present situation</li>
+              <li>Patterns you understand logically but still struggle to change</li>
+            </ul>
+            <p>You do not need to have experienced a major traumatic event to benefit from this work.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do I need to know where the problem started?</summary>
+          <div class="faq-answer">
+            <p>No. You do not need to know why you feel the way you do or which memory originally created the pattern.</p>
+            <p>We can begin with what is happening in your life now, such as an emotion, reaction, fear, thought, physical sensation, or recurring situation.</p>
+            <p>As we work, relevant memories and connections may naturally emerge. Sometimes these are experiences you had not consciously connected to the current issue.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can IEMT be done online?</summary>
+          <div class="faq-answer">
+            <p>Yes. IEMT can be done online through Zoom.</p>
+            <p>For an online session, you will need:</p>
+            <ul>
+              <li>A computer rather than a phone</li>
+              <li>A stable internet connection</li>
+              <li>A quiet and private space</li>
+              <li>A camera positioned at eye level</li>
+              <li>Enough lighting for me to clearly see your face and eye movements</li>
+            </ul>
+            <p>Sessions are available in English or Hebrew.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is IEMT hypnosis?</summary>
+          <div class="faq-answer">
+            <p>No. IEMT is not hypnosis.</p>
+            <p>You remain awake, aware, and in control throughout the entire session. You can speak, ask questions, pause, or stop at any time.</p>
+            <p>The eye movements are used while you consciously notice certain emotions, memories, thoughts, or physical sensations. You will remember the session and everything that happens during it.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
     <section class="closing">
       <div class="narrow center">
         <p class="eyebrow">Curious whether IEMT could support you?</p>
@@ -180,10 +255,12 @@
         <a class="button" href="https://wa.me/972586783575">Message me on WhatsApp</a>
       </div>
     </section>
+
   </main>
 
   <footer>
     <span>Danielle Ronit</span>
+    <span>Certified IEMT Practitioner</span>
     <a href="mailto:danielleronit@gmail.com">danielleronit@gmail.com</a>
   </footer>
   <script>
@@ -205,6 +282,20 @@
       previous.addEventListener("click", () => showSlide(activeIndex - 1));
       next.addEventListener("click", () => showSlide(activeIndex + 1));
     }
+
+    const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+
+    faqItems.forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.open = false;
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
