@@ -249,6 +249,10 @@ section {
   background: var(--paper);
 }
 
+.session-details-section {
+  background: #eadfd4;
+}
+
 .section-grid {
   width: min(1040px, 100%);
   margin: 0 auto;
@@ -622,6 +626,53 @@ p {
     url("../assets/media/iemt-silk-hero.png") center / cover no-repeat;
 }
 
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 20;
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.floating-whatsapp-label {
+  max-width: 104px;
+  color: rgba(47, 41, 37, .74);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.floating-whatsapp-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, .28);
+  color: #fff;
+  line-height: 1;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.floating-whatsapp-icon svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  fill: currentColor;
+}
+
+.floating-whatsapp:hover .floating-whatsapp-icon,
+.floating-whatsapp:focus-visible .floating-whatsapp-icon {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(37, 211, 102, .34);
+}
+
 footer {
   padding: 36px 24px;
   display: flex;
@@ -788,5 +839,20 @@ html[dir="rtl"] .faq-item summary::after {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+  }
+
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .floating-whatsapp-label {
+    max-width: 92px;
+    font-size: 9px;
+  }
+
+  .floating-whatsapp-icon {
+    width: 46px;
+    height: 46px;
   }
 }
