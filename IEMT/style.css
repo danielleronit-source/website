@@ -253,6 +253,10 @@ section {
   background: #eadfd4;
 }
 
+.first-session-section {
+  background: #f7f1ea;
+}
+
 .section-grid {
   width: min(1040px, 100%);
   margin: 0 auto;
@@ -408,12 +412,41 @@ p {
   box-shadow: 0 18px 42px rgba(70, 54, 45, .08);
 }
 
-.testimonial-section {
+.about-section {
   background: #e8ddd2;
 }
 
-.center-credential {
-  margin: 0 auto 24px;
+.testimonial-section {
+  background: var(--paper);
+}
+
+.social-proof-carousel {
+  width: min(1040px, 100%);
+  margin: 44px auto 0;
+  position: relative;
+}
+
+.social-proof-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.social-proof-arrow {
+  display: none;
+}
+
+.social-proof-gallery img {
+  width: 100%;
+  height: 240px;
+  display: block;
+  object-fit: cover;
+  border: 1px solid rgba(70, 54, 45, .14);
+  box-shadow: 0 18px 42px rgba(70, 54, 45, .08);
+}
+
+.social-proof-gallery img:nth-child(1) {
+  object-position: 50% 42%;
 }
 
 .video-grid {
@@ -778,6 +811,49 @@ html[dir="rtl"] .faq-item summary::after {
   .video-grid,
   .screenshot-grid {
     grid-template-columns: 1fr;
+  }
+
+  .social-proof-carousel {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .social-proof-gallery {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .social-proof-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .social-proof-gallery img {
+    flex: 0 0 100%;
+    height: auto;
+    max-height: none;
+    scroll-snap-align: center;
+  }
+
+  .social-proof-arrow {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: rgba(255, 253, 249, .62);
+    color: var(--ink);
+    cursor: pointer;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 28px;
   }
 
   .quote-carousel {

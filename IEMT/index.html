@@ -111,18 +111,6 @@
       <p class="center session-note">You remain conscious, present, and in control throughout the session.</p>
     </section>
 
-    <section class="text-section">
-      <div class="narrow">
-        <p class="eyebrow">How this helps you</p>
-        <h2>You do not have to explain everything for the work to go deep.</h2>
-        <ul class="clean-list">
-          <li><strong>Work Without Re-Telling:</strong> You don’t have to know all the details of what happened. My method hones in on the feelings and body sensations in the present, safely unlocking past hurts as needed.</li>
-          <li><strong>Deep, Lasting Change:</strong> By combining IEMT and IFS, we not only clear emotional imprinting but also strengthen your inner leadership (your “Self” energy) to prevent old patterns from returning.</li>
-          <li><strong>Nervous System Care:</strong> Every step is gentle. We pause for breathing and grounding so you feel comfortable. Afterward, many clients report feeling lighter, more peaceful, and free from that stuck sensation.</li>
-        </ul>
-      </div>
-    </section>
-
     <section class="text-section session-details-section">
       <div class="narrow">
         <p class="eyebrow">Session details</p>
@@ -136,7 +124,7 @@
       </div>
     </section>
 
-    <section class="soft-section">
+    <section class="soft-section first-session-section">
       <div class="narrow">
         <p class="eyebrow">Your first session</p>
         <h2>Warm, private, and guided at your pace.</h2>
@@ -150,13 +138,30 @@
       </div>
     </section>
 
+    <section class="about-section">
+      <div class="narrow center">
+        <p class="eyebrow">About Danielle</p>
+        <h2>Intuitive support shaped by training, practice, and lived experience.</h2>
+        <p>I am Danielle Ronit, a <strong>certified IEMT practitioner</strong> with additional training in <strong>Trauma Aware Facilitation</strong>, <strong>NLP and coaching</strong>, and <strong>inner child and reparenting work</strong>. I am also a yoga teacher and Reiki practitioner, with years of experience facilitating <strong>women's circles</strong>, <strong>self-development workshops</strong>, <strong>personal growth containers</strong> online and in person, and teaching and guiding different kinds of <strong>meditation</strong>.</p>
+        <p>The way I work has become very intuitive over time. These trainings and experiences gave me a strong foundation, but they are not just tools I use with clients. They are tools I have spent years using on myself, alongside years of meditation and self-healing. This has made me very in tune with myself and with the people I work with. Over time, it has naturally evolved into my own way of working, bringing together IEMT, somatics, trauma-informed support, and inner child work in whatever way feels most supportive for the person I am working with.</p>
+        <p>I became an IEMT practitioner after IEMT helped me overcome PTSD-related nightmares in just one session. Since then, I have seen this hybrid work create deep shifts for many clients. Results vary from person to person.</p>
+        <div class="social-proof-carousel" aria-label="Facilitation and women's circle photos">
+          <button class="social-proof-arrow social-proof-prev" type="button" aria-label="Previous photo">‹</button>
+          <div class="social-proof-gallery">
+            <img src="../assets/media/social-proof/facilitation-room.jpeg" alt="Danielle facilitating a personal growth workshop">
+            <img src="../assets/media/social-proof/womens-circle-group.jpeg" alt="Women's circle gathering with Danielle">
+            <img src="../assets/media/social-proof/meditation-circle-pool.jpg" alt="Danielle guiding a meditation circle">
+            <img src="../assets/media/social-proof/waterfall-growth-circle.jpg" alt="Women's growth circle sitting together by water">
+          </div>
+          <button class="social-proof-arrow social-proof-next" type="button" aria-label="Next photo">›</button>
+        </div>
+      </div>
+    </section>
+
     <section class="testimonial-section">
       <div class="narrow center">
-        <p class="eyebrow">Trust and real experiences</p>
-        <h2>Certified support, personal experience, and client feedback.</h2>
-        <p class="credential center-credential">Certified IEMT Practitioner</p>
-        <p>I am Danielle Ronit, a certified IEMT practitioner and trauma-awareness coach. I am also a yoga teacher and Reiki practitioner, and I bring these skills together in a warm, intuitive way.</p>
-        <p>I became a practitioner after IEMT helped me overcome PTSD-related nightmares in just one session. Since then, I have seen this hybrid work create deep shifts for many clients. Results vary from person to person.</p>
+        <p class="eyebrow">Client feedback</p>
+        <h2>Real experiences from people I have worked with.</h2>
         <div class="quote-carousel" aria-label="Written testimonials">
           <button class="quote-arrow quote-prev" type="button" aria-label="Previous testimonial">‹</button>
           <div class="quote-slides">
@@ -299,7 +304,9 @@
         <details class="faq-item">
           <summary>Are you a licensed therapist?</summary>
           <div class="faq-answer">
-            <p>I am a certified IEMT practitioner and trained in parts work and somatic methods. My background includes Trauma Awareness Practitioner Training, NLP Practitioner Certification, yoga teacher training, and Reiki practitioner training.</p>
+            <p>I am a certified IEMT practitioner with additional training in Trauma Aware Facilitation, NLP and coaching, and inner child and reparenting work. I am also a yoga teacher and Reiki practitioner.</p>
+            <p>I have years of experience facilitating women's circles, self-development workshops, personal growth containers online and in person, and teaching and guiding different kinds of meditation.</p>
+            <p>My work is not a rigid formula. The trainings and years of using these tools in my own life, meditation, and self-healing have shaped a more intuitive approach. This has made me very in tune with myself and with the people I work with, bringing together IEMT, somatics, trauma-informed support, and inner child work in whatever way feels most supportive.</p>
             <p>I always follow ethical guidelines, work within my scope, and refer out when needed.</p>
           </div>
         </details>
@@ -351,6 +358,24 @@
 
       previous.addEventListener("click", () => showSlide(activeIndex - 1));
       next.addEventListener("click", () => showSlide(activeIndex + 1));
+    }
+
+    const socialProofCarousel = document.querySelector(".social-proof-carousel");
+
+    if (socialProofCarousel) {
+      const gallery = socialProofCarousel.querySelector(".social-proof-gallery");
+      const previous = socialProofCarousel.querySelector(".social-proof-prev");
+      const next = socialProofCarousel.querySelector(".social-proof-next");
+
+      const scrollPhotos = (direction) => {
+        gallery.scrollBy({
+          left: direction * gallery.clientWidth,
+          behavior: "smooth"
+        });
+      };
+
+      previous.addEventListener("click", () => scrollPhotos(-1));
+      next.addEventListener("click", () => scrollPhotos(1));
     }
 
     const faqItems = Array.from(document.querySelectorAll(".faq-item"));
