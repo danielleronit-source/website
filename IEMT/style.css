@@ -160,6 +160,16 @@ h1 {
   transform: translateY(-2px);
 }
 
+.hero-portrait {
+  display: block;
+  width: min(520px, 86vw);
+  margin: 46px auto 0;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid rgba(47, 41, 37, .18);
+}
+
 section {
   padding: 98px 24px;
 }
@@ -274,26 +284,18 @@ p {
   align-items: center;
 }
 
-.portrait-wrap {
-  width: min(420px, 100%);
+.about-photo-wrap {
+  width: min(460px, 100%);
   margin: 0 auto;
-  position: relative;
 }
 
-.portrait-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 22px -22px -22px 22px;
-  border: 1px solid var(--line);
-}
-
-.portrait-wrap img {
-  position: relative;
+.about-photo-wrap img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center;
+  border: 1px solid rgba(47, 41, 37, .18);
 }
 
 .process-grid {
