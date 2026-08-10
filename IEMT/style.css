@@ -160,30 +160,6 @@ h1 {
   transform: translateY(-2px);
 }
 
-.button-note {
-  margin: 16px auto 0;
-  color: rgba(47, 41, 37, .7);
-  font-size: 15px;
-}
-
-.button-note strong {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.hero-inline-photo {
-  width: min(420px, 100%);
-  margin: 34px auto 0;
-}
-
-.hero-inline-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba(70, 54, 45, .14);
-  box-shadow: 0 18px 42px rgba(70, 54, 45, .08);
-}
-
 section {
   padding: 98px 24px;
 }
@@ -195,29 +171,6 @@ section {
 
 .center {
   text-align: center;
-}
-
-.concise-page section {
-  padding: 84px 24px;
-}
-
-.concise-page .hero {
-  min-height: 720px;
-}
-
-.concise-page .narrow {
-  width: min(820px, 100%);
-}
-
-.concise-page h1 {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: clamp(52px, 7vw, 96px);
-}
-
-.concise-page .section-grid {
-  grid-template-columns: 1fr;
-  gap: 28px;
 }
 
 .intro {
@@ -247,14 +200,6 @@ section {
 
 .text-section {
   background: var(--paper);
-}
-
-.session-details-section {
-  background: #eadfd4;
-}
-
-.first-session-section {
-  background: #f7f1ea;
 }
 
 .section-grid {
@@ -383,70 +328,8 @@ p {
   line-height: 1.2;
 }
 
-.one-session-video {
-  background: var(--sand-soft);
-}
-
-.one-session-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 34px;
-  align-items: center;
-}
-
-.one-session-video .small {
-  margin: 8px 0 0;
-}
-
-.short-video-card {
-  width: min(330px, 100%);
-  margin: 0 auto;
-}
-
-.short-video-card iframe {
-  display: block;
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  border: 1px solid var(--line);
-  background: rgba(255, 253, 249, .44);
-  box-shadow: 0 18px 42px rgba(70, 54, 45, .08);
-}
-
-.about-section {
-  background: #e8ddd2;
-}
-
 .testimonial-section {
-  background: var(--paper);
-}
-
-.social-proof-carousel {
-  width: min(1040px, 100%);
-  margin: 44px auto 0;
-  position: relative;
-}
-
-.social-proof-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.social-proof-arrow {
-  display: none;
-}
-
-.social-proof-gallery img {
-  width: 100%;
-  height: 240px;
-  display: block;
-  object-fit: cover;
-  border: 1px solid rgba(70, 54, 45, .14);
-  box-shadow: 0 18px 42px rgba(70, 54, 45, .08);
-}
-
-.social-proof-gallery img:nth-child(1) {
-  object-position: 50% 42%;
+  background: #e8ddd2;
 }
 
 .video-grid {
@@ -659,53 +542,6 @@ p {
     url("../assets/media/iemt-silk-hero.png") center / cover no-repeat;
 }
 
-.floating-whatsapp {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  z-index: 20;
-  display: grid;
-  justify-items: center;
-  gap: 5px;
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.floating-whatsapp-label {
-  max-width: 104px;
-  color: rgba(47, 41, 37, .74);
-  font-size: 10px;
-  font-weight: 400;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.floating-whatsapp-icon {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #25d366;
-  box-shadow: 0 12px 28px rgba(37, 211, 102, .28);
-  color: #fff;
-  line-height: 1;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.floating-whatsapp-icon svg {
-  width: 28px;
-  height: 28px;
-  display: block;
-  fill: currentColor;
-}
-
-.floating-whatsapp:hover .floating-whatsapp-icon,
-.floating-whatsapp:focus-visible .floating-whatsapp-icon {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(37, 211, 102, .34);
-}
-
 footer {
   padding: 36px 24px;
   display: flex;
@@ -716,70 +552,7 @@ footer {
 }
 
 footer a {
-  color: var(--ink);
-  font-weight: 400;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
-}
-
-footer a:hover,
-footer a:focus-visible {
-  color: rgba(47, 41, 37, .86);
-  text-decoration-thickness: 2px;
-}
-
-html[dir="rtl"] body {
-  direction: rtl;
-  font-family: "Noto Sans Hebrew", Arial, sans-serif;
-}
-
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] .brand,
-html[dir="rtl"] .intro p,
-html[dir="rtl"] .session-note,
-html[dir="rtl"] .quote-slide p,
-html[dir="rtl"] .faq-item summary {
-  font-family: "Noto Serif Hebrew", "Noto Sans Hebrew", serif;
-  letter-spacing: 0;
-}
-
-html[dir="rtl"] .kicker,
-html[dir="rtl"] .eyebrow,
-html[dir="rtl"] .credential,
-html[dir="rtl"] .button,
-html[dir="rtl"] .nav-cta {
-  letter-spacing: .04em;
-}
-
-html[dir="rtl"] .clean-list li,
-html[dir="rtl"] .faq-item li {
-  padding-left: 0;
-}
-
-html[dir="rtl"] .clean-list li {
-  padding-right: 31px;
-}
-
-html[dir="rtl"] .faq-item li {
-  padding-right: 28px;
-}
-
-html[dir="rtl"] .clean-list li::before,
-html[dir="rtl"] .faq-item li::before {
-  left: auto;
-  right: 0;
-}
-
-html[dir="rtl"] .faq-item summary {
-  padding-right: 0;
-  padding-left: 54px;
-}
-
-html[dir="rtl"] .faq-item summary::after {
-  right: auto;
-  left: 0;
+  text-decoration: none;
 }
 
 @media (max-width: 820px) {
@@ -791,12 +564,6 @@ html[dir="rtl"] .faq-item summary::after {
   .hero {
     min-height: 690px;
     padding: 118px 22px 72px;
-    text-align: center;
-  }
-
-  .hero-copy {
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .session-photo-band {
@@ -811,49 +578,6 @@ html[dir="rtl"] .faq-item summary::after {
   .video-grid,
   .screenshot-grid {
     grid-template-columns: 1fr;
-  }
-
-  .social-proof-carousel {
-    display: grid;
-    grid-template-columns: 36px minmax(0, 1fr) 36px;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .social-proof-gallery {
-    display: flex;
-    gap: 0;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-
-  .social-proof-gallery::-webkit-scrollbar {
-    display: none;
-  }
-
-  .social-proof-gallery img {
-    flex: 0 0 100%;
-    height: auto;
-    max-height: none;
-    scroll-snap-align: center;
-  }
-
-  .social-proof-arrow {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    place-items: center;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    background: rgba(255, 253, 249, .62);
-    color: var(--ink);
-    cursor: pointer;
-    font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: 30px;
-    font-weight: 300;
-    line-height: 28px;
   }
 
   .quote-carousel {
@@ -915,20 +639,5 @@ html[dir="rtl"] .faq-item summary::after {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-  }
-
-  .floating-whatsapp {
-    right: 14px;
-    bottom: 14px;
-  }
-
-  .floating-whatsapp-label {
-    max-width: 92px;
-    font-size: 9px;
-  }
-
-  .floating-whatsapp-icon {
-    width: 46px;
-    height: 46px;
   }
 }
