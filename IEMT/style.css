@@ -54,6 +54,29 @@ a {
   text-decoration: none;
 }
 
+.page-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 2.4vw, 30px);
+  color: rgba(47, 41, 37, .72);
+  font-size: 12px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.page-tabs a {
+  text-decoration: none;
+}
+
+.page-tabs a:hover,
+.page-tabs a:focus-visible,
+footer a:hover,
+footer a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .nav-cta {
   padding: 7px 22px;
   border: 1px solid rgba(47, 41, 37, .38);
@@ -62,6 +85,12 @@ a {
   letter-spacing: .16em;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+#what-is-iemt,
+#about-me,
+#testimonials {
+  scroll-margin-top: 24px;
 }
 
 .hero {
@@ -561,11 +590,20 @@ footer a {
   .quiet-nav {
     min-height: 72px;
     padding: 22px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .page-tabs {
+    order: 3;
+    width: 100%;
+    gap: 16px;
+    font-size: 11px;
   }
 
   .hero {
     min-height: 690px;
-    padding: 118px 22px 72px;
+    padding: 148px 22px 72px;
   }
 
   .session-photo-band {
@@ -612,6 +650,13 @@ footer a {
   .nav-cta {
     padding: 6px 14px;
     font-size: 11px;
+  }
+
+  .page-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    white-space: nowrap;
   }
 
   h1 {
