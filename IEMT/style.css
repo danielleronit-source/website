@@ -28,6 +28,11 @@ body {
   line-height: 1.7;
 }
 
+html[dir="rtl"] body {
+  direction: rtl;
+  font-family: "Noto Sans Hebrew", Arial, sans-serif;
+}
+
 a {
   color: inherit;
 }
@@ -149,6 +154,24 @@ h2 {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-weight: 300;
   letter-spacing: .02em;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] .intro p,
+html[dir="rtl"] .quote-slide p,
+html[dir="rtl"] .session-note,
+html[dir="rtl"] .faq-item summary {
+  font-family: "Noto Serif Hebrew", Georgia, serif;
+}
+
+html[dir="rtl"] .kicker,
+html[dir="rtl"] .eyebrow,
+html[dir="rtl"] .page-tabs,
+html[dir="rtl"] .button,
+html[dir="rtl"] .video-card h3 {
+  letter-spacing: .04em;
+  text-transform: none;
 }
 
 h1 {
@@ -289,6 +312,11 @@ p {
   font-size: 19px;
 }
 
+html[dir="rtl"] .clean-list li {
+  padding-right: 31px;
+  padding-left: 0;
+}
+
 .clean-list li::before {
   content: "";
   position: absolute;
@@ -298,6 +326,11 @@ p {
   height: 11px;
   border: 1px solid var(--clay);
   border-radius: 50%;
+}
+
+html[dir="rtl"] .clean-list li::before {
+  right: 0;
+  left: auto;
 }
 
 .image-band {
@@ -372,6 +405,10 @@ p {
   text-align: left;
 }
 
+html[dir="rtl"] .video-grid {
+  text-align: right;
+}
+
 .video-card h3 {
   margin: 0 0 10px;
   color: rgba(47, 41, 37, .78);
@@ -421,6 +458,14 @@ p {
   grid-template-columns: 42px minmax(0, 1fr) 42px;
   gap: 12px;
   align-items: center;
+}
+
+html[dir="rtl"] .quote-carousel {
+  direction: ltr;
+}
+
+html[dir="rtl"] .quote-slide {
+  direction: rtl;
 }
 
 .quote-slides {
@@ -517,6 +562,11 @@ p {
   list-style: none;
 }
 
+html[dir="rtl"] .faq-item summary {
+  padding-right: 0;
+  padding-left: 54px;
+}
+
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
@@ -537,6 +587,11 @@ p {
   line-height: 1;
   transform: translateY(-50%);
   transition: transform 180ms ease, background 180ms ease;
+}
+
+html[dir="rtl"] .faq-item summary::after {
+  right: auto;
+  left: 0;
 }
 
 .faq-item[open] summary::after {
@@ -567,6 +622,11 @@ p {
   font-size: 18px;
 }
 
+html[dir="rtl"] .faq-item li {
+  padding-right: 28px;
+  padding-left: 0;
+}
+
 .faq-item li::before {
   content: "";
   position: absolute;
@@ -576,6 +636,11 @@ p {
   height: 9px;
   border: 1px solid var(--clay);
   border-radius: 50%;
+}
+
+html[dir="rtl"] .faq-item li::before {
+  right: 0;
+  left: auto;
 }
 
 .closing {
