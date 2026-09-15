@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ריטריטים וחוויות לנשים בקופנגן | Danielle Ronit</title>
+  <meta name="description" content="מפגשים, סדנאות וריטריטים אינטימיים לנשים ישראליות בקופנגן - חיבור, טבע, תנועה, עבודת עומק עדינה וקהילה נשית.">
+  <link rel="canonical" href="https://danielleronit.com/retreats/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canopy: #123629;
+      --jungle: #275744;
+      --leaf: #6f8d62;
+      --moss: #d7dfc5;
+      --cream: #fff8ec;
+      --shell: #fffdf7;
+      --sand: #e7d2ac;
+      --cacao: #6c4631;
+      --earth: #9a6f4f;
+      --rose: #c98078;
+      --rose-soft: #f3d8d2;
+      --petal: #fff1ec;
+      --gold: #c69b4f;
+      --ink: #21332b;
+      --muted: #6a766f;
+      --line: rgba(39, 87, 68, 0.18);
+      --shadow: 0 24px 70px rgba(18, 54, 41, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255, 248, 236, 0.96), rgba(255, 253, 247, 0.98) 32%, rgba(243, 216, 210, 0.2) 62%, rgba(232, 218, 189, 0.24)),
+        var(--cream);
+      font-family: "Assistant", "Heebo", Arial, sans-serif;
+      line-height: 1.7;
+      text-align: right;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.32;
+      background-image:
+        linear-gradient(rgba(18, 54, 41, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(18, 54, 41, 0.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, #000, transparent 72%);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .site-nav {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0;
+      color: var(--shell);
+    }
+
+    .brand {
+      font-family: "Heebo", "Assistant", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 180ms ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+      color: var(--shell);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+    }
+
+    .hero-media img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(18, 54, 41, 0.18), rgba(18, 54, 41, 0.62) 54%, rgba(18, 54, 41, 0.72)),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.32), rgba(18, 54, 41, 0.25) 42%, rgba(18, 54, 41, 0.9));
+    }
+
+    .hero-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 150px 0 88px;
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: rgba(255, 253, 247, 0.82);
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Heebo", "Assistant", Arial, sans-serif;
+      letter-spacing: 0;
+      line-height: 1.08;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 6.35rem);
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: rgba(255, 253, 247, 0.9);
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      line-height: 1.68;
+    }
+
+    .hero-actions,
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--rose), var(--gold));
+      color: #1c2c25;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(108, 70, 49, 0.18);
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, #d6958e, #d9ad60);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 253, 247, 0.12);
+      border-color: rgba(255, 253, 247, 0.58);
+      color: var(--shell);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn.light {
+      background: var(--shell);
+      color: var(--canopy);
+      box-shadow: none;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border-color: rgba(255, 253, 247, 0.62);
+      color: var(--shell);
+      box-shadow: none;
+    }
+
+    section {
+      position: relative;
+      padding: 86px 0;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: #ad7467;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--canopy);
+      font-size: clamp(2.05rem, 4.6vw, 4.05rem);
+      font-weight: 800;
+    }
+
+    .lead {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.06rem, 1.65vw, 1.22rem);
+    }
+
+    .intro {
+      background:
+        linear-gradient(180deg, #fffdf7 0%, var(--petal) 46%, #fbf3e6 100%);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
+      gap: clamp(34px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .intro-card {
+      position: relative;
+      padding: clamp(30px, 5vw, 58px) clamp(24px, 4.6vw, 50px);
+      border-block: 1px solid rgba(39, 87, 68, 0.16);
+      background:
+        linear-gradient(90deg, rgba(201, 128, 120, 0.13), transparent 24%),
+        rgba(255, 253, 247, 0.56);
+    }
+
+    .intro-card p {
+      position: relative;
+      margin: 0 0 18px;
+      color: #33463d;
+      font-size: 1.12rem;
+      line-height: 1.82;
+    }
+
+    .intro-card .section-title {
+      max-width: 720px;
+      font-size: clamp(2.35rem, 4.7vw, 4.3rem);
+    }
+
+    .intro-photo {
+      position: relative;
+      min-height: 560px;
+      margin: 0;
+      border: 1px solid rgba(255, 253, 247, 0.82);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 30px 90px rgba(18, 54, 41, 0.18);
+      background: var(--moss);
+    }
+
+    .intro-photo::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(255, 253, 247, 0.62);
+      pointer-events: none;
+    }
+
+    .intro-photo img {
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(1.12) contrast(1.07) brightness(1.04);
+    }
+
+    .experiences {
+      background:
+        linear-gradient(180deg, rgba(215, 223, 197, 0.44), rgba(255, 241, 236, 0.58) 52%, rgba(255, 248, 236, 0.88)),
+        var(--cream);
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .experience-card {
+      display: flex;
+      min-height: 100%;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(18, 54, 41, 0.16);
+      border-radius: 8px;
+      background: linear-gradient(180deg, var(--shell), #fff7ef);
+      box-shadow: 0 18px 54px rgba(18, 54, 41, 0.11);
+    }
+
+    .experience-card.featured {
+      transform: translateY(-12px);
+      border-color: rgba(201, 128, 120, 0.5);
+      background: linear-gradient(180deg, #fffdf7, #fff0e8 46%, #fbf0dd);
+    }
+
+    .experience-card.featured .card-image img {
+      filter: saturate(1.15) contrast(1.08) brightness(1.04);
+    }
+
+    .experience-card.color-enhanced .card-image img {
+      filter: saturate(1.15) contrast(1.08) brightness(1.04);
+    }
+
+    .card-image {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--moss);
+    }
+
+    .card-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+
+    .experience-card:hover .card-image img {
+      transform: scale(1.035);
+    }
+
+    .badge {
+      position: absolute;
+      inset: 16px 16px auto auto;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 241, 236, 0.93);
+      color: var(--canopy);
+      font-size: 0.9rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .card-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 26px;
+    }
+
+    .card-body h3 {
+      margin: 0 0 8px;
+      color: var(--canopy);
+      font-size: 1.9rem;
+      font-weight: 800;
+    }
+
+    .duration {
+      margin: 0 0 18px;
+      color: var(--earth);
+      font-weight: 700;
+    }
+
+    .card-body p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .clean-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: auto 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .clean-list li {
+      padding: 6px 10px;
+      border: 1px solid rgba(201, 128, 120, 0.24);
+      border-radius: 999px;
+      background: rgba(255, 241, 236, 0.58);
+      color: var(--jungle);
+      font-size: 0.94rem;
+      line-height: 1.3;
+    }
+
+    .story {
+      background:
+        linear-gradient(180deg, var(--shell), rgba(255, 241, 236, 0.55)),
+        var(--shell);
+      overflow: hidden;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      grid-auto-rows: 210px;
+      gap: 14px;
+    }
+
+    .story-photo {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      border-radius: 8px;
+      background: var(--moss);
+      box-shadow: 0 16px 42px rgba(18, 54, 41, 0.1);
+    }
+
+    .story-photo:nth-child(1) {
+      grid-row: span 2;
+      border-radius: 120px 8px 8px 8px;
+    }
+
+    .story-photo:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .story-photo img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-photo.color-enhanced img {
+      filter: saturate(1.14) contrast(1.07) brightness(1.04);
+    }
+
+    .story-photo.nature-crop img {
+      object-position: center 60%;
+      filter: saturate(1.16) contrast(1.08) brightness(1.04);
+    }
+
+    .story-photo span {
+      position: absolute;
+      inset: auto 14px 14px auto;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(64, 45, 38, 0.72);
+      color: var(--shell);
+      font-size: 0.92rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .about {
+      background:
+        linear-gradient(90deg, rgba(73, 57, 45, 0.32), transparent 46%),
+        linear-gradient(90deg, rgba(39, 87, 68, 0.95), rgba(18, 54, 41, 0.98)),
+        var(--canopy);
+      color: var(--shell);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+      gap: 54px;
+      align-items: center;
+    }
+
+    .portrait {
+      overflow: hidden;
+      margin: 0;
+      border: 10px solid rgba(255, 241, 236, 0.17);
+      border-radius: 8px 150px 8px 8px;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+    }
+
+    .portrait img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .about .eyebrow,
+    .about .section-title,
+    .about p {
+      color: var(--shell);
+    }
+
+    .about p {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: rgba(255, 253, 247, 0.83);
+      font-size: 1.08rem;
+    }
+
+    .method-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 24px;
+    }
+
+    .method-tags span {
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 241, 236, 0.28);
+      border-radius: 999px;
+      color: rgba(255, 253, 247, 0.9);
+      background: rgba(255, 241, 236, 0.08);
+      font-size: 0.94rem;
+    }
+
+    .testimonials {
+      background:
+        linear-gradient(180deg, var(--cream), rgba(255, 241, 236, 0.7)),
+        var(--cream);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .quote-card,
+    .waitlist-card,
+    .event-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 253, 247, 0.88);
+      box-shadow: 0 16px 44px rgba(18, 54, 41, 0.09);
+    }
+
+    .quote-card {
+      padding: 26px;
+    }
+
+    .quote-card p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .quote-card footer {
+      margin-top: 18px;
+      color: var(--earth);
+      font-weight: 700;
+    }
+
+    .upcoming {
+      background: var(--shell);
+    }
+
+    .event-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .waitlist-card,
+    .event-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: clamp(24px, 4vw, 38px);
+      overflow: hidden;
+    }
+
+    .event-card {
+      border-right: 5px solid var(--rose);
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .event-meta li {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(255, 241, 236, 0.72);
+      color: var(--jungle);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .waitlist-card h3,
+    .event-card h3 {
+      margin: 0 0 8px;
+      color: var(--canopy);
+      font-size: clamp(1.65rem, 2.8vw, 2.3rem);
+      font-weight: 800;
+    }
+
+    .waitlist-card p,
+    .event-card p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta {
+      color: var(--shell);
+      background:
+        linear-gradient(90deg, rgba(18, 54, 41, 0.92), rgba(39, 87, 68, 0.88)),
+        url("../insidefreedom/assets/photos/gallery-04-night-circle.jpg") center / cover;
+      background-blend-mode: multiply;
+    }
+
+    .cta-panel {
+      max-width: 760px;
+    }
+
+    .cta .eyebrow,
+    .cta .section-title,
+    .cta .lead {
+      color: var(--shell);
+    }
+
+    .final {
+      min-height: 72vh;
+      display: grid;
+      align-items: end;
+      color: var(--shell);
+      background:
+        linear-gradient(180deg, rgba(18, 54, 41, 0.08), rgba(18, 54, 41, 0.82)),
+        url("../insidefreedom/assets/photos/gallery-01-water-circle.jpg") center / cover;
+    }
+
+    .final h2 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.35rem, 5.4vw, 5rem);
+      font-weight: 800;
+      color: var(--shell);
+    }
+
+    .final p {
+      max-width: 620px;
+      margin: 18px 0 0;
+      color: rgba(255, 253, 247, 0.88);
+      font-size: 1.18rem;
+    }
+
+    .footer {
+      padding: 40px 0 92px;
+      color: rgba(255, 253, 247, 0.82);
+      background: var(--canopy);
+      font-size: 0.96rem;
+    }
+
+    .footer-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-whatsapp {
+      position: fixed;
+      right: 14px;
+      left: 14px;
+      bottom: 14px;
+      z-index: 50;
+      display: none;
+      min-height: 54px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #2f7d52;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 16px 40px rgba(18, 54, 41, 0.28);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: reveal 720ms ease forwards;
+    }
+
+    [data-reveal="2"] {
+      animation-delay: 120ms;
+    }
+
+    [data-reveal="3"] {
+      animation-delay: 220ms;
+    }
+
+    @keyframes reveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 88vh;
+      }
+
+      .hero-inner {
+        padding-bottom: 68px;
+      }
+
+      .intro-grid,
+      .about-grid,
+      .waitlist-card,
+      .event-card {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-photo,
+      .intro-photo img {
+        min-height: 420px;
+      }
+
+      .experience-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-card.featured {
+        transform: none;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 180px;
+      }
+
+      .story-photo:nth-child(1),
+      .story-photo:nth-child(4) {
+        grid-column: auto;
+        grid-row: span 2;
+      }
+
+      .mobile-whatsapp {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 620px) {
+      section {
+        padding: 66px 0;
+      }
+
+      .site-nav {
+        padding-top: 18px;
+      }
+
+      .hero {
+        min-height: 86vh;
+        align-items: center;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(180deg, rgba(18, 54, 41, 0.28), rgba(18, 54, 41, 0.36) 38%, rgba(18, 54, 41, 0.94)),
+          linear-gradient(90deg, rgba(18, 54, 41, 0.62), rgba(18, 54, 41, 0.38));
+      }
+
+      .hero-inner {
+        padding: 88px 0 96px;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 12vw, 3.75rem);
+      }
+
+      .hero-actions,
+      .cta-actions {
+        flex-direction: column;
+      }
+
+      .intro-card {
+        padding-inline: 0;
+        background: transparent;
+      }
+
+      .intro-photo,
+      .intro-photo img {
+        min-height: 320px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .photo-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+      }
+
+      .story-photo:nth-child(1),
+      .story-photo:nth-child(4) {
+        grid-row: auto;
+      }
+
+      .footer {
+        padding-bottom: 88px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="site-nav" aria-label="ניווט ראשי">
+      <a class="brand" href="/">Danielle Ronit</a>
+      <nav class="nav-links" aria-label="קישורים בעמוד">
+        <a href="#experience">החוויה</a>
+        <a href="#options">סוגי מפגשים</a>
+        <a href="#upcoming">תיאום קבוצה</a>
+        <a href="#waitlist">וואטסאפ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="ריטריטים וחוויות לנשים בקופנגן">
+        <picture class="hero-media">
+          <img src="../insidefreedom/assets/photos/gallery-02-waterfall-circle.jpg" alt="נשים במים בטבע בקופנגן" fetchpriority="high">
+        </picture>
+        <div class="hero-inner">
+          <p class="kicker" data-reveal>לנשים ישראליות בקופנגן</p>
+          <h1 data-reveal="2">ריטריטים וחוויות לנשים בקופנגן</h1>
+          <p class="hero-copy" data-reveal="3">מרחבים אינטימיים בטבע לעצור רגע, לנשום, לפגוש את עצמך מבפנים ולהיות יחד עם נשים שרוצות חיבור אמיתי, עומק ועדינות.</p>
+          <div class="hero-actions" data-reveal="3">
+            <a class="btn" href="#upcoming">לתיאום קבוצה פרטית</a>
+            <a class="btn secondary" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">רוצה לבדוק אפשרות לקבוצה?</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" id="experience">
+        <div class="wrap intro-grid">
+          <div class="intro-card">
+            <p class="eyebrow">החוויה</p>
+            <h2 class="section-title">מרחב נשי קטן, חי ונושם.</h2>
+            <p>המפגשים האלה נוצרו לנשים שמגיעות לקופנגן ורוצות יותר מעוד אטרקציה בלו״ז. זה זמן להאט, להרגיש את הגוף, להיות בטבע, לפתוח שיחה כנה ולהיזכר במה שכבר נמצא בפנים.</p>
+            <p>כל מפגש מקבל צורה קצת אחרת לפי הנושא, המקום והקבוצה: לפעמים יותר תנועה, לפעמים כתיבה ושיתוף, לפעמים עבודה רגשית עדינה עם דפוסים פנימיים ותת־מודע. תמיד בקצב אנושי, עם הרבה מקום לנשימה.</p>
+          </div>
+          <figure class="intro-photo">
+            <img src="../insidefreedom/assets/photos/session-women-circle.jpg" alt="נשים יושבות יחד במפגש אינטימי בטבע" loading="lazy">
+          </figure>
+        </div>
+      </section>
+
+      <section class="experiences" id="options">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">אפשרויות</p>
+            <h2 class="section-title">שלוש דרכים להיכנס פנימה</h2>
+            <p class="lead">אפשר להגיע לערב אחד, לחצי יום של עומק בטבע, או ליום מלא שמחזיק גם תהליך וגם טקס סיום רך.</p>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card color-enhanced">
+              <div class="card-image">
+                <img src="../insidefreedom/assets/photos/gallery-04-night-circle.jpg" alt="ערב נשים באווירה אינטימית" loading="lazy">
+                <span class="badge">ערב</span>
+              </div>
+              <div class="card-body">
+                <h3>ערב לנשים</h3>
+                <p class="duration">כ־3 שעות</p>
+                <p>מפגש אינטימי שמאפשר לנחות מהיום, לפתוח את הלב, לפגוש נשים אחרות ולתת מקום למה שמבקש להישמע.</p>
+                <ul class="clean-list" aria-label="מה יכול להיות בערב">
+                  <li>קקאו</li>
+                  <li>הנחיה פנימית</li>
+                  <li>תנועה</li>
+                  <li>מדיטציה</li>
+                  <li>שיתוף</li>
+                  <li>טקס סיום</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="experience-card color-enhanced">
+              <div class="card-image">
+                <img src="../insidefreedom/assets/photos/gallery-02-waterfall-circle.jpg" alt="ריטריט חצי יום בטבע ובמים" loading="lazy">
+                <span class="badge">חצי יום</span>
+              </div>
+              <div class="card-body">
+                <h3>ריטריט חצי יום</h3>
+                <p class="duration">כ־4-5 שעות</p>
+                <p>חוויה עמוקה יותר, לרוב בטבע, עם זמן לתנועה, כתיבה, חיבור לגוף ועבודה עדינה עם דפוסים רגשיים ותת־מודעים.</p>
+                <ul class="clean-list" aria-label="מה יכול להיות בריטריט חצי יום">
+                  <li>מפל או ג׳ונגל</li>
+                  <li>יומן אישי</li>
+                  <li>עבודת עומק</li>
+                  <li>מערכת עצבים</li>
+                  <li>תרגילי חיבור</li>
+                  <li>אינטגרציה</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="experience-card featured">
+              <div class="card-image">
+                <img src="../insidefreedom/assets/photos/gallery-01-water-circle.jpg" alt="ריטריט יום מלא לנשים בטבע" loading="lazy">
+                <span class="badge">יום מלא</span>
+              </div>
+              <div class="card-body">
+                <h3>ריטריט יום מלא</h3>
+                <p class="duration">החוויה הכי רחבה</p>
+                <p>יום שמאפשר להעמיק באמת: חלק ראשון בשעות היום, הפסקה לאוכל ומנוחה, ואז חזרה לערב של קקאו, תנועה, חיבור וסגירה.</p>
+                <ul class="clean-list" aria-label="מבנה לדוגמה של ריטריט יום מלא">
+                  <li>10:00-14:00/15:00 ריטריט יום</li>
+                  <li>הפסקה למנוחה</li>
+                  <li>18:00-21:00 ערב חווייתי</li>
+                  <li>קקאו וטקס</li>
+                  <li>שיתוף וסגירה</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" aria-label="האווירה במפגשים">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">רגעים מהמרחב</p>
+            <h2 class="section-title">פחות להסביר. יותר להרגיש.</h2>
+          </div>
+
+          <!-- To replace photos, update only the src and alt values in these image tags. -->
+          <div class="photo-grid">
+            <figure class="story-photo"><img src="../insidefreedom/assets/photos/jungle-journaling-presence-bright.png" alt="רגע שקט של כתיבה והתבוננות בטבע" loading="lazy"><span>נוכחות</span></figure>
+            <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/danielle-dancing.jpg" alt="תנועה חופשית במפגש" loading="lazy"><span>תנועה</span></figure>
+            <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/gallery-10-group-selfie.jpg" alt="נשים מחייכות יחד אחרי מפגש" loading="lazy"><span>חיבור</span></figure>
+            <figure class="story-photo"><img src="../insidefreedom/assets/photos/evening-presence-depth-circle.png" alt="נשים במרחב ערב אינטימי עם אורות וטקס" loading="lazy"><span>עומק</span></figure>
+            <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/session-women-circle.jpg" alt="נשים סביב מרחב אינטימי עם נרות ופירות" loading="lazy"><span>קהילה</span></figure>
+            <figure class="story-photo nature-crop"><img src="../insidefreedom/assets/photos/koh-phangan-waterfall-women.png" alt="נשים במפל בטבע בקופנגן" loading="lazy"><span>טבע</span></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="wrap about-grid">
+          <figure class="portrait">
+            <img src="../insidefreedom/assets/photos/danielle-beach-shell-portrait.jpg" alt="דניאל רונית בחוף עם צדף" loading="lazy">
+          </figure>
+          <div>
+            <p class="eyebrow">על דניאל</p>
+            <h2 class="section-title">אני דניאל רונית.</h2>
+            <p>אני מנחה תהליכי עומק רגשיים ותת־מודעים, ומובילה חוויות קבוצתיות לנשים. בעבודה שלי אני משלבת הקשבה לגוף, שיחה כנה, תנועה, חיבור אנושי וכלים שמאפשרים לפגוש בעדינות את מה שקורה מתחת לפני השטח.</p>
+            <p>הרקע שלי כולל IEMT, NLP, הנחיה מודעת טראומה, עבודה עם ילדה פנימית והורות פנימית, Authentic Relating, יוגה, רייקי, הנחיית קבוצות ומעגלי נשים.</p>
+            <div class="method-tags" aria-label="תחומי רקע">
+              <span>IEMT</span>
+              <span>NLP</span>
+              <span>מודעות טראומה</span>
+              <span>ילדה פנימית</span>
+              <span>Authentic Relating</span>
+              <span>Somatic Work</span>
+              <span>יוגה</span>
+              <span>רייקי</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-label="מילים מנשים שהיו במרחב">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">מילים מנשים שהיו במרחב</p>
+            <h2 class="section-title">מה נשים מספרות אחרי מפגש</h2>
+            <p class="lead">כל אישה מגיעה עם משהו אחר, אבל שוב ושוב חוזרות מילים על שקט, חיבור, עומק ותחושה שיש מקום להיות בדיוק כמו שאת.</p>
+          </div>
+
+          <!-- Testimonial cards are easy to duplicate, remove, or replace with full names later. Keep 3-5 cards for a calm section. -->
+          <div class="testimonial-grid">
+            <article class="quote-card">
+              <p>״מעגל הנשים של דניאל היה בדיוק מה שהייתי צריכה בזמן הטיול שלי בקופנגן. יכולתי פשוט להיות ולהביע את עצמי באופן אותנטי בתוך מרחב אוהב ובטוח. דניאל החזיקה את המרחב, עודדה והנחתה אותנו בבהירות ועם המון אהבה. אהבתי במיוחד את השילוב של מדיטציה, נשימה, תנועה וכתיבה מונחית. הייתי מצטרפת שוב בלי לחשוב פעמיים.״</p>
+              <footer>Madison, USA</footer>
+            </article>
+            <article class="quote-card">
+              <p>״דניאל היא אישה מדהימה עם הרבה חוכמה וידע. כשהגעתי למעגל הנשים שלה אהבתי מאוד את הדרך שבה היא החזיקה את המרחב, ראתה כל אחת מאיתנו וגרמה לי ולנו להרגיש בטוחות להיפתח. התרגילים שעשינו היו נפלאים והרגישו הוליסטיים. אני בהחלט ממליצה עליה.״</p>
+              <footer>Clara, Germany</footer>
+            </article>
+            <article class="quote-card">
+              <p>״המרחב הזה מושלם לנשים עם חיים עמוסים, או לנשים שלא יוצא להן להיות הרבה עם נשים אחרות אבל מתגעגעות לחיבור אנושי פשוט, נקי וללא שיפוט. הכי אהבתי לפגוש נשים חדשות, לשמוע את הסיפורים שלהן, ולהרגיש את היכולת גם לתמוך וגם להיתמך. אם אף פעם לא היית במעגל נשים, אני ממש ממליצה להתחיל אצל דניאל.״</p>
+              <footer>Kira, Koh Phangan</footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="upcoming" id="upcoming">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">תיאום פרטי</p>
+            <h2 class="section-title">רוצה לארגן חוויה לקבוצה שלך?</h2>
+            <p class="lead">אין כאן לוח אירועים קבוע. המפגשים והריטריטים נקבעים באופן פרטי לקבוצות נשים בקופנגן, לפי הזמן, האווירה והעומק שמתאימים לכן.</p>
+          </div>
+
+          <div class="event-list">
+            <!--
+              To publish a private booking option, duplicate this card and edit:
+              format, duration, location, description, price, minimum group size, CTA link.
+
+              <article class="event-card">
+                <div>
+                  <ul class="event-meta">
+                    <li>מיקום</li>
+                    <li>פורמט</li>
+                    <li>מחיר</li>
+                    <li>מינימום 4 נשים</li>
+                  </ul>
+                  <h3>שם החוויה</h3>
+                  <p>תיאור קצר של החוויה הפרטית.</p>
+                </div>
+                <a class="btn" href="https://wa.me/972586783575">לתיאום בוואטסאפ</a>
+              </article>
+            -->
+
+            <article class="waitlist-card">
+              <div>
+                <h3>כל חוויה נקבעת באופן פרטי.</h3>
+                <p>אפשר לתאם ערב נשים, ריטריט חצי יום או יום מלא לקבוצה קיימת. מינימום 4 נשים בקבוצה, ואפשר לבנות יחד את הפורמט לפי מה שהקבוצה מבקשת: טבע, תנועה, קקאו, כתיבה, שיתוף ועבודת עומק עדינה.</p>
+              </div>
+              <a class="btn" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">לתיאום קבוצה</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" id="waitlist">
+        <div class="wrap cta-panel">
+          <p class="eyebrow">וואטסאפ</p>
+          <h2 class="section-title">רוצה לתאם חוויה פרטית?</h2>
+          <p class="lead">שלחי לי הודעה עם כמה נשים אתן, איזה סוג חוויה מעניין אתכן ומה בערך התאריך שמתאים לכן. מינימום 4 נשים בקבוצה.</p>
+          <div class="cta-actions">
+            <a class="btn light" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">שלחי לי הודעה בוואטסאפ</a>
+            <a class="btn outline" href="mailto:danielleronit@gmail.com">מעדיפה מייל?</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final">
+        <div class="wrap">
+          <h2>בין ג׳ונגל, מים ונשים טובות, משהו בפנים נזכר לנשום.</h2>
+          <p>בואי כמו שאת. סקרנית, עייפה, פתוחה, לא בטוחה. יש מקום.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%AA%D7%A2%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%D7%91%D7%9E%D7%A4%D7%92%D7%A9%20%D7%A0%D7%A9%D7%99%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">דברי איתי</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Danielle Ronit</span>
+        <a href="mailto:danielleronit@gmail.com">danielleronit@gmail.com</a>
+        <a href="https://www.instagram.com/danielle_ronit/" dir="ltr">@danielle_ronit</a>
+        <span>© 2026</span>
+      </div>
+    </footer>
+
+    <a class="mobile-whatsapp" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F" aria-label="שליחת הודעה לדניאל בוואטסאפ">לתיאום קבוצה פרטית</a>
+  </div>
+</body>
+</html>
