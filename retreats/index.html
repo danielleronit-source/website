@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://danielleronit.com/retreats/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --canopy: #123629;
@@ -20,9 +20,10 @@
       --sand: #e7d2ac;
       --cacao: #6c4631;
       --earth: #9a6f4f;
-      --rose: #c98078;
-      --rose-soft: #f3d8d2;
-      --petal: #fff1ec;
+      --rose: #d98f9a;
+      --rose-soft: #f7c8d4;
+      --petal: #fff0f5;
+      --blush: #ffd8e2;
       --gold: #c69b4f;
       --ink: #21332b;
       --muted: #6a766f;
@@ -42,9 +43,10 @@
       margin: 0;
       color: var(--ink);
       background:
-        linear-gradient(180deg, rgba(255, 248, 236, 0.96), rgba(255, 253, 247, 0.98) 32%, rgba(243, 216, 210, 0.2) 62%, rgba(232, 218, 189, 0.24)),
+        linear-gradient(180deg, rgba(255, 248, 236, 0.96), rgba(255, 253, 247, 0.98) 32%, rgba(255, 216, 226, 0.24) 62%, rgba(232, 218, 189, 0.2)),
         var(--cream);
-      font-family: "Assistant", "Heebo", Arial, sans-serif;
+      font-family: "Assistant", Arial, sans-serif;
+      font-weight: 400;
       line-height: 1.7;
       text-align: right;
       overflow-x: hidden;
@@ -93,9 +95,9 @@
     }
 
     .brand {
-      font-family: "Heebo", "Assistant", Arial, sans-serif;
+      font-family: "Assistant", Arial, sans-serif;
       font-size: 1rem;
-      font-weight: 800;
+      font-weight: 600;
       text-decoration: none;
       letter-spacing: 0;
     }
@@ -105,6 +107,7 @@
       align-items: center;
       gap: 18px;
       font-size: 0.94rem;
+      font-weight: 400;
     }
 
     .nav-links a {
@@ -159,22 +162,22 @@
       margin: 0 0 18px;
       color: rgba(255, 253, 247, 0.82);
       font-size: 0.98rem;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     h1,
     h2,
     h3 {
-      font-family: "Heebo", "Assistant", Arial, sans-serif;
+      font-family: "Assistant", Arial, sans-serif;
       letter-spacing: 0;
-      line-height: 1.08;
+      line-height: 1;
     }
 
     h1 {
       max-width: 760px;
       margin: 0;
-      font-size: clamp(3rem, 8vw, 6.35rem);
-      font-weight: 800;
+      font-size: clamp(3.15rem, 8.4vw, 6.6rem);
+      font-weight: 300;
     }
 
     .hero-copy {
@@ -202,9 +205,9 @@
       padding: 13px 22px;
       border: 1px solid transparent;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--rose), var(--gold));
+      background: linear-gradient(135deg, var(--blush), var(--rose) 58%, var(--gold));
       color: #1c2c25;
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
       box-shadow: 0 14px 34px rgba(108, 70, 49, 0.18);
       transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
@@ -212,7 +215,7 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      background: linear-gradient(135deg, #d6958e, #d9ad60);
+      background: linear-gradient(135deg, #ffe2ea, #e8a0aa 58%, #d9ad60);
     }
 
     .btn.secondary {
@@ -254,14 +257,14 @@
       margin: 0 0 12px;
       color: #ad7467;
       font-size: 0.92rem;
-      font-weight: 700;
+      font-weight: 600;
     }
 
     .section-title {
       margin: 0;
       color: var(--canopy);
       font-size: clamp(2.05rem, 4.6vw, 4.05rem);
-      font-weight: 800;
+      font-weight: 400;
     }
 
     .lead {
@@ -288,7 +291,7 @@
       padding: clamp(30px, 5vw, 58px) clamp(24px, 4.6vw, 50px);
       border-block: 1px solid rgba(39, 87, 68, 0.16);
       background:
-        linear-gradient(90deg, rgba(201, 128, 120, 0.13), transparent 24%),
+        linear-gradient(90deg, rgba(255, 216, 226, 0.35), transparent 28%),
         rgba(255, 253, 247, 0.56);
     }
 
@@ -334,7 +337,7 @@
 
     .experiences {
       background:
-        linear-gradient(180deg, rgba(215, 223, 197, 0.44), rgba(255, 241, 236, 0.58) 52%, rgba(255, 248, 236, 0.88)),
+        linear-gradient(180deg, rgba(215, 223, 197, 0.44), rgba(255, 216, 226, 0.34) 52%, rgba(255, 248, 236, 0.88)),
         var(--cream);
     }
 
@@ -357,7 +360,7 @@
 
     .experience-card.featured {
       transform: translateY(-12px);
-      border-color: rgba(201, 128, 120, 0.5);
+      border-color: rgba(217, 143, 154, 0.55);
       background: linear-gradient(180deg, #fffdf7, #fff0e8 46%, #fbf0dd);
     }
 
@@ -391,10 +394,10 @@
       inset: 16px 16px auto auto;
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(255, 241, 236, 0.93);
+      background: rgba(255, 216, 226, 0.94);
       color: var(--canopy);
       font-size: 0.9rem;
-      font-weight: 700;
+      font-weight: 500;
       backdrop-filter: blur(8px);
     }
 
@@ -409,13 +412,13 @@
       margin: 0 0 8px;
       color: var(--canopy);
       font-size: 1.9rem;
-      font-weight: 800;
+      font-weight: 500;
     }
 
     .duration {
       margin: 0 0 18px;
       color: var(--earth);
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .card-body p {
@@ -434,9 +437,9 @@
 
     .clean-list li {
       padding: 6px 10px;
-      border: 1px solid rgba(201, 128, 120, 0.24);
+      border: 1px solid rgba(217, 143, 154, 0.28);
       border-radius: 999px;
-      background: rgba(255, 241, 236, 0.58);
+      background: rgba(255, 216, 226, 0.42);
       color: var(--jungle);
       font-size: 0.94rem;
       line-height: 1.3;
@@ -444,7 +447,7 @@
 
     .story {
       background:
-        linear-gradient(180deg, var(--shell), rgba(255, 241, 236, 0.55)),
+        linear-gradient(180deg, var(--shell), rgba(255, 216, 226, 0.34)),
         var(--shell);
       overflow: hidden;
     }
@@ -483,6 +486,12 @@
       filter: saturate(1.14) contrast(1.07) brightness(1.04);
     }
 
+    .story-photo.presence-crop img {
+      object-position: center 70%;
+      transform: scale(1.045);
+      filter: saturate(1.18) contrast(1.07) brightness(1.12);
+    }
+
     .story-photo.nature-crop img {
       object-position: center 60%;
       filter: saturate(1.16) contrast(1.08) brightness(1.04);
@@ -517,7 +526,7 @@
     .portrait {
       overflow: hidden;
       margin: 0;
-      border: 10px solid rgba(255, 241, 236, 0.17);
+      border: 10px solid rgba(255, 216, 226, 0.2);
       border-radius: 8px 150px 8px 8px;
       box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
     }
@@ -526,7 +535,6 @@
       aspect-ratio: 4 / 5;
       object-fit: cover;
       object-position: center;
-      filter: saturate(1.12) contrast(1.06) brightness(1.06) sepia(0.04);
     }
 
     .about .eyebrow,
@@ -551,16 +559,16 @@
 
     .method-tags span {
       padding: 7px 12px;
-      border: 1px solid rgba(255, 241, 236, 0.28);
+      border: 1px solid rgba(255, 216, 226, 0.32);
       border-radius: 999px;
       color: rgba(255, 253, 247, 0.9);
-      background: rgba(255, 241, 236, 0.08);
+      background: rgba(255, 216, 226, 0.1);
       font-size: 0.94rem;
     }
 
     .testimonials {
       background:
-        linear-gradient(180deg, var(--cream), rgba(255, 241, 236, 0.7)),
+        linear-gradient(180deg, var(--cream), rgba(255, 216, 226, 0.38)),
         var(--cream);
     }
 
@@ -592,7 +600,7 @@
     .quote-card footer {
       margin-top: 18px;
       color: var(--earth);
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .upcoming {
@@ -631,10 +639,10 @@
     .event-meta li {
       padding: 5px 10px;
       border-radius: 999px;
-      background: rgba(255, 241, 236, 0.72);
+      background: rgba(255, 216, 226, 0.58);
       color: var(--jungle);
       font-size: 0.92rem;
-      font-weight: 700;
+      font-weight: 500;
     }
 
     .waitlist-card h3,
@@ -642,7 +650,7 @@
       margin: 0 0 8px;
       color: var(--canopy);
       font-size: clamp(1.65rem, 2.8vw, 2.3rem);
-      font-weight: 800;
+      font-weight: 500;
     }
 
     .waitlist-card p,
@@ -684,7 +692,7 @@
       max-width: 760px;
       margin: 0;
       font-size: clamp(2.35rem, 5.4vw, 5rem);
-      font-weight: 800;
+      font-weight: 300;
       color: var(--shell);
     }
 
@@ -724,7 +732,7 @@
       border-radius: 999px;
       background: #2f7d52;
       color: #fff;
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
       box-shadow: 0 16px 40px rgba(18, 54, 41, 0.28);
     }
@@ -1000,8 +1008,8 @@
 
           <!-- To replace photos, update only the src and alt values in these image tags. -->
           <div class="photo-grid">
-            <figure class="story-photo"><img src="../insidefreedom/assets/photos/jungle-journaling-presence-bright.png" alt="רגע שקט של כתיבה והתבוננות בטבע" loading="lazy"><span>נוכחות</span></figure>
-            <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/danielle-dancing.jpg" alt="תנועה חופשית במפגש" loading="lazy"><span>תנועה</span></figure>
+            <figure class="story-photo presence-crop"><img src="../insidefreedom/assets/photos/presence-waterfall-rest.png" alt="רגע של מנוחה ונוכחות ליד מפל" loading="lazy"><span>נוכחות</span></figure>
+            <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/movement-circle-evening.png" alt="נשים במעגל תנועה בערב" loading="lazy"><span>תנועה</span></figure>
             <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/connection-waterfall-two-women.png" alt="שתי נשים יושבות יחד במים בטבע" loading="lazy"><span>חיבור</span></figure>
             <figure class="story-photo"><img src="../insidefreedom/assets/photos/evening-presence-depth-circle.png" alt="נשים במרחב ערב אינטימי עם אורות וטקס" loading="lazy"><span>עומק</span></figure>
             <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/session-women-circle.jpg" alt="נשים סביב מרחב אינטימי עם נרות ופירות" loading="lazy"><span>קהילה</span></figure>
@@ -1017,7 +1025,7 @@
           </figure>
           <div>
             <p class="eyebrow">על דניאל</p>
-            <h2 class="section-title">אני דניאל רונית.</h2>
+            <h2 class="section-title">אני דניאל.</h2>
             <p>אני בת 31, במקור מקליפורניה, וחיה בעיקר בקופנגן בחמש השנים האחרונות. אני מנחה תהליכי עומק רגשיים ותת־מודעים, ומובילה חוויות קבוצתיות לנשים. בעבודה שלי אני משלבת הקשבה לגוף, שיחה כנה, תנועה, חיבור אנושי וכלים שמאפשרים לפגוש בעדינות את מה שקורה מתחת לפני השטח.</p>
             <p>הרקע שלי כולל IEMT, NLP, הנחיה מודעת טראומה, עבודה עם ילדה פנימית והורות פנימית, Authentic Relating, יוגה, רייקי, הנחיית קבוצות ומעגלי נשים.</p>
             <div class="method-tags" aria-label="תחומי רקע">
