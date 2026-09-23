@@ -343,7 +343,7 @@
 
     .experience-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -443,6 +443,37 @@
       color: var(--jungle);
       font-size: 0.94rem;
       line-height: 1.3;
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 10px;
+      margin: 4px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .schedule-list li {
+      padding: 10px 12px;
+      border-right: 3px solid rgba(217, 143, 154, 0.45);
+      background: rgba(255, 216, 226, 0.22);
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .combine-note {
+      margin-top: 20px;
+      padding: 22px 26px;
+      border: 1px solid rgba(217, 143, 154, 0.28);
+      border-radius: 8px;
+      background: rgba(255, 253, 247, 0.72);
+      color: var(--muted);
+      box-shadow: 0 14px 38px rgba(18, 54, 41, 0.08);
+    }
+
+    .combine-note strong {
+      color: var(--canopy);
+      font-weight: 600;
     }
 
     .story {
@@ -893,7 +924,7 @@
       <nav class="nav-links" aria-label="קישורים בעמוד">
         <a href="#experience">החוויה</a>
         <a href="#options">סוגי מפגשים</a>
-        <a href="#upcoming">תיאום קבוצה</a>
+        <a href="#upcoming">תאריכים ותיאום</a>
         <a href="#waitlist">וואטסאפ</a>
       </nav>
     </header>
@@ -908,8 +939,8 @@
           <h1 data-reveal="2">ריטריטים וחוויות לנשים בקופנגן</h1>
           <p class="hero-copy" data-reveal="3">מרחבים אינטימיים בטבע לעצור רגע, לנשום, לפגוש את עצמך מבפנים ולהיות יחד עם נשים שרוצות חיבור אמיתי, עומק ועדינות.</p>
           <div class="hero-actions" data-reveal="3">
-            <a class="btn" href="#upcoming">לתיאום קבוצה פרטית</a>
-            <a class="btn secondary" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">רוצה לבדוק אפשרות לקבוצה?</a>
+            <a class="btn" href="#upcoming">לתאריכים ותיאום</a>
+            <a class="btn secondary" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%D7%90%D7%95%20%D7%A2%D7%A8%D7%91%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">רוצה לבדוק איתי?</a>
           </div>
         </div>
       </section>
@@ -932,69 +963,57 @@
         <div class="wrap">
           <div class="section-head">
             <p class="eyebrow">אפשרויות</p>
-            <h2 class="section-title">שלוש דרכים להיכנס פנימה</h2>
-            <p class="lead">אפשר להגיע לערב אחד, לחצי יום של עומק בטבע, או ליום מלא שמחזיק גם תהליך וגם טקס סיום רך.</p>
+            <h2 class="section-title">שתי אפשרויות להיפגש</h2>
+            <p class="lead">אפשר להצטרף לתאריך קרוב כשיש ריטריט או ערב פתוח, או לתאם חוויה פרטית לקבוצה משלכן. אפשר לבחור ריטריט יום אחד בטבע, ערב נשים אינטימי, או לשלב ביניהם לחוויה מלאה יותר.</p>
           </div>
 
           <div class="experience-grid">
+            <article class="experience-card featured">
+              <div class="card-image">
+                <img src="../insidefreedom/assets/photos/full-day-retreat-waterfall.png" alt="ריטריט יום אחד לנשים במפל בקופנגן" loading="lazy">
+                <span class="badge">יום אחד</span>
+              </div>
+              <div class="card-body">
+                <h3>ריטריט יום אחד במפל</h3>
+                <p class="duration">10:30-17:00 בערך</p>
+                <p>יום נשי בטבע סביב מפל יפהפה, עם זמן להאט, לנשום, להתחבר לגוף, למים, לעצמך ולנשים שאיתך.</p>
+                <ul class="schedule-list" aria-label="מבנה לדוגמה של ריטריט יום אחד">
+                  <li>10:30 נפגשות בנקודת ההתחלה ופותחות את היום בעדינות.</li>
+                  <li>הליכה שקטה וקצרה של כ־20 דקות במעלה הדרך אל המפל.</li>
+                  <li>זמן בחלק הראשון של המפל: תרגילי חיבור, נוכחות, כתיבה, שיתוף ושהייה במים.</li>
+                  <li>עולות יחד לחלק השני של המפל, עם עוד זמן לטבע, תמונות, מנוחה ותרגולים שמחברים פנימה והחוצה.</li>
+                  <li>בסביבות 15:00 יוצאות לארוחת צהריים במסעדה נעימה וטעימה.</li>
+                  <li>סיום סביב 17:00, עם אינטגרציה רכה וחזרה לקצב שלכן.</li>
+                </ul>
+              </div>
+            </article>
+
             <article class="experience-card color-enhanced">
               <div class="card-image">
                 <img src="../insidefreedom/assets/photos/gallery-04-night-circle.jpg" alt="ערב נשים באווירה אינטימית" loading="lazy">
-                <span class="badge">ערב</span>
+                <span class="badge">ערב נשים</span>
               </div>
               <div class="card-body">
-                <h3>ערב לנשים</h3>
+                <h3>ערב נשים</h3>
                 <p class="duration">כ־3 שעות</p>
-                <p>מפגש אינטימי שמאפשר לנחות מהיום, לפתוח את הלב, לפגוש נשים אחרות ולתת מקום למה שמבקש להישמע.</p>
-                <ul class="clean-list" aria-label="מה יכול להיות בערב">
-                  <li>קקאו</li>
-                  <li>הנחיה פנימית</li>
-                  <li>תנועה</li>
+                <p>מרחב להאט, לנשום, לדבר אמת ולהרגיש מוחזקת. בתוך עולם מהיר ומלא ציפיות, הערב נותן מקום פשוט להיות, בלי להוכיח ובלי לתקן.</p>
+                <p>דרך נוכחות, כתיבה, תנועה, הקשבה ושיתוף אותנטי, אנחנו יוצרות מרחב רך לחמלה עצמית, אמון, חיבור לגוף וללב, והיזכרות בכוח של אחוות נשים.</p>
+                <ul class="clean-list" aria-label="מה יכול להיות בערב נשים">
                   <li>מדיטציה</li>
+                  <li>נשימה</li>
+                  <li>תרגול סומטי</li>
+                  <li>תנועה עדינה</li>
+                  <li>כתיבה רפלקטיבית</li>
                   <li>שיתוף</li>
-                  <li>טקס סיום</li>
+                  <li>Authentic Relating</li>
+                  <li>עבודה עם נושאים כמו גבולות, ילדה פנימית, סליחה ואמון בקול שלך</li>
                 </ul>
               </div>
             </article>
+          </div>
 
-            <article class="experience-card color-enhanced">
-              <div class="card-image">
-                <img src="../insidefreedom/assets/photos/gallery-02-waterfall-circle.jpg" alt="ריטריט חצי יום בטבע ובמים" loading="lazy">
-                <span class="badge">חצי יום</span>
-              </div>
-              <div class="card-body">
-                <h3>ריטריט חצי יום</h3>
-                <p class="duration">כ־4-5 שעות</p>
-                <p>חוויה עמוקה יותר, לרוב בטבע, עם זמן לתנועה, כתיבה, חיבור לגוף ועבודה עדינה עם דפוסים רגשיים ותת־מודעים.</p>
-                <ul class="clean-list" aria-label="מה יכול להיות בריטריט חצי יום">
-                  <li>מפל או ג׳ונגל</li>
-                  <li>יומן אישי</li>
-                  <li>עבודת עומק</li>
-                  <li>מערכת עצבים</li>
-                  <li>תרגילי חיבור</li>
-                  <li>אינטגרציה</li>
-                </ul>
-              </div>
-            </article>
-
-            <article class="experience-card featured">
-              <div class="card-image">
-                <img src="../insidefreedom/assets/photos/full-day-retreat-waterfall.png" alt="ריטריט יום מלא לנשים בטבע" loading="lazy">
-                <span class="badge">יום מלא</span>
-              </div>
-              <div class="card-body">
-                <h3>ריטריט יום מלא</h3>
-                <p class="duration">החוויה הכי רחבה</p>
-                <p>יום שמאפשר להעמיק באמת: חלק ראשון בשעות היום, הפסקה לאוכל ומנוחה, ואז חזרה לערב של קקאו, תנועה, חיבור וסגירה.</p>
-                <ul class="clean-list" aria-label="מבנה לדוגמה של ריטריט יום מלא">
-                  <li>10:00-14:00/15:00 ריטריט יום</li>
-                  <li>הפסקה למנוחה</li>
-                  <li>18:00-21:00 ערב חווייתי</li>
-                  <li>קקאו וטקס</li>
-                  <li>שיתוף וסגירה</li>
-                </ul>
-              </div>
-            </article>
+          <div class="combine-note">
+            <strong>אפשר גם לשלב:</strong> להתחיל בריטריט יום במפל ולהוסיף ערב נשים לסיום עמוק יותר, באותו יום או בזמן נפרד לפי מה שמתאים לקבוצה.
           </div>
         </div>
       </section>
@@ -1027,6 +1046,7 @@
             <p class="eyebrow">על דניאל</p>
             <h2 class="section-title">אני דניאל.</h2>
             <p>אני בת 31, במקור מקליפורניה, וחיה בעיקר בקופנגן בחמש השנים האחרונות. אני מנחה תהליכי עומק רגשיים ותת־מודעים, ומובילה חוויות קבוצתיות לנשים. בעבודה שלי אני משלבת הקשבה לגוף, שיחה כנה, תנועה, חיבור אנושי וכלים שמאפשרים לפגוש בעדינות את מה שקורה מתחת לפני השטח.</p>
+            <p>המרחבים שאני יוצרת משלבים מודעות סומטית, ויסות מערכת העצבים, עבודה עם ילדה פנימית, רייקי וטקסים פשוטים שמחזירים אותנו לגוף, לנשימה ולאדמה. אני מאמינה שריפוי לא מגיע מתוך מאמץ לתקן את עצמנו, אלא מתוך היזכרות במי שאנחנו מתחת לשכבות.</p>
             <p>הרקע שלי כולל IEMT, NLP, הנחיה מודעת טראומה, עבודה עם ילדה פנימית והורות פנימית, Authentic Relating, יוגה, רייקי, הנחיית קבוצות ומעגלי נשים.</p>
             <div class="method-tags" aria-label="תחומי רקע">
               <span>IEMT</span>
@@ -1071,22 +1091,21 @@
       <section class="upcoming" id="upcoming">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow">תיאום פרטי</p>
-            <h2 class="section-title">רוצה לארגן חוויה לקבוצה שלך?</h2>
-            <p class="lead">אין כאן לוח אירועים קבוע. המפגשים והריטריטים נקבעים באופן פרטי לקבוצות נשים בקופנגן, לפי הזמן, האווירה והעומק שמתאימים לכן. שלחי לי הודעה כדי לבדוק התאמה ולקבל פרטים על המחיר.</p>
+            <p class="eyebrow">תאריכים ותיאום</p>
+            <h2 class="section-title">רוצה להצטרף או לארגן קבוצה?</h2>
+            <p class="lead">אפשר לשלוח לי הודעה כדי לשאול על תאריכים קרובים לריטריטים או ערבי נשים, ואפשר גם לתאם חוויה פרטית לקבוצה קיימת. הפרטים והעלות נשלחים בשיחה אישית לפי התאריך, הקבוצה והפורמט.</p>
           </div>
 
           <div class="event-list">
             <!--
               To publish a private booking option, duplicate this card and edit:
-              format, duration, location, description, price, minimum group size, CTA link.
+              format, duration, location, description, group size, CTA link.
 
               <article class="event-card">
                 <div>
                   <ul class="event-meta">
                     <li>מיקום</li>
                     <li>פורמט</li>
-                    <li>מחיר</li>
                     <li>מינימום 4 נשים</li>
                   </ul>
                   <h3>שם החוויה</h3>
@@ -1098,10 +1117,10 @@
 
             <article class="waitlist-card">
               <div>
-                <h3>כל חוויה נקבעת באופן פרטי.</h3>
-                <p>אפשר לתאם ערב נשים, ריטריט חצי יום או יום מלא לקבוצה קיימת. מינימום 4 נשים בקבוצה, ואפשר לבנות יחד את הפורמט לפי מה שהקבוצה מבקשת: טבע, תנועה, קקאו, כתיבה, שיתוף ועבודת עומק עדינה. למחיר ולפרטים נוספים פשוט שלחו לי הודעה.</p>
+                <h3>אפשר להצטרף לתאריך קרוב או לתאם קבוצה פרטית.</h3>
+                <p>אם את לבד או עם חברה, כתבי לי ואעדכן אותך לגבי ריטריטים וערבי נשים קרובים. אם יש לכן קבוצה קיימת, אפשר לתאם ריטריט יום אחד במפל, ערב נשים, או שילוב של שניהם. לקבוצה פרטית המינימום הוא 4 נשים, ואפשר לבנות יחד את הפורמט לפי מה שהקבוצה מבקשת: טבע, תנועה, כתיבה, שיתוף ועבודת עומק עדינה.</p>
               </div>
-              <a class="btn" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">לתיאום קבוצה</a>
+              <a class="btn" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%D7%90%D7%95%20%D7%A2%D7%A8%D7%91%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">שלחי הודעה</a>
             </article>
           </div>
         </div>
@@ -1110,10 +1129,10 @@
       <section class="cta" id="waitlist">
         <div class="wrap cta-panel">
           <p class="eyebrow">וואטסאפ</p>
-          <h2 class="section-title">רוצה לתאם חוויה פרטית?</h2>
-          <p class="lead">שלחי לי הודעה עם כמה נשים אתן, איזה סוג חוויה מעניין אתכן ומה בערך התאריך שמתאים לכן, ואשלח לך פרטים על האפשרויות והמחיר. מינימום 4 נשים בקבוצה.</p>
+          <h2 class="section-title">רוצה לשמוע מה התאריך הבא?</h2>
+          <p class="lead">שלחי לי הודעה אם את רוצה להצטרף לריטריט או ערב נשים קרוב, או אם את רוצה לתאם חוויה פרטית לקבוצה. אם זו קבוצה פרטית, כתבי כמה נשים אתן ומה בערך התאריך שמתאים לכן. מינימום 4 נשים לקבוצה פרטית.</p>
           <div class="cta-actions">
-            <a class="btn light" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">שלחי לי הודעה בוואטסאפ</a>
+            <a class="btn light" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%D7%90%D7%95%20%D7%A2%D7%A8%D7%91%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">שלחי לי הודעה בוואטסאפ</a>
             <a class="btn outline" href="mailto:danielleronit@gmail.com">מעדיפה מייל?</a>
           </div>
         </div>
@@ -1139,7 +1158,7 @@
       </div>
     </footer>
 
-    <a class="mobile-whatsapp" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%97%D7%95%D7%95%D7%99%D7%94%20%D7%A4%D7%A8%D7%98%D7%99%D7%AA%20%D7%9C%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F" aria-label="שליחת הודעה לדניאל בוואטסאפ">לתיאום קבוצה פרטית</a>
+    <a class="mobile-whatsapp" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%D7%90%D7%95%20%D7%A2%D7%A8%D7%91%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F" aria-label="שליחת הודעה לדניאל בוואטסאפ">לתאריכים ותיאום</a>
   </div>
 </body>
 </html>
