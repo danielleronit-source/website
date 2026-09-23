@@ -115,6 +115,17 @@
       line-height: 1.55;
     }
 
+    .home-portrait {
+      display: block;
+      width: min(420px, 82vw);
+      margin: 22px auto 0;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 42%;
+      border: 1px solid rgba(47, 41, 37, .18);
+      box-shadow: 0 24px 70px rgba(70, 54, 45, .14);
+    }
+
     .programs {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -322,6 +333,10 @@
         font-size: 1.08rem;
       }
 
+      .home-portrait {
+        width: min(330px, 86vw);
+      }
+
       .program {
         min-height: 285px;
         padding: 24px;
@@ -345,6 +360,7 @@
         <h1 id="page-title">Choose where you want to begin.</h1>
       </div>
       <p>Different doors into the same work: language confidence, emotional freedom, private sessions, transformational programs, and women’s retreats.</p>
+      <img class="home-portrait" src="assets/media/iemt-fave.jpeg" alt="Danielle Ronit by the river">
     </section>
 
     <section class="programs" aria-label="Choose a program">
