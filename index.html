@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Danielle Ronit</title>
-  <meta name="description" content="Choose from Danielle Ronit's current workshops and transformational programs.">
+  <meta name="description" content="Choose from Danielle Ronit's current workshops, private sessions, retreats, and transformational programs.">
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -132,7 +132,7 @@
 
     .programs {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 22px;
     }
 
@@ -216,6 +216,13 @@
       --accent-soft: rgba(52, 17, 32, 0.12);
       --accent-line: rgba(52, 17, 32, 0.3);
       --accent-glow: rgba(52, 17, 32, 0.1);
+    }
+
+    .program:nth-child(5) {
+      --accent: var(--green);
+      --accent-soft: rgba(80, 109, 90, 0.14);
+      --accent-line: rgba(184, 90, 122, 0.26);
+      --accent-glow: rgba(184, 90, 122, 0.1);
     }
 
     .program-kicker {
@@ -371,7 +378,7 @@
         <p class="eyebrow">Danielle Ronit</p>
         <h1 id="page-title">Choose where you want to begin.</h1>
       </div>
-      <p>Three doors into the same work: language confidence, emotional freedom, and deep personal transformation.</p>
+      <p>Different doors into the same work: language confidence, emotional freedom, private sessions, transformational programs, and women’s retreats.</p>
     </section>
 
     <section class="programs" aria-label="Choose a program">
@@ -409,6 +416,15 @@
           <p class="program-text">Private session with me.</p>
         </div>
         <div class="program-action">Visit <span>IEMT</span></div>
+      </a>
+
+      <a class="program" href="/retreats/">
+        <div>
+          <span class="program-kicker">Koh Phangan</span>
+          <h2 class="program-title">Women’s Retreats</h2>
+          <p class="program-text">Private women’s circles and nature retreats in Koh Phangan.</p>
+        </div>
+        <div class="program-action">Visit <span>Retreats</span></div>
       </a>
     </section>
 
