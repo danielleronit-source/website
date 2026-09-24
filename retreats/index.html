@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ריטריטים וחוויות לנשים בקופנגן | Danielle Ronit</title>
-  <meta name="description" content="מפגשים, סדנאות וריטריטים אינטימיים לנשים ישראליות בקופנגן - חיבור, טבע, תנועה, עבודת עומק עדינה וקהילה נשית.">
+  <title>ריטריט יום לנשים בקופנגן | Danielle Ronit</title>
+  <meta name="description" content="ריטריט יום נשי לקבוצות חברות בקופנגן - מפל, טבע, כתיבה, חיבור, עבודת ילדה פנימית ותרגילי קירבה אותנטית.">
   <link rel="canonical" href="https://danielleronit.com/retreats/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -476,6 +476,39 @@
       font-weight: 600;
     }
 
+    .retreat-schedule-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(24px, 5vw, 54px);
+      align-items: start;
+      padding: clamp(28px, 5vw, 52px);
+      border: 1px solid rgba(18, 54, 41, 0.16);
+      border-radius: 8px;
+      background:
+        linear-gradient(120deg, rgba(255, 216, 226, 0.3), rgba(255, 253, 247, 0.88)),
+        var(--shell);
+      box-shadow: 0 22px 58px rgba(18, 54, 41, 0.1);
+    }
+
+    .retreat-schedule-card h3 {
+      margin: 0;
+      color: var(--canopy);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 400;
+    }
+
+    .retreat-schedule-card p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .add-on {
+      background:
+        linear-gradient(180deg, rgba(255, 216, 226, 0.4), rgba(255, 248, 236, 0.9)),
+        var(--cream);
+    }
+
     .story {
       background:
         linear-gradient(180deg, var(--shell), rgba(255, 216, 226, 0.34)),
@@ -579,22 +612,6 @@
       margin: 18px 0 0;
       color: rgba(255, 253, 247, 0.83);
       font-size: 1.08rem;
-    }
-
-    .method-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 24px;
-    }
-
-    .method-tags span {
-      padding: 7px 12px;
-      border: 1px solid rgba(255, 216, 226, 0.32);
-      border-radius: 999px;
-      color: rgba(255, 253, 247, 0.9);
-      background: rgba(255, 216, 226, 0.1);
-      font-size: 0.94rem;
     }
 
     .testimonials {
@@ -819,6 +836,7 @@
 
       .intro-grid,
       .about-grid,
+      .retreat-schedule-card,
       .waitlist-card,
       .event-card {
         grid-template-columns: 1fr;
@@ -923,21 +941,22 @@
       <a class="brand" href="/">Danielle Ronit</a>
       <nav class="nav-links" aria-label="קישורים בעמוד">
         <a href="#experience">החוויה</a>
-        <a href="#options">סוגי מפגשים</a>
+        <a href="#schedule">הלו״ז</a>
+        <a href="#evening">ערב נשים</a>
         <a href="#upcoming">תאריכים ותיאום</a>
         <a href="#waitlist">וואטסאפ</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero" aria-label="ריטריטים וחוויות לנשים בקופנגן">
+      <section class="hero" aria-label="ריטריט יום לנשים בקופנגן">
         <picture class="hero-media">
           <img src="../insidefreedom/assets/photos/gallery-02-waterfall-circle.jpg" alt="נשים במים בטבע בקופנגן" fetchpriority="high">
         </picture>
         <div class="hero-inner">
-          <p class="kicker" data-reveal>לנשים ישראליות בקופנגן</p>
-          <h1 data-reveal="2">ריטריטים וחוויות לנשים בקופנגן</h1>
-          <p class="hero-copy" data-reveal="3">מרחבים אינטימיים בטבע לעצור רגע, לנשום, לפגוש את עצמך מבפנים ולהיות יחד עם נשים שרוצות חיבור אמיתי, עומק ועדינות.</p>
+          <p class="kicker" data-reveal>לקבוצות חברות שמטיילות יחד בקופנגן</p>
+          <h1 data-reveal="2">בא לכן יום פינוק נשי מיוחד?</h1>
+          <p class="hero-copy" data-reveal="3">הגעתן למקום הנכון. יום בטבע סביב מפל קסום, שנוצר לקבוצות חברות שמגיעות לאי ורוצות חוויה שהיא יותר מעוד אטרקציה: חיבור לעצמכן, אחת לשנייה, לשקט ולטבע.</p>
           <div class="hero-actions" data-reveal="3">
             <a class="btn" href="#upcoming">לתאריכים ותיאום</a>
             <a class="btn secondary" href="https://wa.me/972586783575?text=%D7%94%D7%99%D7%99%20%D7%93%D7%A0%D7%99%D7%90%D7%9C%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A8%D7%99%D7%98%D7%A8%D7%99%D7%98%20%D7%90%D7%95%20%D7%A2%D7%A8%D7%91%20%D7%A0%D7%A9%D7%99%D7%9D%20%D7%91%D7%A7%D7%95%D7%A4%D7%A0%D7%92%D7%9F">רוצה לבדוק איתי?</a>
@@ -948,13 +967,13 @@
       <section class="intro" id="experience">
         <div class="wrap intro-grid">
           <div class="intro-card">
-            <p class="eyebrow">החוויה</p>
-            <h2 class="section-title">מרחב נשי קטן, חי ונושם.</h2>
-            <p>המפגשים האלה נוצרו לנשים שמגיעות לקופנגן ורוצות יותר מעוד אטרקציה בלו״ז. זה זמן להאט, להרגיש את הגוף, להיות בטבע, לפתוח שיחה כנה ולהיזכר במה שכבר נמצא בפנים.</p>
-            <p>כל מפגש מקבל צורה קצת אחרת לפי הנושא, המקום והקבוצה: לפעמים יותר תנועה, לפעמים כתיבה ושיתוף, לפעמים עבודה רגשית עדינה עם דפוסים פנימיים ותת־מודע. תמיד בקצב אנושי, עם הרבה מקום לנשימה.</p>
+            <p class="eyebrow">היי, אני דניאל</p>
+            <h2 class="section-title">אני גרה על האי, מחזיקה מרחבי נשים ומנחה תהליכי חיבור פנימה.</h2>
+            <p>אני יוצרת מרחבים עדינים וברורים לנשים שרוצות להאט, להרגיש, לדבר אמת ולפגוש את עצמן ואת החברות שלהן קצת יותר לעומק.</p>
+            <p>הריטריט הזה נולד בשביל קבוצות חברות שמגיעות לקופנגן ורוצות לקחת רגע מתוך כל האטרקציות, לנשום, להתחבר לטבע ולצאת עם תחושה של נוכחות, פתיחות וחיבור אמיתי יותר.</p>
           </div>
           <figure class="intro-photo">
-            <img src="../insidefreedom/assets/photos/session-women-circle.jpg" alt="נשים יושבות יחד במפגש אינטימי בטבע" loading="lazy">
+            <img src="../insidefreedom/assets/photos/nature-water-circle-retreat.jpg" alt="נשים יושבות יחד במים בטבע בקופנגן" loading="lazy">
           </figure>
         </div>
       </section>
@@ -962,58 +981,77 @@
       <section class="experiences" id="options">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow">אפשרויות</p>
-            <h2 class="section-title">שתי אפשרויות להיפגש</h2>
-            <p class="lead">אפשר להצטרף לתאריך קרוב כשיש ריטריט או ערב פתוח, או לתאם חוויה פרטית לקבוצה משלכן. אפשר לבחור ריטריט יום אחד בטבע, ערב נשים אינטימי, או לשלב ביניהם לחוויה מלאה יותר.</p>
+            <p class="eyebrow">החוויה</p>
+            <h2 class="section-title">יום של מפל, שקט וחיבור נשי.</h2>
+            <p class="lead">נפגשות ליום שהוא גם כיפי, גם עמוק וגם מזין: הליכה למפל קסום, זמן במים, תרגילי חיבור, כתיבה, שיחה ועבודת ילדה פנימית שמזמינה לפתוח את הלב אחת עם השנייה.</p>
           </div>
 
           <div class="experience-grid">
             <article class="experience-card featured">
               <div class="card-image">
                 <img src="../insidefreedom/assets/photos/full-day-retreat-waterfall.png" alt="ריטריט יום אחד לנשים במפל בקופנגן" loading="lazy">
-                <span class="badge">יום אחד</span>
+                <span class="badge">הריטריט</span>
               </div>
               <div class="card-body">
-                <h3>ריטריט יום אחד במפל</h3>
-                <p class="duration">10:30-17:00 בערך</p>
-                <p>יום נשי בטבע סביב מפל יפהפה, עם זמן להאט, לנשום, להתחבר לגוף, למים, לעצמך ולנשים שאיתך.</p>
-                <ul class="schedule-list" aria-label="מבנה לדוגמה של ריטריט יום אחד">
-                  <li>10:30 נפגשות בנקודת ההתחלה ופותחות את היום בעדינות.</li>
-                  <li>הליכה שקטה וקצרה של כ־20 דקות במעלה הדרך אל המפל.</li>
-                  <li>זמן בחלק הראשון של המפל: תרגילי חיבור, נוכחות, כתיבה, שיתוף ושהייה במים.</li>
-                  <li>עולות יחד לחלק השני של המפל, עם עוד זמן לטבע, תמונות, מנוחה ותרגולים שמחברים פנימה והחוצה.</li>
-                  <li>בסביבות 15:00 יוצאות לארוחת צהריים במסעדה נעימה וטעימה.</li>
-                  <li>סיום סביב 17:00, עם אינטגרציה רכה וחזרה לקצב שלכן.</li>
+                <h3>מה אתן מקבלות?</h3>
+                <p class="duration">חוויה מחברת לקבוצת חברות</p>
+                <p>מרחב שמאפשר להאט ליום אחד, להתחבר לעצמך ולשקט פנימי עמוק יותר, ומתוך זה גם להתחבר בצורה אמיתית יותר לחברות שאיתך ולטבע סביבכן.</p>
+                <ul class="clean-list" aria-label="מה מקבלים בריטריט">
+                  <li>הליכה למפל קסום</li>
+                  <li>זמן במים</li>
+                  <li>חיבור לטבע</li>
+                  <li>כתיבה מונחית</li>
+                  <li>Authentic Relating</li>
+                  <li>עבודת ילדה פנימית</li>
+                  <li>שיתוף ושיחה</li>
                 </ul>
               </div>
             </article>
 
             <article class="experience-card color-enhanced">
               <div class="card-image">
-                <img src="../insidefreedom/assets/photos/gallery-04-night-circle.jpg" alt="ערב נשים באווירה אינטימית" loading="lazy">
-                <span class="badge">ערב נשים</span>
+                <img src="../insidefreedom/assets/photos/connection-waterfall-two-women.png" alt="שתי נשים יושבות יחד במים בטבע" loading="lazy">
+                <span class="badge">למי זה מתאים?</span>
               </div>
               <div class="card-body">
-                <h3>ערב נשים</h3>
-                <p class="duration">כ־3 שעות</p>
-                <p>מרחב להאט, לנשום, לדבר אמת ולהרגיש מוחזקת. בתוך עולם מהיר ומלא ציפיות, הערב נותן מקום פשוט להיות, בלי להוכיח ובלי לתקן.</p>
-                <p>דרך נוכחות, כתיבה, תנועה, הקשבה ושיתוף אותנטי, אנחנו יוצרות מרחב רך לחמלה עצמית, אמון, חיבור לגוף וללב, והיזכרות בכוח של אחוות נשים.</p>
-                <ul class="clean-list" aria-label="מה יכול להיות בערב נשים">
-                  <li>מדיטציה</li>
-                  <li>נשימה</li>
-                  <li>תרגול סומטי</li>
-                  <li>תנועה עדינה</li>
-                  <li>כתיבה רפלקטיבית</li>
-                  <li>שיתוף</li>
-                  <li>Authentic Relating</li>
-                  <li>עבודה עם נושאים כמו גבולות, ילדה פנימית, סליחה ואמון בקול שלך</li>
+                <h3>לקבוצות חברות שרוצות משהו מיוחד.</h3>
+                <p class="duration">מינימום 4 נשים לקבוצה פרטית</p>
+                <p>אם הגעתן לאי יחד ובא לכן חוויה יותר משמעותית מעוד יום רגיל, זה בשבילכן: משהו שהוא גם יפה, גם נשי, גם מקרב וגם משאיר תחושה של לב פתוח.</p>
+                <ul class="clean-list" aria-label="למי הריטריט מתאים">
+                  <li>חברות בטיול בקופנגן</li>
+                  <li>מסיבת רווקות רגועה</li>
+                  <li>קבוצת נשים שרוצה עומק</li>
+                  <li>יום מיוחד בטבע</li>
+                  <li>חוויה מחברת פנימה והחוצה</li>
                 </ul>
               </div>
             </article>
           </div>
 
           <div class="combine-note">
-            <strong>אפשר גם לשלב:</strong> להתחיל בריטריט יום במפל ולהוסיף ערב נשים לסיום עמוק יותר, באותו יום או בזמן נפרד לפי מה שמתאים לקבוצה.
+            <strong>בא לכן חוויה שמחברת פנימה?</strong> קופנגן מציעה הרבה אטרקציות ופעילויות, אבל לפעמים הדבר הכי מיוחד הוא לקחת רגע לעצמכן: לנשום, להתחבר פנימה, להתחבר לטבע ולהרגיש את הקשר ביניכן נפתח.
+          </div>
+        </div>
+      </section>
+
+      <section class="experiences" id="schedule">
+        <div class="wrap">
+          <div class="retreat-schedule-card">
+            <div>
+              <p class="eyebrow">הלו״ז</p>
+              <h3>איך היום נראה?</h3>
+              <p>הלו״ז יכול להשתנות קצת לפי מזג האוויר, הקבוצה והקצב שלכן, אבל זה המבנה הכללי של היום.</p>
+            </div>
+            <ul class="schedule-list" aria-label="לו״ז ריטריט יום במפל">
+              <li><strong>10:30</strong> מעגל פתיחה, פירות ותה קר.</li>
+              <li>הליכה שקטה של כ־20 דקות בטבע אל המפל.</li>
+              <li>המפל הראשון: זמן במים, נשימה, נוכחות והתקרקעות.</li>
+              <li>עבודה קבוצתית ותרגילי Authentic Relating להעמקת האינטימיות והקשר ביניכן.</li>
+              <li>כתיבה מונחית כדי להכניס פנימה, לפגוש את עצמך ולהתחבר לילדה הפנימית.</li>
+              <li>זמן שקט להתבוננות, מנוחה וצילומים במקום יפהפה.</li>
+              <li>מעגל סגירה ואינטגרציה.</li>
+              <li>בסיום יוצאות לארוחת צהריים במסעדה נעימה וטעימה.</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -1030,9 +1068,46 @@
             <figure class="story-photo presence-crop"><img src="../insidefreedom/assets/photos/presence-waterfall-rest.png" alt="רגע של מנוחה ונוכחות ליד מפל" loading="lazy"><span>נוכחות</span></figure>
             <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/movement-circle-evening.png" alt="נשים במעגל תנועה בערב" loading="lazy"><span>תנועה</span></figure>
             <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/connection-waterfall-two-women.png" alt="שתי נשים יושבות יחד במים בטבע" loading="lazy"><span>חיבור</span></figure>
-            <figure class="story-photo"><img src="../insidefreedom/assets/photos/evening-presence-depth-circle.png" alt="נשים במרחב ערב אינטימי עם אורות וטקס" loading="lazy"><span>עומק</span></figure>
+            <figure class="story-photo"><img src="../insidefreedom/assets/photos/depth-retreat-moment.png" alt="רגע עומק וחיבור בריטריט נשים בקופנגן" loading="lazy"><span>עומק</span></figure>
             <figure class="story-photo color-enhanced"><img src="../insidefreedom/assets/photos/session-women-circle.jpg" alt="נשים סביב מרחב אינטימי עם נרות ופירות" loading="lazy"><span>קהילה</span></figure>
             <figure class="story-photo nature-crop"><img src="../insidefreedom/assets/photos/nature-water-circle-retreat.jpg" alt="נשים במעגל במים בטבע בקופנגן" loading="lazy"><span>טבע</span></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="add-on" id="evening">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">אפשר להוסיף</p>
+            <h2 class="section-title">ערב נשים להעמקת החוויה</h2>
+            <p class="lead">אם בא לכן להמשיך את האנרגיה שנפתחה ביום, אפשר להוסיף ערב נשים אינטימי וטקסי. הערב הוא המשך טבעי לריטריט: יורדות מהטבע אל מרחב ערב רך, מתחברות יותר לגוף, מעבדות את מה שעלה ומעמיקות את החיבור ביניכן.</p>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card color-enhanced">
+              <div class="card-image">
+                <img src="../insidefreedom/assets/photos/gallery-04-night-circle.jpg" alt="ערב נשים באווירה אינטימית" loading="lazy">
+                <span class="badge">ערב נשים</span>
+              </div>
+              <div class="card-body">
+                <h3>המשך רך וטקסי</h3>
+                <p class="duration">כ-שעתיים</p>
+                <p>דרך נוכחות, תנועה עדינה, כתיבה, שיתוף וטקסים פשוטים, אנחנו נותנות מקום למה שנפתח במהלך היום. זה מרחב להקשיב לגוף, לרכך את הלב ולהמשיך את החוויה מתוך עומק, אינטימיות ואחוות נשים.</p>
+              </div>
+            </article>
+
+            <article class="experience-card">
+              <div class="card-body">
+                <h3>למה להוסיף ערב?</h3>
+                <p>הריטריט במפל פותח הרבה חיבור, תחושה וזיכרון בגוף. הערב מאפשר להישאר עוד רגע עם מה שנוצר: לעבד, לשתף, להעמיק דרך הגוף והטקס, ולסגור את היום בתחושה מלאה, שקטה ומחוברת יותר.</p>
+                <ul class="clean-list" aria-label="למה להוסיף ערב נשים">
+                  <li>העמקה ואינטגרציה</li>
+                  <li>העמקת הקשר ביניכן</li>
+                  <li>חיבור לגוף וללב</li>
+                  <li>מרחב טקסי ואינטימי</li>
+                </ul>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -1048,41 +1123,30 @@
             <p>אני בת 31, במקור מקליפורניה, וחיה בעיקר בקופנגן בחמש השנים האחרונות. אני מנחה תהליכי עומק רגשיים ותת־מודעים, ומובילה חוויות קבוצתיות לנשים. בעבודה שלי אני משלבת הקשבה לגוף, שיחה כנה, תנועה, חיבור אנושי וכלים שמאפשרים לפגוש בעדינות את מה שקורה מתחת לפני השטח.</p>
             <p>המרחבים שאני יוצרת משלבים מודעות סומטית, ויסות מערכת העצבים, עבודה עם ילדה פנימית, רייקי וטקסים פשוטים שמחזירים אותנו לגוף, לנשימה ולאדמה. אני מאמינה שריפוי לא מגיע מתוך מאמץ לתקן את עצמנו, אלא מתוך היזכרות במי שאנחנו מתחת לשכבות.</p>
             <p>הרקע שלי כולל IEMT, NLP, הנחיה מודעת טראומה, עבודה עם ילדה פנימית והורות פנימית, Authentic Relating, יוגה, רייקי, הנחיית קבוצות ומעגלי נשים.</p>
-            <div class="method-tags" aria-label="תחומי רקע">
-              <span>IEMT</span>
-              <span>NLP</span>
-              <span>מודעות טראומה</span>
-              <span>ילדה פנימית</span>
-              <span>Authentic Relating</span>
-              <span>Somatic Work</span>
-              <span>יוגה</span>
-              <span>רייקי</span>
-            </div>
           </div>
         </div>
       </section>
 
-      <section class="testimonials" aria-label="מילים מנשים שהיו במרחב">
+      <section class="testimonials" aria-label="מילים מנשים שעברו את הריטריט">
         <div class="wrap">
           <div class="section-head">
-            <p class="eyebrow">מילים מנשים שהיו במרחב</p>
-            <h2 class="section-title">מה נשים מספרות אחרי מפגש</h2>
-            <p class="lead">כל אישה מגיעה עם משהו אחר, אבל שוב ושוב חוזרות מילים על שקט, חיבור, עומק ותחושה שיש מקום להיות בדיוק כמו שאת.</p>
+            <p class="eyebrow">מילים מנשים שעברו את הריטריט</p>
+            <h2 class="section-title">מה נשים מספרות אחרי ריטריט היום</h2>
+            <p class="lead">נשים חוזרות מהיום הזה עם מילים על עומק, פתיחות, חיבור ושיחה אחרת שנפתחת ביניהן.</p>
           </div>
 
-          <!-- Testimonial cards are easy to duplicate, remove, or replace with full names later. Keep 3-5 cards for a calm section. -->
           <div class="testimonial-grid">
             <article class="quote-card">
-              <p>״מעגל הנשים של דניאל היה בדיוק מה שהייתי צריכה בזמן הטיול שלי בקופנגן. יכולתי פשוט להיות ולהביע את עצמי באופן אותנטי בתוך מרחב אוהב ובטוח. דניאל החזיקה את המרחב, עודדה והנחתה אותנו בבהירות ועם המון אהבה. אהבתי במיוחד את השילוב של מדיטציה, נשימה, תנועה וכתיבה מונחית. הייתי מצטרפת שוב בלי לחשוב פעמיים.״</p>
-              <footer>Madison, USA</footer>
+              <p>״דניאל לקחה אותנו למסע שפשוט חיווט מחדש משהו במוח. הלכנו יחפות בתוך הג׳ונגל, בהמון אמון ובלי ציפיות, וכל תרגיל הרגיש מדויק. השאלות שלה היו כל כך עמוקות וכל כך פשוטות, וזה פתח בינינו דמעות, כנות ושיחה אחרת לגמרי.״</p>
+              <footer>משתתפת בריטריט</footer>
             </article>
             <article class="quote-card">
-              <p>״דניאל היא אישה מדהימה עם הרבה חוכמה וידע. כשהגעתי למעגל הנשים שלה אהבתי מאוד את הדרך שבה היא החזיקה את המרחב, ראתה כל אחת מאיתנו וגרמה לי ולנו להרגיש בטוחות להיפתח. התרגילים שעשינו היו נפלאים והרגישו הוליסטיים. אני בהחלט ממליצה עליה.״</p>
-              <footer>Clara, Germany</footer>
+              <p>״לא בכיתי עם החברות הכי טובות שלי שנים. ופתאום היה כל כך משחרר פשוט לבכות את הפחד, ודניאל החזיקה את זה בלב עדין וכל כך מאפשר. אחרי הריטריט כל התקשורת בינינו השתנתה. זה היה עמוק, מדויק ופותח.״</p>
+              <footer>משתתפת בריטריט</footer>
             </article>
             <article class="quote-card">
-              <p>״המרחב הזה מושלם לנשים עם חיים עמוסים, או לנשים שלא יוצא להן להיות הרבה עם נשים אחרות אבל מתגעגעות לחיבור אנושי פשוט, נקי וללא שיפוט. הכי אהבתי לפגוש נשים חדשות, לשמוע את הסיפורים שלהן, ולהרגיש את היכולת גם לתמוך וגם להיתמך. אם אף פעם לא היית במעגל נשים, אני ממש ממליצה להתחיל אצל דניאל.״</p>
-              <footer>Kira, Koh Phangan</footer>
+              <p>״לא שמתי על זה שום ציפייה, וזה היה יותר טוב ממה שיכולתי לדמיין. אחרי 40 שנה יחד, דניאל נתנה לנו את השאלות הנכונות להעמיק, וזה שינה את כל הדיבור בינינו באותו רגע. חזרנו עם אורות, עומק וכלים חדשים.״</p>
+              <footer>משתתפת בריטריט</footer>
             </article>
           </div>
         </div>
