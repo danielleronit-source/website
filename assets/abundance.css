@@ -5,7 +5,7 @@
   --line: rgba(167,93,80,.28);
 }
 .abundance-page .soft-section {background: var(--salmon-soft);}
-.abundance-page .dream-hero {background-image: linear-gradient(rgba(249,231,224,.5),rgba(251,248,242,.82)),url('/assets/media/iemt-silk-hero.png');}
+.abundance-page .dream-hero {background-image: linear-gradient(rgba(249,231,224,.5),rgba(251,248,242,.82)),url('media/iemt-silk-hero.png');}
 .abundance-page .dream-hero h1 {color: var(--salmon-deep);}
 .abundance-page h2::after {content: ""; display: block; width: 54px; height: 2px; margin-top: 24px; background: var(--salmon);}
 .abundance-page .center h2::after {margin-left: auto; margin-right: auto;}
@@ -31,10 +31,22 @@
 .abundance-page .clean-list {margin-bottom: 32px;}
 .dream-stories h3 {font-family: "Cormorant Garamond",Georgia,serif; font-weight: 400; font-size: clamp(28px,4vw,38px); line-height: 1.2; margin: 48px 0 24px;}
 .dream-placeholder-grid {display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px;}
+.dream-video-grid {grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start;}
+.dream-video-grid h4 {margin: 0 0 18px; color: var(--ink); font-family: "Cormorant Garamond",Georgia,serif; font-size: 28px; font-weight: 400; line-height: 1.25;}
+.dream-video-grid .video-story-label {margin: 0 0 12px; color: var(--salmon-deep); font-size: 11px; font-weight: 400; letter-spacing: .16em; text-transform: uppercase;}
+.video-story-quote {margin: 0 0 26px; padding-left: 20px; border-left: 2px solid var(--salmon);}
+.video-story-quote p {font-size: 18px; line-height: 1.75;}
 .dream-placeholder-grid > .placeholder {margin: 0; min-width: 0;}
 .dream-placeholder-grid blockquote p {font-size: 17px;}
+.dream-written-testimonial {grid-column: 1 / -1; margin: 0; padding: clamp(24px,4vw,44px); border: 1px solid var(--line); background: rgba(255,253,249,.72);}
+.dream-written-testimonial h4 {margin: 0 0 24px; color: var(--ink); font-family: "Cormorant Garamond",Georgia,serif; font-size: clamp(28px,4vw,38px); font-weight: 400; line-height: 1.25;}
 .dream-placeholder-grid footer {display: block; padding: 0; margin-top: 20px; border: 0; background: none; font-size: 13px; line-height: 1.6;}
 .dream-placeholder-note {font-size: 16px;}
+.dream-screenshot-gallery {columns: 2; column-gap: 24px; margin-top: 28px;}
+.dream-screenshot-gallery a {display: block; break-inside: avoid; margin: 0 0 24px;}
+.dream-screenshot-gallery img {display: block; width: 100%; height: auto; border: 1px solid var(--line);}
+.dream-screenshot-gallery a:focus-visible {outline: 2px solid var(--salmon-deep); outline-offset: 5px;}
+@media (max-width: 700px) {.dream-screenshot-gallery {columns: 1;}}
 .dream-screenshot-placeholders {display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin-top: 24px;}
 .dream-screenshot-placeholders .placeholder {display: grid; align-content: center; min-height: 190px; text-align: center;}
 .dream-closing {scroll-margin-top: 24px;}

@@ -1,4 +1,4 @@
-.journey-hero {text-align: center; padding: 105px 24px 100px; background: linear-gradient(rgba(251,248,242,.4),rgba(251,248,242,.7)),url('/assets/media/iemt-silk-hero.png') center / cover;}
+.journey-hero {text-align: center; padding: 105px 24px 100px; background: linear-gradient(rgba(251,248,242,.4),rgba(251,248,242,.7)),url('media/iemt-silk-hero.png') center / cover;}
 .journey-hero h1 {font-size: clamp(54px,7vw,92px); line-height: 1.05;}
 .journey-hero .hero-copy {max-width: 790px; margin: 28px auto 0;}
 .journey-wrap {width: min(1080px,100%); margin: auto;}
