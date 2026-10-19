@@ -1,0 +1,75 @@
+.journey-hero {text-align: center; padding: 105px 24px 100px; background: linear-gradient(rgba(251,248,242,.4),rgba(251,248,242,.7)),url('/assets/media/iemt-silk-hero.png') center / cover;}
+.journey-hero h1 {font-size: clamp(54px,7vw,92px); line-height: 1.05;}
+.journey-hero .hero-copy {max-width: 790px; margin: 28px auto 0;}
+.journey-wrap {width: min(1080px,100%); margin: auto;}
+.journey-wrap > h2, .journey-wrap > .section-heading {max-width: 800px; margin-bottom: 32px;}
+.journey-grid, .story-grid {display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px;}
+.journey-card, .story-card {padding: clamp(24px,3vw,38px); border: 1px solid rgba(70,54,45,.22); background: rgba(255,253,249,.7); margin: 0; min-width: 0;}
+.journey-card h3 {font-family: "Cormorant Garamond",Georgia,serif; font-size: 31px; font-weight: 400; line-height: 1.15; margin: 0 0 18px;}
+.journey-card p:last-child, .story-card p:last-child {margin-bottom: 0;}
+.journey-list {padding-left: 22px; color: #74695f; font-size: 19px;}
+.journey-list li {padding: 12px 0; border-bottom: 1px solid rgba(70,54,45,.15);}
+.placeholder {padding: 22px; border: 1px dashed #b7a194; color: #74695f; background: rgba(251,248,242,.6); font-size: 16px;}
+.cohort-details {margin: 32px 0 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 40px; text-align: left;}
+.cohort-details > div {padding: 20px 0; border-bottom: 1px solid rgba(70,54,45,.22);}
+.cohort-details dt {font-size: 11px; text-transform: uppercase; font-weight: 400; letter-spacing: .15em;}
+.cohort-details dd {margin: 8px 0 0; font-size: 18px; color: #74695f;}
+
+.offering-navigation {position: relative; flex-wrap: wrap; gap: 20px; background: var(--paper);}
+.offering-navigation .page-tabs {gap: clamp(12px,1.8vw,24px); font-size: 11px;}
+.offering-navigation .page-tabs a[aria-current="page"] {text-decoration: underline; text-underline-offset: 6px;}
+.offering-page .hero {padding-top: 62px;}
+.offering-page .testimonial-section .narrow {width: min(1040px,100%);}
+.written-testimonials {width: min(800px,100%); margin: 44px auto 0; text-align: start;}
+.written-story {margin: 0; padding: clamp(30px,5vw,56px) 0; border-bottom: 1px solid var(--line);}
+.written-story:first-child {border-top: 1px solid var(--line);}
+.written-story p {color: var(--ink); font-family: "Cormorant Garamond",Georgia,serif; font-size: clamp(25px,3vw,34px); line-height: 1.5; margin: 0 0 22px;}
+.written-story p:last-child {margin-bottom: 0;}
+.written-story .testimonial-attribution {display: block; margin: 24px 0 0; padding: 0; border: 0; background: none; color: var(--ink); font-family: "Lato",Arial,sans-serif; font-size: 17px; font-weight: 400; line-height: 1.5; letter-spacing: .03em; text-align: start;}
+.written-story[dir="rtl"] .testimonial-attribution {text-align: right;}
+.written-story.long-story p {font-family: "Lato",Arial,sans-serif; font-size: clamp(18px,2vw,21px); line-height: 1.85;}
+.written-story[lang="he"] p {font-family: Arial,sans-serif;}
+.testimonials-subheading {margin: 76px auto 30px; font-size: clamp(35px,4.5vw,54px);}
+.testimonials-page .video-grid {margin-top: 0;}
+.testimonial-video {position: relative; aspect-ratio: 16 / 9; background: #171511; overflow: hidden;}
+.testimonial-video-play {position: absolute; inset: 0; display: block; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer;}
+.testimonial-video-play > img {display: block; width: 100%; height: 100%; object-fit: cover;}
+.testimonial-play-icon {position: absolute; top: 50%; left: 50%; width: 68px; height: 48px; transform: translate(-50%,-50%);}
+.testimonial-play-icon svg {display: block; width: 100%; height: 100%;}
+.testimonial-video-play:hover .testimonial-play-icon {filter: brightness(.9);}
+.testimonial-video-play:focus-visible {outline: 3px solid var(--white); outline-offset: -6px;}
+.testimonial-video iframe {position: absolute; inset: 0; width: 100%; height: 100%; border: 0;}
+.testimonials-page .screenshot-testimonials .testimonials-subheading {margin-top: 18px;}
+.offering-page .screenshot-grid img {height: auto;}
+@media (max-width: 1050px) {
+  .offering-navigation .page-tabs {order: 3; width: 100%; flex-wrap: wrap; justify-content: center; overflow: visible; white-space: normal; gap: 10px 20px;}
+}
+@media (max-width: 700px) {
+  .journey-hero {padding: 66px 22px;}
+  .journey-grid,.story-grid,.cohort-details {grid-template-columns: 1fr;}
+  .offering-page .hero {padding-top: 42px;}
+}
+@media (prefers-reduced-motion: reduce) {html {scroll-behavior: auto;}}
+
+/* A personal introduction, with a headline spanning the text and portrait. */
+.testimonials-editorial {position: relative; display: grid; grid-template-columns: 47% 53%; padding: 0; background: var(--paper); isolation: isolate;}
+.testimonials-editorial h1 {position: absolute; z-index: 1; top: 10px; left: 0; width: 100%; display: grid; grid-template-columns: 47% 53%; font-size: clamp(52px,10.2vw,170px); line-height: 1.04; letter-spacing: -.045em; pointer-events: none;}
+.testimonials-editorial h1 span:first-child {text-align: right; padding-right: 12px; color: var(--ink); white-space: nowrap;}
+.testimonials-editorial h1 span:last-child {text-align: left; padding-left: 12px; color: var(--white); white-space: nowrap;}
+.testimonials-introduction {padding: clamp(135px,16vw,240px) 26px 70px clamp(28px,10vw,150px); text-align: right; align-self: start;}
+.testimonials-introduction .eyebrow {font-size: 11px; letter-spacing: .15em; margin-bottom: 28px;}
+.testimonials-introduction > p:not(.eyebrow) {font-size: clamp(17px,1.65vw,25px); line-height: 1.65; margin-bottom: 28px;}
+.testimonials-read-link {display: inline-flex; align-items: center; gap: 20px; margin-top: 6px; padding-bottom: 7px; border-bottom: 1px solid var(--line); font-size: 12px; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; text-decoration: none;}
+.testimonials-read-link:hover {border-bottom-color: var(--ink);}
+.testimonials-read-link:focus-visible {outline: 2px solid var(--muted); outline-offset: 6px;}
+.testimonials-portrait {position: relative; min-height: clamp(650px,65vw,970px); background: var(--sand);}
+.testimonials-portrait img {position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%;}
+@media (max-width: 600px) {
+  .testimonials-editorial {grid-template-columns: minmax(0,1fr);}
+  .testimonials-editorial h1 {position: relative; top: auto; display: block; padding: 46px 22px 0; font-size: clamp(54px,11vw,77px); text-align: center;}
+  .testimonials-editorial h1 span:first-child,.testimonials-editorial h1 span:last-child {padding: 0; color: var(--ink); white-space: normal;}
+  .testimonials-introduction {padding: 32px 26px 44px; text-align: left;}
+  .testimonials-introduction .eyebrow {text-align: center;}
+  .testimonials-introduction > p:not(.eyebrow) {font-size: 18px; margin-bottom: 22px;}
+  .testimonials-portrait {min-height: 0; aspect-ratio: 4 / 5;}
+}
