@@ -39,6 +39,7 @@
 .testimonial-video-play:hover .testimonial-play-icon {filter: brightness(.9);}
 .testimonial-video-play:focus-visible {outline: 3px solid var(--white); outline-offset: -6px;}
 .testimonial-video iframe {position: absolute; inset: 0; width: 100%; height: 100%; border: 0;}
+.featured-healing-testimonial {width: min(760px,100%); margin: 36px auto 0; text-align: left;}
 .testimonials-page .screenshot-testimonials .testimonials-subheading {margin-top: 18px;}
 .offering-page .screenshot-grid img {height: auto;}
 @media (max-width: 1050px) {
@@ -73,6 +74,15 @@
   .testimonials-introduction > p:not(.eyebrow) {font-size: 18px; margin-bottom: 22px;}
   .testimonials-portrait {min-height: 0; aspect-ratio: 4 / 5;}
 }
+
+/* Written testimonials on the healing page. */
+.healing-quote-carousel .quote-slides {display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; align-items: stretch;}
+.healing-quote-carousel .quote-slides::-webkit-scrollbar {display: none;}
+.healing-quote-carousel .quote-slide {flex: 0 0 100%; min-width: 0; box-sizing: border-box; scroll-snap-align: start; opacity: 1; pointer-events: auto; display: flex; flex-direction: column; justify-content: center; padding: clamp(28px,5vw,48px) clamp(24px,4vw,44px); border: 0; border-radius: 12px; background: var(--sand-soft); text-align: center;}
+.healing-quote-carousel .quote-slide p {width: 100%; max-width: 38ch; margin: 0 auto; font-size: clamp(22px,2.4vw,28px); line-height: 1.5; text-align: center;}
+.healing-quote-carousel .quote-slide .testimonial-attribution {margin-top: 24px; text-align: center;}
+.healing-quote-carousel .quote-position {grid-column: 2; margin: 0; font-size: 14px; color: var(--muted); text-align: center;}
+.healing-quote-carousel .quote-slides:focus-visible {outline: 2px solid var(--ink); outline-offset: 4px;}
 
 .video-testimonial-quote {margin: 0 0 22px; color: var(--ink); font-size: clamp(18px,2vw,21px); line-height: 1.65; text-align: left;}
 .video-testimonial-quote[dir="rtl"] {text-align: right;}
