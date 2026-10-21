@@ -80,6 +80,7 @@
 .healing-quote-carousel .quote-slides::-webkit-scrollbar {display: none;}
 .healing-quote-carousel .quote-slide {flex: 0 0 100%; min-width: 0; box-sizing: border-box; scroll-snap-align: start; opacity: 1; pointer-events: auto; display: flex; flex-direction: column; justify-content: center; padding: clamp(28px,5vw,48px) clamp(24px,4vw,44px); border: 0; border-radius: 12px; background: var(--sand-soft); text-align: center;}
 .healing-quote-carousel .quote-slide p {width: 100%; max-width: 38ch; margin: 0 auto; font-size: clamp(22px,2.4vw,28px); line-height: 1.5; text-align: center;}
+.healing-quote-carousel .quote-slide p + p {margin-top: 18px;}
 .healing-quote-carousel .quote-slide .testimonial-attribution {margin-top: 24px; text-align: center;}
 .healing-quote-carousel .quote-position {grid-column: 2; margin: 0; font-size: 14px; color: var(--muted); text-align: center;}
 .healing-quote-carousel .quote-slides:focus-visible {outline: 2px solid var(--ink); outline-offset: 4px;}
