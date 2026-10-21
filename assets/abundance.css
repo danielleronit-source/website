@@ -115,3 +115,5 @@
 .facilitator-story-content {margin-top: 28px; padding: clamp(24px,4vw,36px); background: rgba(255,253,249,.65); border-left: 3px solid var(--sage);}
 .facilitator-story-content h3 {margin: 0 0 24px; font: 400 clamp(28px,4vw,36px)/1.2 "Cormorant Garamond",Georgia,serif;}
 .facilitator-story-content .story-close-button {margin-top: 14px;}
+
+.facilitator-story-content strong {font-weight: 700;}
