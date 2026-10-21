@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --canopy: #123629;
-      --jungle: #275744;
-      --leaf: #6f8d62;
-      --moss: #d7dfc5;
+      --canopy: #46583b;
+      --jungle: #46583b;
+      --leaf: #bfcfb4;
+      --moss: #edf1e8;
       --cream: #fff8ec;
       --shell: #fffdf7;
       --sand: #e7d2ac;
@@ -933,20 +933,46 @@
         padding-bottom: 88px;
       }
     }
+
+    .global-navigation {display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; padding: 24px clamp(24px,5vw,76px); background: var(--shell); color: var(--ink); text-align: left;}
+    .global-navigation a {text-decoration: none;}
+    .global-brand {font-size: 25px; font-weight: 500; white-space: nowrap;}
+    .global-navigation nav {display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase;}
+    .global-navigation nav a {padding: 6px 0;}
+    .global-navigation nav a[aria-current="page"] {color: var(--jungle); border-bottom: 1px solid currentColor;}
+    .global-navigation a:hover {text-decoration: underline; text-underline-offset: 5px;}
+    .global-navigation a:focus-visible {outline: 2px solid var(--jungle); outline-offset: 5px;}
+    @media (max-width: 700px) {.global-navigation {justify-content: center; text-align: center;} .global-navigation nav {justify-content: center; gap: 10px 20px;}}
+
+    /* Sage palette shared with The Abundance Container. */
+    :root {--sage: #bfcfb4; --sage-deep: #46583b; --sage-soft: #edf1e8;}
+    .hero::before {background: linear-gradient(90deg,rgba(191,207,180,.78),rgba(191,207,180,.94)),linear-gradient(rgba(191,207,180,.4),rgba(191,207,180,.4));}
+    .hero,.hero h1,.hero .kicker,.hero .hero-copy {color: #2f2925;}
+    .hero .btn.secondary,.btn.outline {color: #2f2925; border-color: var(--sage-deep); background: rgba(255,253,247,.4);}
+    .about {background: var(--sage); color: #2f2925;}
+    .about .eyebrow,.about .section-title,.about p {color: #2f2925;}
+    .cta {background: var(--sage); color: #2f2925; background-blend-mode: normal;}
+    .cta .eyebrow,.cta .section-title,.cta .lead {color: #2f2925;}
+    .final {background: linear-gradient(rgba(191,207,180,.86),rgba(191,207,180,.94)),url("../insidefreedom/assets/photos/gallery-01-water-circle.jpg") center / cover; color: #2f2925;}
+    .final h2,.final p {color: #2f2925;}
+    .footer {background: var(--sage); color: #2f2925;}
+    .mobile-whatsapp {background: var(--sage); color: #2f2925;}
   </style>
+  <link rel="stylesheet" href="../assets/site-header.css?v=original-type-2">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="page">
-    <header class="site-nav" aria-label="ניווט ראשי">
-      <a class="brand" href="/">Danielle Ronit</a>
-      <nav class="nav-links" aria-label="קישורים בעמוד">
-        <a href="#experience">החוויה</a>
-        <a href="#schedule">הלו״ז</a>
-        <a href="#evening">ערב נשים</a>
-        <a href="#upcoming">תאריכים ותיאום</a>
-        <a href="#waitlist">וואטסאפ</a>
-      </nav>
-    </header>
+  <header class="site-header" dir="ltr" aria-label="Page header">
+    <a class="site-brand" href="../index.html">Danielle Ronit</a>
+    <nav class="site-links" aria-label="Main navigation">
+      <a href="../index.html">1:1 Healing Sessions</a>
+      <a href="../abundance/index.html">The Abundance Container</a>
+      <a href="index.html" aria-current="page">Retreats</a>
+      <a href="../testimonials/index.html">Testimonials</a>
+    </nav>
+    <a class="site-language" href="../IEMT/he/index.html" lang="he" dir="rtl">עברית</a>
+  </header>
 
     <main>
       <section class="hero" aria-label="ריטריט יום לנשים בקופנגן">
