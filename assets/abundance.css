@@ -22,7 +22,7 @@
 .abundance-page .dream-hero .kicker {color: var(--sage-deep);}
 .abundance-page .clean-list li::before {border-color: var(--sage-deep);}
 .abundance-page .placeholder {border-color: #c88978;}
-.abundance-page .dream-closing {background: linear-gradient(135deg,#bfcfb4,#e1ead9);}
+.abundance-page .dream-closing {background: var(--paper);}
 .abundance-page h2 {margin-bottom: 30px;}
 .danielle-heart {display: inline-block; width: .65em; height: .65em; margin-left: .12em; vertical-align: .04em; fill: none; stroke: var(--salmon); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;}
 .dream-about-photo {display: block; float: right; width: min(42%,320px); aspect-ratio: 4 / 5; object-fit: cover; object-position: center 42%; margin: 6px 0 28px 36px; border: 1px solid var(--line);}
