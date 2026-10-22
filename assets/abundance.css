@@ -5,23 +5,26 @@
   --sage: #bfcfb4;
   --sage-deep: #46583b;
   --sage-soft: #edf1e8;
-  --line: rgba(167,93,80,.28);
+  --ink: #293d30;
+  --muted: #566354;
+  --line: rgba(70,88,59,.24);
 }
-.abundance-page .soft-section {background: var(--salmon-soft);}
-.abundance-page .dream-hero {background-image: linear-gradient(rgba(249,231,224,.5),rgba(251,248,242,.82)),url('media/iemt-silk-hero.png');}
-.abundance-page .dream-hero h1 {color: var(--salmon-deep);}
-.abundance-page h2::after {content: ""; display: block; width: 54px; height: 2px; margin-top: 24px; background: var(--sage);}
+.abundance-page .soft-section {background: var(--sage-soft);}
+.abundance-page .abundance-themes {background: var(--paper);}
+.abundance-page .dream-hero {background-color: var(--sage); background-image: linear-gradient(rgba(191,207,180,.48),rgba(225,234,217,.66)),url('media/iemt-silk-hero.png'); background-blend-mode: normal, luminosity;}
+.abundance-page .dream-hero h1 {color: #334c36;}
+.abundance-page h2::after {content: ""; display: block; width: 54px; height: 2px; margin-top: 24px; background: var(--salmon);}
 .abundance-page .center h2::after {margin-left: auto; margin-right: auto;}
-.abundance-page .button {background: var(--sage); border-color: var(--sage); color: var(--ink);}
-.abundance-page .button:hover,.abundance-page .button:focus-visible {background: #afc1a2; border-color: var(--sage-deep);}
+.abundance-page .button {background: var(--salmon); border-color: var(--salmon); color: var(--ink);}
+.abundance-page .button:hover,.abundance-page .button:focus-visible {background: #e19a85; border-color: var(--salmon-deep);}
 .abundance-page .button:focus-visible {outline: 2px solid var(--sage-deep); outline-offset: 4px;}
 .abundance-page .page-tabs a[aria-current="page"] {color: var(--sage-deep);}
 .abundance-page .dream-hero .kicker {color: var(--sage-deep);}
 .abundance-page .clean-list li::before {border-color: var(--sage-deep);}
 .abundance-page .placeholder {border-color: #c88978;}
-.abundance-page .dream-closing {background: linear-gradient(135deg,#f4d4c9,#faeee7);}
+.abundance-page .dream-closing {background: linear-gradient(135deg,#bfcfb4,#e1ead9);}
 .abundance-page h2 {margin-bottom: 30px;}
-.danielle-heart {display: inline-block; width: .65em; height: .65em; margin-left: .12em; vertical-align: .04em; fill: none; stroke: var(--sage); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;}
+.danielle-heart {display: inline-block; width: .65em; height: .65em; margin-left: .12em; vertical-align: .04em; fill: none; stroke: var(--salmon); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;}
 .dream-about-photo {display: block; float: right; width: min(42%,320px); aspect-ratio: 4 / 5; object-fit: cover; object-position: center 42%; margin: 6px 0 28px 36px; border: 1px solid var(--line);}
 @media (max-width: 600px) {.dream-about-photo {float: none; width: min(420px,100%); margin: 0 auto 30px;}}
 .abundance-page p:last-child {margin-bottom: 0;}
@@ -94,7 +97,7 @@
 .integration-note {padding: clamp(24px,4vw,36px); margin: 28px 0; border-left: 3px solid var(--sage); background: var(--sage-soft);}
 .abundance-page .abundance-group {background: var(--sage); --muted: var(--ink);}
 .abundance-group p {color: var(--ink);}
-.abundance-page .abundance-group h2::after {background: var(--sage-deep);}
+.abundance-page .abundance-group h2::after {background: var(--salmon-deep);}
 .abundance-about .narrow::after {content: ""; display: block; clear: both;}
 @media (max-width: 480px) {
   .cohort-facts > div {grid-template-columns: 1fr; gap: 6px;}
@@ -117,3 +120,15 @@
 .facilitator-story-content .story-close-button {margin-top: 14px;}
 
 .facilitator-story-content strong {font-weight: 700;}
+
+/* Alternate sage and warm beige through the page. */
+.abundance-page .abundance-intro,
+.abundance-page .program-details,
+.abundance-page .abundance-fit {background: var(--sage-soft);}
+.abundance-page .abundance-group,
+.abundance-page .abundance-testimonials {background: var(--paper);}
+.abundance-intro .facilitator-story {padding-top: 20px;}
+.abundance-intro .facilitator-story-content {background: var(--paper); border-left-color: var(--salmon);}
+.facilitator-story-content h4 {margin: 40px 0 20px; color: var(--sage-deep); font: 400 clamp(26px,3.5vw,32px)/1.25 "Cormorant Garamond",Georgia,serif;}
+
+.program-details .cohort-apply {text-align: center;}
