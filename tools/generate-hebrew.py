@@ -11,10 +11,12 @@ ROOT=Path(__file__).resolve().parents[1]
 TEXT=json.loads((ROOT/'content/hebrew-translations.json').read_text())
 ROUTES={'/abundance/':'/abundance/he/','/IEMT/':'/IEMT/he/','/testimonials/':'/testimonials/he/','/':'/abundance/he/'}
 class HebrewPage(HTMLParser):
- def __init__(self,page):
-  super().__init__(convert_charrefs=True);self.page=page;self.out=[];self.skip=False;self.missing=[];self.language=False
+ def __init__(self,page,protected=None):
+  super().__init__(convert_charrefs=True);self.page=page;self.out=[];self.skip=False;self.missing=[];self.language=False;self.protected=protected or []
  def handle_decl(self,data):self.out.append('<!'+data+'>')
- def handle_comment(self,data):self.out.append('<!--'+data+'-->')
+ def handle_comment(self,data):
+  if data.startswith('HE_COPY:'):self.out.append(self.protected[int(data.split(':')[1])])
+  else:self.out.append('<!--'+data+'-->')
  def handle_starttag(self,tag,attrs):
   a=dict(attrs);self.language=tag=='a' and a.get('class')=='site-language'
   if tag in ['script','style']:self.skip=True
@@ -55,7 +57,25 @@ class HebrewPage(HTMLParser):
    if text in TEXT:d=d.replace(text,TEXT[text])
   self.out.append(escape(d,quote=False))
 for page in ['abundance','testimonials']:
- p=HebrewPage(page);p.feed((ROOT/page/'index.html').read_text())
+ source=(ROOT/page/'index.html').read_text()
+ protected=[]
+ def translated_emphasis(match):
+  body=match['body']
+  if not re.search(r'<(?:strong|em)>',body) or re.search(r'<(?!/?(?:strong|em)[ >])',body):return match[0]
+  plain=unescape(re.sub(r'</?(?:strong|em)>','',body))
+  if plain not in TEXT:return match[0]
+  translated=escape(TEXT[plain],quote=False)
+  phrases=re.findall(r'<(strong|em)>(.*?)</\1>',body)
+  for tag,phrase in phrases:
+   phrase=unescape(phrase)
+   assert phrase in TEXT, 'Missing emphasized Hebrew phrase: '+phrase
+   equivalent=escape(TEXT[phrase],quote=False)
+   assert equivalent in translated, 'Emphasis not found in Hebrew sentence: '+phrase
+   translated=translated.replace(equivalent,'<'+tag+' dir="auto">'+equivalent+'</'+tag+'>',1)
+  protected.append('<'+match['tag']+match['attrs']+'>'+translated+'</'+match['tag']+'>')
+  return '<!--HE_COPY:'+str(len(protected)-1)+'-->'
+ source=re.sub(r'<(?P<tag>p|li)(?P<attrs>[^>]*)>(?P<body>.*?)</(?P=tag)>',translated_emphasis,source,flags=re.S)
+ p=HebrewPage(page,protected);p.feed(source)
  assert not p.missing,'Missing Hebrew translations: '+repr(sorted(set(p.missing)))
  out=ROOT/page/'he/index.html';out.parent.mkdir(exist_ok=True);out.write_text(''.join(p.out))
  print(out.relative_to(ROOT))

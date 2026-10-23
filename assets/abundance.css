@@ -28,7 +28,7 @@
 .dream-about-photo {display: block; float: right; width: min(42%,320px); aspect-ratio: 4 / 5; object-fit: cover; object-position: center 42%; margin: 6px 0 28px 36px; border: 1px solid var(--line);}
 @media (max-width: 600px) {.dream-about-photo {float: none; width: min(420px,100%); margin: 0 auto 30px;}}
 .abundance-page p:last-child {margin-bottom: 0;}
-.abundance-page strong {font-weight: 400; color: var(--ink);}
+.abundance-page strong {font-weight: 700; color: var(--ink);}
 .dream-hero .dream-subheading {max-width: 680px; margin: 26px auto 40px; color: var(--ink); font-size: clamp(23px,3vw,31px); line-height: 1.5; font-family: "Cormorant Garamond",Georgia,serif;}
 .dream-opening {max-width: 650px; margin: 0 auto;}
 .dream-opening p {margin-bottom: 18px;}
@@ -151,3 +151,5 @@
 .abundance-theme-list p + p {margin-top: 16px;}
 
 .abundance-page .abundance-session-method strong {font-weight: 700;}
+
+.abundance-page .cohort-timezones strong {font-weight: 400;}
