@@ -29,3 +29,4 @@ html[lang="he"] .testimonials-introduction {padding: 32px clamp(24px,4vw,56px) 4
   html[lang="he"] .testimonials-editorial {grid-template-columns: minmax(0,1fr);}
   html[lang="he"] .testimonials-portrait {min-height: 0; aspect-ratio: 4 / 5;}
 }
+html[lang="he"] .faq-item summary {font-family: "Noto Serif Hebrew",Georgia,serif; line-height: 1.4;}

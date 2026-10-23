@@ -139,3 +139,15 @@
 /* Maintain alternating backgrounds as sections are added or removed. */
 .abundance-page main > section:nth-of-type(2n) {background-color: var(--paper);}
 .abundance-page main > section:nth-of-type(2n + 3) {background-color: var(--sage-soft);}
+
+.abundance-theme-list {list-style: none; padding: 0; margin: 36px 0 24px; counter-reset: abundance-theme; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px;}
+.abundance-theme-list > li {counter-increment: abundance-theme; min-width: 0; padding: clamp(24px,3vw,32px); border: 1px solid var(--line); background: rgba(251,248,242,.75);}
+.abundance-theme-list > li::before {content: counter(abundance-theme,decimal-leading-zero); display: block; margin-bottom: 18px; font-size: 14px; font-weight: 700; color: var(--salmon-deep);}
+.abundance-theme-list h3 {margin: 0 0 16px; font: 400 clamp(26px,3vw,32px)/1.25 "Cormorant Garamond",Georgia,serif;}
+.abundance-theme-list p {font-size: 17px; line-height: 1.75; margin: 0;}
+.abundance-page .abundance-journey-note {font-size: 15px;}
+@media(max-width:700px) {.abundance-theme-list {grid-template-columns: minmax(0,1fr);}}
+
+.abundance-theme-list p + p {margin-top: 16px;}
+
+.abundance-page .abundance-session-method strong {font-weight: 700;}
