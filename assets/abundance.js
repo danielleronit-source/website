@@ -13,3 +13,12 @@
     summary.scrollIntoView({block: 'nearest', behavior: 'instant'});
   });
 })();
+
+(() => {
+  const dismiss = document.querySelector('.contact-dismiss');
+  if (!dismiss) return;
+  dismiss.addEventListener('click', () => {
+    document.querySelector('.contact-greeting').hidden = true;
+    document.querySelector('.contact-launcher').focus({preventScroll: true});
+  });
+})();
