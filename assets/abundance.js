@@ -19,6 +19,7 @@
   if (!dismiss) return;
   dismiss.addEventListener('click', () => {
     document.querySelector('.contact-greeting').hidden = true;
+    document.querySelector('.contact-widget').classList.add('contact-compact');
     document.querySelector('.contact-launcher').focus({preventScroll: true});
   });
 })();

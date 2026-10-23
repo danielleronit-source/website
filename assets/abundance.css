@@ -172,3 +172,9 @@
 .contact-message:focus-visible,.contact-launcher:focus-visible,.contact-dismiss:focus-visible {outline: 3px solid var(--salmon); outline-offset: 4px;}
 .contact-greeting[hidden] {display: none;}
 @media (max-width: 600px) {.contact-widget {right: 16px; bottom: max(16px, env(safe-area-inset-bottom)); width: min(280px, calc(100vw - 32px));} .contact-launcher img {width: 46px; height: 46px;} .contact-message {font-size: 15px; padding-top: 16px; padding-bottom: 16px;}}
+
+.contact-widget.contact-compact {width: auto;}
+.contact-compact .contact-launcher {padding: 4px; gap: 0;}
+.contact-compact .contact-launcher img {width: 46px; height: 46px;}
+.contact-compact .contact-launcher span,
+.contact-compact .contact-launcher svg {display: none;}
