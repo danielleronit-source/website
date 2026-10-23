@@ -132,3 +132,10 @@
 .facilitator-story-content h4 {margin: 40px 0 20px; color: var(--sage-deep); font: 400 clamp(26px,3.5vw,32px)/1.25 "Cormorant Garamond",Georgia,serif;}
 
 .program-details .cohort-apply {text-align: center;}
+
+.abundance-page .abundance-possibilities {background: var(--paper);}
+.abundance-possibilities .clean-list strong {font-weight: 700;}
+
+/* Maintain alternating backgrounds as sections are added or removed. */
+.abundance-page main > section:nth-of-type(2n) {background-color: var(--paper);}
+.abundance-page main > section:nth-of-type(2n + 3) {background-color: var(--sage-soft);}
