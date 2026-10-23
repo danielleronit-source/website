@@ -153,3 +153,8 @@
 .abundance-page .abundance-session-method strong {font-weight: 700;}
 
 .abundance-page .cohort-timezones strong {font-weight: 400;}
+
+.application-steps {margin: 32px 0 0; padding-inline-start: 1.5em;}
+.application-steps li {padding-inline-start: .5em; margin-bottom: 24px;}
+.application-steps li::marker {color: var(--salmon-deep); font-weight: 700;}
+.application-steps p {margin: 0;}
