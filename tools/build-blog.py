@@ -13,7 +13,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
     <details class="site-programs">
       <summary>Group Programs</summary>
       <div class="site-programs-menu">
-        <span class="site-program-unavailable" lang="en" dir="ltr">Inner Source</span>
+        <a href="/inner-source/" lang="en" dir="ltr">Inner Source</a>
         <a href="/abundance/">The Abundance Container</a>
       </div>
     </details>
