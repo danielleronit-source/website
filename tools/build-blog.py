@@ -9,8 +9,14 @@ E=escape
 HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
   <a class="site-brand" href="/">Danielle Ronit</a>
   <nav class="site-links" aria-label="Main navigation">
-    <a href="/IEMT/">1:1 Sessions</a>
-    <a href="/abundance/">The Abundance Container</a>
+    <a href="/IEMT/">One-on-One Sessions</a>
+    <details class="site-programs">
+      <summary>Group Programs</summary>
+      <div class="site-programs-menu">
+        <span class="site-program-unavailable" lang="en" dir="ltr">Inner Source</span>
+        <a href="/abundance/">The Abundance Container</a>
+      </div>
+    </details>
     <a href="/retreats/">Retreats</a>
     <a href="/testimonials/">Testimonials</a>
     <a href="/blog/" aria-current="page">Blog</a>
@@ -38,7 +44,7 @@ def document(title,description,path,body,schema,image=None):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/IEMT/style.css?v=iemt-moshe-1">
-  <link rel="stylesheet" href="/assets/site-header.css?v=blog-3">
+  <link rel="stylesheet" href="/assets/site-header.css?v=group-programs-1">
   <link rel="stylesheet" href="/assets/blog.css?v=1">
   <script type="application/ld+json">{schema_json}</script>
 </head>
@@ -47,6 +53,7 @@ def document(title,description,path,body,schema,image=None):
 {HEADER}
 <main id="main">{body}</main>
 {FOOTER}
+<script src="/assets/site-navigation.js?v=1" defer></script>
 </body>
 </html>
 '''
