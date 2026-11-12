@@ -10,7 +10,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
   <a class="site-brand" href="/">Danielle Ronit</a>
   <nav class="site-links" aria-label="Main navigation">
     <a href="/IEMT/">1:1 Sessions</a>
-    <a href="/abundance/">The Abundance Healing Container</a>
+    <a href="/abundance/">The Abundance Container</a>
     <a href="/retreats/">Retreats</a>
     <a href="/testimonials/">Testimonials</a>
     <a href="/blog/" aria-current="page">Blog</a>
