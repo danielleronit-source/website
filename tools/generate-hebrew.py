@@ -9,7 +9,7 @@ from urllib.parse import urljoin,urlsplit
 import json,re
 ROOT=Path(__file__).resolve().parents[1]
 TEXT=json.loads((ROOT/'content/hebrew-translations.json').read_text())
-ROUTES={'/abundance/':'/abundance/he/','/IEMT/':'/IEMT/he/','/testimonials/':'/testimonials/he/','/':'/abundance/he/'}
+ROUTES={'/abundance/':'/abundance/he/','/IEMT/':'/IEMT/he/','/testimonials/':'/testimonials/he/','/':'/IEMT/he/'}
 class HebrewPage(HTMLParser):
  def __init__(self,page,protected=None):
   super().__init__(convert_charrefs=True);self.page=page;self.out=[];self.skip=False;self.missing=[];self.language=False;self.protected=protected or []

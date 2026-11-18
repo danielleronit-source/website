@@ -14,7 +14,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
       <summary>Group Programs</summary>
       <div class="site-programs-menu">
         <span class="site-program-unavailable" lang="en" dir="ltr">Inner Source</span>
-        <a href="/abundance/">The Abundance Container</a>
+        <span class="site-program-unavailable">The Abundance Container</span>
       </div>
     </details>
     <a href="/retreats/">Retreats</a>
@@ -22,7 +22,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
     <a href="/blog/" aria-current="page">Blog</a>
   </nav>
 </header>'''
-FOOTER='''<footer class="blog-footer"><a class="footer-brand" href="/">Danielle Ronit</a><nav aria-label="Footer navigation"><a href="/abundance/">The Abundance Healing Container</a><a href="/IEMT/">1:1 Healing Sessions</a><a href="/blog/">Blog</a><a href="mailto:danielleronit@gmail.com">danielleronit@gmail.com</a></nav></footer>'''
+FOOTER='''<footer class="blog-footer"><a class="footer-brand" href="/">Danielle Ronit</a><nav aria-label="Footer navigation"><a href="/IEMT/">1:1 Healing Sessions</a><a href="/blog/">Blog</a><a href="mailto:danielleronit@gmail.com">danielleronit@gmail.com</a></nav></footer>'''
 def document(title,description,path,body,schema,image=None):
  image=image or POSTS[0]['image']
  schema_json=json.dumps(schema,ensure_ascii=False).replace('</','<\\/')
