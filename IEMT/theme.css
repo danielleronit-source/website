@@ -79,16 +79,7 @@
     url("/assets/media/iemt-silk-hero.png") center / cover no-repeat;
 }
 
-.iemt-page #about-me .story-grid {
-  align-items: start;
-}
-
-@media (max-width: 820px) {
-  .iemt-page #about-me .story-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .iemt-page #about-me .about-photo-wrap {
-    order: -1;
-  }
+.iemt-page #about-me .about-photo-wrap {
+  width: min(600px, 100%);
+  margin: 32px auto;
 }
