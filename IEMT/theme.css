@@ -1,0 +1,80 @@
+.iemt-page {
+  --sage: #46583b;
+  --sage-soft: #edf1e8;
+  --salmon: #e9ac9a;
+  --ink: #293d30;
+  --muted: #566354;
+  --line: rgba(70, 88, 59, .24);
+  --clay: var(--sage);
+}
+
+.iemt-page h1,
+.iemt-page h2,
+.iemt-page .eyebrow,
+.iemt-page .kicker {
+  color: var(--sage);
+}
+
+.iemt-page .soft-section {
+  background: var(--sage-soft);
+}
+
+.iemt-page .invitation-opening {
+  display: block;
+  font-size: clamp(64px, 9vw, 104px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -.025em;
+}
+
+.iemt-page .invitation-completion {
+  display: block;
+  max-width: 680px;
+  margin: 14px auto 0;
+  color: var(--sage);
+  font-size: clamp(28px, 4.3vw, 46px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.iemt-page .button {
+  background: var(--salmon);
+  border-color: var(--salmon);
+  color: var(--ink);
+}
+
+.iemt-page .button:hover {
+  background: #e19a85;
+  border-color: #a75d50;
+}
+
+.iemt-page .button:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 4px;
+}
+
+.iemt-page main h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 2px;
+  margin-top: 24px;
+  background: var(--salmon);
+}
+
+.iemt-page .center h2::after {
+  margin-inline: auto;
+}
+
+.iemt-page .healing-quote-carousel .written-story {
+  background: var(--sage-soft);
+  border-color: var(--line);
+}
+
+.iemt-page .closing {
+  background:
+    linear-gradient(rgba(237, 241, 232, .88), rgba(237, 241, 232, .92)),
+    url("/assets/media/iemt-silk-hero.png") center / cover no-repeat;
+}
