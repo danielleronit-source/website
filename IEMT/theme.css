@@ -83,3 +83,7 @@
   width: min(600px, 100%);
   margin: 32px auto;
 }
+
+.iemt-page #testimonials {
+  background: #f7e6df;
+}
