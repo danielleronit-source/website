@@ -10,8 +10,15 @@
   --line: rgba(89,71,57,.22);
 }
 .inner-source-page .hero {
-  background: linear-gradient(rgba(243,197,180,.6),rgba(245,218,207,.7)),url('/assets/media/iemt-silk-hero.png') center / cover no-repeat;
+  background: linear-gradient(rgba(243,197,180,.28),rgba(245,218,207,.4)),url('/assets/media/iemt-silk-hero.png') center / cover no-repeat;
+  background-size: cover, 100% 100%;
+  background-position: center, center top;
+  background-repeat: no-repeat;
+  background-color: #f3c9b9;
   background-blend-mode: normal, luminosity;
+}
+.inner-source-page .hero::before {
+  background: linear-gradient(90deg,rgba(251,248,242,.08),transparent 50%,rgba(251,248,242,.08));
 }
 .inner-source-page .hero h1 { color: var(--ink); }
 .inner-source-page .hero-lead { color: var(--ink); }
