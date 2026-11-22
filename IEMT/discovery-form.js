@@ -39,8 +39,8 @@
       }
       form.reset();
       status.textContent = hebrew
-        ? 'תודה שפנית. אצור איתך קשר בוואטסאפ כדי לתאם את השיחה שלנו.'
-        : 'Thank you for reaching out. I’ll contact you on WhatsApp to arrange our call.';
+        ? 'תודה שפנית. אצור איתך קשר באימייל כדי לתאם את השיחה שלנו.'
+        : 'Thank you for reaching out. I’ll email you to arrange our call.';
     } catch {
       status.textContent = hebrew
         ? 'לא הצלחנו לאשר שההודעה נשלחה. הפרטים שלך נשמרו בטופס. אפשר לנסות שוב או לפנות אליי בוואטסאפ דרך הכפתור שבפינה.'
