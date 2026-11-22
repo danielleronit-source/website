@@ -81,3 +81,5 @@
  .blog-intro h1 {font-size: clamp(64px,8vw,96px);}
  .blog-featured .blog-image-link {min-height: 440px;}
 }
+
+.blog-image-link img[src$="i-quit-weed-and-three-months-later-my-teenage-self-showed-up-1.jpg"] { object-position: center 12%; }

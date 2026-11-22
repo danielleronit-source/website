@@ -45,7 +45,7 @@ def document(title,description,path,body,schema,image=None):
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/IEMT/style.css?v=iemt-moshe-1">
   <link rel="stylesheet" href="/assets/site-header.css?v=group-programs-1">
-  <link rel="stylesheet" href="/assets/blog.css?v=1">
+  <link rel="stylesheet" href="/assets/blog.css?v=portrait-crop-1">
   <script type="application/ld+json">{schema_json}</script>
 </head>
 <body class="blog-page">
