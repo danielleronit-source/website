@@ -274,3 +274,5 @@
 .iemt-page .featured-written-testimonial .translation-toggle:hover { background: var(--salmon); }
 .iemt-page .featured-written-testimonial .translation-toggle:focus-visible { outline: 2px solid var(--sage); outline-offset: 4px; }
 .iemt-page .featured-written-testimonial [hidden] { display: none; }
+
+.iemt-page .mid-page-booking { margin: 40px auto 0; }
