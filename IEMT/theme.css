@@ -87,3 +87,68 @@
 .iemt-page #testimonials {
   background: #f7e6df;
 }
+
+.iemt-page .discovery-invitation {
+  background: var(--sage);
+  color: var(--paper);
+}
+
+.iemt-page .discovery-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  text-align: start;
+}
+
+.iemt-page .discovery-invitation h2,
+.iemt-page .discovery-invitation p,
+.iemt-page .discovery-invitation strong {
+  color: var(--paper);
+}
+
+.iemt-page .discovery-invitation .eyebrow {
+  color: #f2c2b3;
+}
+
+.iemt-page .discovery-invitation h2 {
+  margin-bottom: 30px;
+}
+
+.iemt-page .discovery-invitation .discovery-note {
+  font-size: 17px;
+  color: #e1e8da;
+}
+
+.iemt-page .discovery-invitation .button {
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 18px;
+  white-space: normal;
+  text-align: center;
+}
+
+.iemt-page .discovery-invitation .button:focus-visible {
+  outline-color: var(--paper);
+}
+
+.iemt-page .discovery-portrait {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 100px 4px 4px 4px;
+}
+
+@media (max-width: 700px) {
+  .iemt-page .discovery-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .iemt-page .discovery-portrait {
+    max-width: 300px;
+  }
+}
