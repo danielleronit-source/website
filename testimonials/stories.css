@@ -258,3 +258,23 @@
     margin-inline-start: 16px;
   }
 }
+
+.testimonials-page .written-story.long-story:first-child {
+  grid-row: auto;
+  width: 100%;
+  margin-top: 0;
+}
+.testimonials-page .translation-toggle {
+  display: block;
+  margin: 0 0 26px;
+  padding: 10px 18px;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--sage);
+  font: 700 15px "Lato", Arial, sans-serif;
+  cursor: pointer;
+}
+.testimonials-page .translation-toggle:hover { background: var(--salmon-soft); }
+.testimonials-page .translation-toggle:focus-visible { outline: 2px solid var(--sage); outline-offset: 4px; }
+.testimonials-page .long-story [hidden] { display: none; }
