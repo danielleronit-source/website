@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/hebrew.css?v=1">
   <link rel="stylesheet" href="/IEMT/session-options.css?v=2">
-  <link rel="stylesheet" href="/IEMT/theme.css?v=discovery-invitation-1">
+  <link rel="stylesheet" href="/IEMT/theme.css?v=discovery-form-1">
 </head>
 <body class="iemt-page">
   <header class="site-header" dir="rtl" aria-label="כותרת העמוד">
@@ -41,7 +41,7 @@
         <p class="kicker">מפגשי 1:1 פרטיים · אונליין ובירושלים</p>
         <h1 id="page-title" class="invitation-title"><span class="invitation-opening">שינוי לא חייב לקחת נצח.</span></h1>
         <p class="hero-copy">לדפוסים, פחדים ותגובות רגשיות שמשאירים אותך תקועה, כדי שתוכלי לחזור לעצמך עם יותר רוגע, בהירות ושמחה.</p>
-        <a class="button" href="https://calendly.com/daniellebenm/book-your-free-intro-call">לקביעת שיחת היכרות חינם של 30 דקות</a>
+        <a class="button" href="#discovery-request">לקביעת שיחת היכרות חינם של 30 דקות</a>
         <img class="hero-portrait" src="../../assets/media/iemt-fave.jpeg" alt="דניאל רונית ליד הנהר">
       </div>
     </section>
@@ -341,7 +341,27 @@
           <p>לפנות לקבלת תמיכה יכול להרגיש כמו צעד גדול, במיוחד כשאת נושאת משהו כבר תקופה. אם משהו כאן נוגע בך, אשמח לשמוע מה מביא אותך לכאן.</p>
           <p>ב<strong>שיחת היכרות חינם של 30 דקות</strong>, נדבר על מה שאת חווה, מה היית רוצה שירגיש אחרת ואיך אוכל לתמוך בך. תוכלי לשאול את השאלות שלך, להכיר אותי ואת הדרך שבה אני עובדת, ולבדוק אם עבודה יחד מרגישה לך מתאימה.</p>
           <p class="discovery-note">זו שיחה פתוחה, עם מקום להחליט בקצב שלך.</p>
-          <a class="button" href="https://calendly.com/daniellebenm/book-your-free-intro-call">לקביעת שיחת היכרות חינם של 30 דקות</a>
+          <form id="discovery-request" class="discovery-form" action="https://formsubmit.co/danielleronit@gmail.com" method="post">
+            <input type="hidden" name="_subject" value="New free 30-minute discovery call request">
+            <input type="hidden" name="_template" value="table">
+            <input class="discovery-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <div class="discovery-field">
+              <label for="discovery-name">השם שלך</label>
+              <input id="discovery-name" name="name" type="text" autocomplete="name" maxlength="150" required>
+            </div>
+            <div class="discovery-field">
+              <label for="discovery-whatsapp">מספר הטלפון שלך בוואטסאפ</label>
+              <input id="discovery-whatsapp" name="whatsapp" type="tel" autocomplete="tel" dir="ltr" maxlength="40" aria-describedby="whatsapp-hint" required>
+              <small id="whatsapp-hint">כולל קידומת המדינה, למשל <bdi>+972</bdi> או <bdi>+1</bdi>.</small>
+            </div>
+            <div class="discovery-field">
+              <label for="discovery-message">מה היית רוצה לשתף?</label>
+              <textarea id="discovery-message" name="message" rows="4" maxlength="5000" required></textarea>
+            </div>
+            <button class="button" type="submit">שליחת בקשה לשיחת היכרות חינם של 30 דקות</button>
+            <p class="discovery-form-status" role="status" aria-live="polite"></p>
+            <p class="discovery-form-note">אצור איתך קשר בוואטסאפ כדי לתאם זמן לשיחה שלנו.</p>
+          </form>
         </div>
         <img class="discovery-portrait" src="/assets/media/danielle-testimonials-portrait.jpg" alt="דניאל מחייכת כשהיא יושבת עם המחשב הנייד" width="1080" height="1440" loading="lazy">
       </div>
@@ -406,5 +426,6 @@
 <script src="/assets/language-switch.js?v=1" defer></script>
 <script src="/assets/abundance.js?v=contact-widget-5" defer></script>
 <script src="/assets/site-navigation.js?v=1" defer></script>
+<script src="/IEMT/discovery-form.js?v=1" defer></script>
 </body>
 </html>

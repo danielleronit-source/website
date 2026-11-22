@@ -143,6 +143,73 @@
   border-radius: 100px 4px 4px 4px;
 }
 
+.iemt-page .discovery-form {
+  margin-top: 32px;
+  scroll-margin-top: 28px;
+}
+
+.iemt-page .discovery-field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.iemt-page .discovery-field label {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.iemt-page .discovery-field input,
+.iemt-page .discovery-field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #d5decd;
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.iemt-page .discovery-field textarea {
+  resize: vertical;
+}
+
+.iemt-page .discovery-field input:focus,
+.iemt-page .discovery-field textarea:focus {
+  outline: 2px solid var(--salmon);
+  outline-offset: 3px;
+}
+
+.iemt-page .discovery-field small,
+.iemt-page .discovery-invitation .discovery-form-note {
+  color: #e1e8da;
+  font-size: 14px;
+}
+
+.iemt-page .discovery-form .button {
+  width: 100%;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.iemt-page .discovery-form .button:disabled {
+  opacity: .7;
+  cursor: wait;
+}
+
+.iemt-page .discovery-form-status {
+  margin: 18px 0 0;
+  font-size: 17px;
+}
+
+.iemt-page .discovery-form-status:empty,
+.iemt-page .discovery-honeypot {
+  display: none;
+}
+
 @media (max-width: 700px) {
   .iemt-page .discovery-layout {
     grid-template-columns: minmax(0, 1fr);
