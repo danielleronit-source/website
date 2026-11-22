@@ -10,7 +10,8 @@
   --line: rgba(89,71,57,.22);
 }
 .inner-source-page .hero {
-  background: linear-gradient(rgba(239,226,211,.26),rgba(251,248,242,.35)),url('/assets/media/iemt-silk-hero.png') center / cover no-repeat;
+  background: linear-gradient(rgba(243,197,180,.6),rgba(245,218,207,.7)),url('/assets/media/iemt-silk-hero.png') center / cover no-repeat;
+  background-blend-mode: normal, luminosity;
 }
 .inner-source-page .hero h1 { color: var(--ink); }
 .inner-source-page .hero-lead { color: var(--ink); }
@@ -21,21 +22,14 @@
 .inner-source-page .button:focus-visible { outline: 2px solid var(--sage-accent); outline-offset: 4px; }
 .inner-source-page .eyebrow { color: var(--sage-accent); }
 .inner-source-page .clean-list li::before { border-color: var(--sage-accent); }
-.inner-source-page #intro,
-.inner-source-page #the-work,
-.inner-source-page #what-may-change { background: var(--sand-soft); }
-.inner-source-page #jess-story { background: #f5eee5; }
-.inner-source-page #process { background: var(--salmon-soft); }
 .inner-source-page .journey-card { background: #fffaf4; border-color: var(--line); border-top: 2px solid var(--salmon); }
 .inner-source-page .journey-card h3 { color: var(--ink); }
 .inner-source-page .written-story { border-color: rgba(98,112,90,.35); }
 .inner-source-page .written-story p { color: var(--ink); }
-.inner-source-page #program-details { background: #f2e9df; }
 .inner-source-page .inner-facts { margin: 20px 0 28px; }
 .inner-source-page .inner-facts > div { display: grid; grid-template-columns: minmax(140px,.65fr) 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
 .inner-source-page .inner-facts dt { color: var(--muted); }
 .inner-source-page .inner-facts dd { margin: 0; font-size: 18px; font-weight: 400; color: var(--ink); }
-.inner-source-page #fit-call { background: linear-gradient(rgba(245,226,218,.83),rgba(245,226,218,.88)),url('/assets/media/iemt-silk-hero.png') center / cover; }
 .inner-source-page #fit-call .narrow > p { max-width: 660px; margin-inline: auto; }
 .inner-source-page .abundance-waitlist { max-width: 520px; margin: 32px auto 0; text-align: start; scroll-margin-top: 30px; }
 .inner-source-page .waitlist-field { display: grid; gap: 8px; margin-bottom: 20px; }
@@ -51,3 +45,7 @@
 @media (max-width: 600px) {
   .inner-source-page .inner-facts > div { grid-template-columns: minmax(0,1fr); gap: 6px; }
 }
+
+/* After the salmon opening, alternate light and deeper beige. */
+.inner-source-page main > section:nth-of-type(2n) { background: var(--paper); }
+.inner-source-page main > section:nth-of-type(2n + 3) { background: var(--sand-soft); }
