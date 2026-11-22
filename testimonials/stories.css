@@ -294,7 +294,7 @@
 .testimonials-page .story-band .video-card:nth-child(even) { background: #f2e9dd; }
 .testimonials-page .story-band .written-story:nth-child(3) { background: transparent; }
 .testimonials-page .story-band > .narrow > p:not(.eyebrow) { max-width: 640px; margin-inline: auto; }
-.testimonials-page .closing { background: #e3eadc; }
+.testimonials-page .closing { background: #f3d8ce; }
 
 .testimonials-page .story-band.tone-sage { background: #e3eadc; }
 .testimonials-page .story-band.tone-salmon { background: #f3d8ce; }
