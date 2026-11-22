@@ -14,7 +14,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
       <summary>Group Programs</summary>
       <div class="site-programs-menu">
         <span class="site-program-unavailable" lang="en" dir="ltr">Inner Source</span>
-        <span class="site-program-unavailable">The Abundance Container</span>
+        <a href="/abundance/">The Abundance Container</a>
       </div>
     </details>
     <a href="/retreats/">Retreats</a>

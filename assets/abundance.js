@@ -23,3 +23,13 @@
     document.querySelector('.contact-launcher').focus({preventScroll: true});
   });
 })();
+
+document.querySelectorAll('[data-close-details]').forEach((button) => {
+  const details = button.closest('details');
+  if (!details) return;
+  button.addEventListener('click', () => {
+    details.open = false;
+    details.querySelector('summary').focus({preventScroll: true});
+    details.scrollIntoView({block: 'nearest', behavior: 'instant'});
+  });
+});

@@ -13,6 +13,19 @@
 .abundance-page .abundance-themes {background: var(--paper);}
 .abundance-page .dream-hero {background-color: var(--sage); background-image: linear-gradient(rgba(191,207,180,.48),rgba(225,234,217,.66)),url('media/iemt-silk-hero.png'); background-blend-mode: normal, luminosity;}
 .abundance-page .dream-hero h1 {color: #334c36;}
+.abundance-page .dream-hero .dream-program-title {
+  font-size: clamp(36px, 8vw, 108px);
+  line-height: 1;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.dream-hero .dream-lead {
+  max-width: 790px;
+  margin: 24px auto 0;
+  font-size: clamp(20px, 3vw, 30px);
+  line-height: 1.4;
+  text-wrap: balance;
+}
 .abundance-page h2::after {content: ""; display: block; width: 54px; height: 2px; margin-top: 24px; background: var(--salmon);}
 .abundance-page .center h2::after {margin-left: auto; margin-right: auto;}
 .abundance-page .button {background: var(--salmon); border-color: var(--salmon); color: var(--ink);}
@@ -25,7 +38,7 @@
 .abundance-page .dream-closing {background: var(--paper);}
 .abundance-page h2 {margin-bottom: 30px;}
 .danielle-heart {display: inline-block; width: .65em; height: .65em; margin-left: .12em; vertical-align: .04em; fill: none; stroke: var(--salmon); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round;}
-.dream-about-photo {display: block; float: right; width: min(42%,320px); aspect-ratio: 4 / 5; object-fit: cover; object-position: center 42%; margin: 6px 0 28px 36px; border: 1px solid var(--line);}
+.dream-about-photo {display: block; float: right; width: min(42%,320px); height: auto; margin: 6px 0 28px 36px; border: 1px solid var(--line);}
 @media (max-width: 600px) {.dream-about-photo {float: none; width: min(420px,100%); margin: 0 auto 30px;}}
 .abundance-page p:last-child {margin-bottom: 0;}
 .abundance-page strong {font-weight: 700; color: var(--ink);}
@@ -87,7 +100,28 @@
 .cohort-timezones small {font-size: 12px; color: var(--ink);}
 .abundance-page .cohort-clock-note {margin-top: 18px; font-size: 14px;}
 .cohort-dates,.more-participant-stories {margin-top: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 18px 0;}
-.cohort-dates summary,.more-participant-stories summary {cursor: pointer; font-size: 17px; color: var(--sage-deep); line-height: 1.5;}
+.cohort-dates summary,
+.more-participant-stories summary,
+.more-participant-stories .participant-stories-close {
+  cursor: pointer;
+  font-size: 17px;
+  color: var(--sage-deep);
+  line-height: 1.5;
+}
+.participant-stories-close {
+  display: block;
+  margin-block-start: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  text-align: start;
+}
+.participant-stories-close::before {
+  content: "▴" / "";
+  margin-inline-end: .35em;
+}
 .cohort-dates p {margin-top: 18px;}
 .abundance-process {list-style: none; counter-reset: process; padding: 0; margin: 0 0 30px;}
 .abundance-process li {counter-increment: process; position: relative; padding: 0 0 24px 48px;}
@@ -178,3 +212,15 @@
 .contact-compact .contact-launcher img {width: 46px; height: 46px;}
 .contact-compact .contact-launcher span,
 .contact-compact .contact-launcher svg {display: none;}
+
+.abundance-page .waitlist-notice { max-width: 620px; margin: 24px auto; font-size: 17px; }
+.abundance-page .abundance-waitlist { max-width: 520px; margin: 30px auto 0; text-align: start; scroll-margin-top: 32px; }
+.abundance-page .waitlist-field { display: grid; gap: 8px; margin-bottom: 20px; }
+.abundance-page .waitlist-field label { font-size: 17px; color: var(--ink); }
+.abundance-page .waitlist-field input { width: 100%; padding: 12px 14px; min-height: 48px; border: 1px solid var(--sage-deep); border-radius: 4px; background: #fffdf9; color: var(--ink); font: inherit; font-size: 17px; }
+.abundance-page .waitlist-field input:focus { outline: 2px solid var(--sage-deep); outline-offset: 3px; }
+.abundance-page .waitlist-note { font-size: 15px; line-height: 1.6; }
+.abundance-page .abundance-waitlist .button { width: 100%; min-width: 0; white-space: normal; cursor: pointer; }
+.abundance-page .abundance-waitlist .button:disabled { opacity: .7; cursor: wait; }
+.abundance-page .waitlist-status { margin-top: 20px; font-size: 17px; }
+.abundance-page .waitlist-status:empty, .abundance-page .waitlist-honeypot { display: none; }
