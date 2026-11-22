@@ -298,3 +298,20 @@
 
 .testimonials-page .story-band.tone-sage { background: #e3eadc; }
 .testimonials-page .story-band.tone-salmon { background: #f3d8ce; }
+
+.testimonials-page .testimonials-discovery > .narrow > p { max-width: 660px; margin-inline: auto; }
+.testimonials-page .testimonials-discovery .discovery-invitation-note { font-size: 16px; }
+.testimonials-page .discovery-form { max-width: 580px; margin: 36px auto 0; text-align: start; scroll-margin-top: 30px; }
+.testimonials-page .discovery-field { display: grid; gap: 8px; margin-bottom: 22px; }
+.testimonials-page .discovery-field label { color: var(--ink); font-size: 17px; }
+.testimonials-page .discovery-field input,
+.testimonials-page .discovery-field textarea { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--sage); border-radius: 4px; background: #fffaf3; color: var(--ink); font: inherit; font-size: 17px; line-height: 1.5; }
+.testimonials-page .discovery-field textarea { resize: vertical; }
+.testimonials-page .discovery-field input:focus,
+.testimonials-page .discovery-field textarea:focus { outline: 2px solid var(--sage); outline-offset: 3px; }
+.testimonials-page .discovery-form .button { width: 100%; min-width: 0; margin-top: 0; white-space: normal; cursor: pointer; }
+.testimonials-page .discovery-form .button:disabled { opacity: .7; cursor: wait; }
+.testimonials-page .discovery-form-status { margin-top: 18px; color: var(--ink); font-size: 17px; }
+.testimonials-page .discovery-form-note { margin-top: 14px; color: var(--ink); font-size: 15px; }
+.testimonials-page .discovery-form-status:empty,
+.testimonials-page .discovery-honeypot { display: none; }
