@@ -252,3 +252,25 @@
 @media (max-width: 480px) {
   .iemt-page .question-dialog { padding: 40px 22px 24px; }
 }
+
+.iemt-page .featured-written-testimonial {
+  margin: 40px auto 32px;
+  padding: clamp(24px, 5vw, 48px);
+  border-radius: 28px 4px 28px 4px;
+  background: var(--sage-soft);
+  text-align: start;
+}
+.iemt-page .featured-written-testimonial .written-story { padding: 0; border: 0; }
+.iemt-page .featured-written-testimonial .translation-toggle {
+  padding: 10px 18px;
+  margin-bottom: 24px;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--sage);
+  font: 700 15px "Lato", Arial, sans-serif;
+  cursor: pointer;
+}
+.iemt-page .featured-written-testimonial .translation-toggle:hover { background: var(--salmon); }
+.iemt-page .featured-written-testimonial .translation-toggle:focus-visible { outline: 2px solid var(--sage); outline-offset: 4px; }
+.iemt-page .featured-written-testimonial [hidden] { display: none; }
