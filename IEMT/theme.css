@@ -234,7 +234,7 @@
 }
 .iemt-page .question-dialog::backdrop { background: #1f2c23a6; }
 .iemt-page .question-dialog h2 { margin: 0 0 12px; color: var(--paper); font-size: 38px; }
-.iemt-page .question-dialog p { font-size: 17px; line-height: 1.6; }
+.iemt-page .question-dialog p { color: var(--paper, #faf7ef); font-size: 17px; line-height: 1.6; }
 .iemt-page .question-close {
   position: absolute;
   top: 8px;
