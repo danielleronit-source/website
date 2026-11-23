@@ -229,3 +229,26 @@
 .abundance-page .waitlist-status:empty, .abundance-page .waitlist-honeypot { display: none; }
 
 .abundance-page .financial-note { display: block; margin-top: 10px; font-size: 14px; font-weight: 300; line-height: 1.6; }
+
+/* Let the opening texture dissolve into the participant video section. */
+.abundance-page .dream-hero { position: relative; isolation: isolate; padding-bottom: 150px; }
+.abundance-page .dream-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(251,248,242,.35) 30%, var(--paper) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+.abundance-page .abundance-stories-intro { background: var(--paper); padding-top: 12px; padding-bottom: 80px; }
+.abundance-page .abundance-stories-intro .narrow { width: min(900px, 100%); }
+.abundance-page .abundance-stories-intro h2 { font-size: clamp(32px, 4.2vw, 44px); margin-bottom: 14px; }
+.abundance-page .abundance-stories-intro h2::after { display: none; }
+.abundance-page .abundance-stories-intro p { margin: 0 auto 30px; font-size: 17px; line-height: 1.6; }
+.abundance-page .abundance-stories-intro .testimonial-video { border-radius: 12px; box-shadow: 0 12px 36px rgba(41,61,48,.12); }
+@media (max-width: 600px) {
+  .abundance-page .dream-hero { padding-bottom: 112px; }
+  .abundance-page .dream-hero::after { height: 125px; }
+  .abundance-page .abundance-stories-intro { padding-top: 12px; padding-bottom: 56px; }
+}
