@@ -252,3 +252,22 @@
   .abundance-page .dream-hero::after { height: 125px; }
   .abundance-page .abundance-stories-intro { padding-top: 12px; padding-bottom: 56px; }
 }
+
+/* Illustrated possibilities, with room for each idea to breathe. */
+.abundance-page .abundance-possibilities > .narrow { width: min(1040px, 100%); }
+.abundance-page .abundance-outcome-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 36px 0; }
+.abundance-page .abundance-outcome-card { padding: clamp(26px, 4vw, 38px); border-radius: 4px 36px 4px 4px; background: #f3e6de; }
+.abundance-page .abundance-outcome-card:nth-child(2n) { background: #e6ecdf; border-radius: 36px 4px 4px 4px; }
+.abundance-page .abundance-outcome-card:nth-child(3) { background: #eee5d9; }
+.abundance-page .abundance-outcome-card:nth-child(4) { background: #f5e5dd; }
+.abundance-page .outcome-icon { display: grid; place-items: center; width: 68px; height: 68px; margin-bottom: 22px; border-radius: 50%; background: rgba(255,253,249,.65); color: var(--sage-deep); }
+.abundance-page .outcome-icon svg { width: 44px; height: 44px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.abundance-page .abundance-outcome-card h3 { margin: 0 0 14px; font: 500 clamp(27px, 3vw, 34px)/1.12 "Cormorant Garamond", Georgia, serif; color: var(--ink); }
+.abundance-page .abundance-outcome-card p { margin: 0; font-size: 18px; line-height: 1.65; }
+.abundance-page .abundance-outcome-card:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: 68px minmax(0, 1fr); align-items: center; gap: 28px; background: #e6ecdf; }
+.abundance-page .abundance-outcome-card:last-child .outcome-icon { margin: 0; }
+@media (max-width: 600px) {
+  .abundance-page .abundance-outcome-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .abundance-page .abundance-outcome-card:last-child { display: block; }
+  .abundance-page .abundance-outcome-card:last-child .outcome-icon { margin-bottom: 22px; }
+}
