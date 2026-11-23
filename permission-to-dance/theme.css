@@ -1,0 +1,60 @@
+.dance-page {
+  --paper: #fbf8f2;
+  --sand-soft: #eee5db;
+  --ink: #3d3242;
+  --muted: #6b5e70;
+  --line: rgba(100,76,113,.24);
+  --plum: #70547f;
+  --lilac: #e8deed;
+}
+.dance-page .hero {
+  min-height: 0;
+  padding: 78px 24px 86px;
+  background: linear-gradient(rgba(205,184,222,.35),rgba(231,217,239,.45)),url('/assets/media/iemt-silk-hero.png') center / 100% 100% no-repeat;
+  background-color: #ddd0e7;
+  background-blend-mode: normal, luminosity;
+}
+.dance-page .hero::before { background: linear-gradient(90deg,rgba(251,248,242,.08),transparent 50%,rgba(251,248,242,.08)); }
+.dance-page .hero::after { height: 90px; }
+.dance-page .hero h1 { font-size: clamp(52px, 9vw, 104px); font-weight: 500; line-height: .96; letter-spacing: -.025em; }
+.dance-page .dance-lead { margin: 28px auto 22px; font: 500 clamp(27px, 4vw, 43px)/1.2 "Cormorant Garamond",Georgia,serif; color: var(--ink); }
+.dance-page .hero-copy { max-width: 690px; margin: 0 auto 24px; color: var(--ink); font-size: clamp(18px,2vw,22px); line-height: 1.6; }
+.dance-page .dance-format { max-width: 680px; margin: 0 auto 12px; font-size: 16px; color: var(--ink); }
+.dance-page .dance-note { margin: 18px 0 0; font-size: 15px; }
+.dance-page .eyebrow { color: var(--plum); }
+.dance-page .button { background: var(--plum); border-color: var(--plum); color: var(--paper); }
+.dance-page .button:hover { background: #594365; border-color: #594365; }
+.dance-page .button:focus-visible { outline: 2px solid var(--plum); outline-offset: 4px; }
+.dance-page .narrow > h2,
+.dance-page .journey-wrap > h2 { margin-bottom: 30px; }
+.dance-page .dance-program { background: var(--lilac); }
+.dance-page .dance-sessions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; margin-top: 40px; }
+.dance-page .dance-session { padding: clamp(26px,4vw,42px); border: 1px solid var(--line); border-radius: 4px 42px 4px 4px; background: #fffaf5; }
+.dance-page .dance-session:nth-child(2) { border-radius: 42px 4px 4px 4px; background: #f5edf7; }
+.dance-page .dance-session .eyebrow { font-size: 14px; letter-spacing: .1em; }
+.dance-page .dance-session h3 { font-size: 34px; line-height: 1.12; margin-bottom: 22px; }
+.dance-page .dance-session p:last-child { margin-bottom: 0; }
+.dance-page .clean-list li::before { border-color: var(--plum); }
+.dance-page .dance-practical { background: var(--sand-soft); }
+.dance-page .dance-facts { margin: 32px 0 0; }
+.dance-page .dance-facts > div { display: grid; grid-template-columns: minmax(120px,.55fr) 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.dance-page .dance-facts dt { color: var(--muted); }
+.dance-page .dance-facts dd { margin: 0; color: var(--ink); font-size: 18px; font-weight: 400; }
+.dance-page .dance-closing { background: linear-gradient(rgba(232,222,237,.82),rgba(232,222,237,.9)),url('/assets/media/iemt-silk-hero.png') center / cover; }
+.dance-page .dance-closing .narrow > p { max-width: 630px; margin-inline: auto; }
+.dance-page .abundance-waitlist { max-width: 520px; margin: 32px auto 0; text-align: start; scroll-margin-top: 30px; }
+.dance-page .waitlist-field { display: grid; gap: 8px; margin-bottom: 20px; }
+.dance-page .waitlist-field label { color: var(--ink); font-size: 17px; }
+.dance-page .waitlist-field input { width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #a895b2; border-radius: 4px; background: #fffaf5; color: var(--ink); font: inherit; font-size: 17px; }
+.dance-page .waitlist-field input:focus { outline: 2px solid var(--plum); outline-offset: 3px; }
+.dance-page .waitlist-note { font-size: 15px; }
+.dance-page .abundance-waitlist .button { width: 100%; min-width: 0; white-space: normal; cursor: pointer; }
+.dance-page .abundance-waitlist .button:disabled { opacity: .7; cursor: wait; }
+.dance-page .waitlist-status { margin-top: 18px; color: var(--ink); font-size: 17px; }
+.dance-page .waitlist-status:empty,
+.dance-page .waitlist-honeypot { display: none; }
+@media (max-width: 640px) {
+  .dance-page .hero { padding: 56px 22px 64px; }
+  .dance-page .dance-sessions { grid-template-columns: minmax(0,1fr); }
+  .dance-page .dance-facts > div { grid-template-columns: minmax(0,1fr); gap: 6px; }
+}

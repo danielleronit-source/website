@@ -14,6 +14,7 @@ HEADER='''<header class="site-header" dir="ltr" aria-label="Page header">
       <summary>Group Programs</summary>
       <div class="site-programs-menu">
         <a href="/inner-source/" lang="en" dir="ltr">Inner Source</a>
+          <a href="/permission-to-dance/" lang="en" dir="ltr">Permission to Dance</a>
         <a href="/abundance/">The Abundance Container</a>
       </div>
     </details>
