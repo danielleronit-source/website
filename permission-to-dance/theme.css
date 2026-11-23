@@ -61,15 +61,9 @@
 
 .dance-page .dance-about { background: #eee4d9; }
 .dance-page .dance-about-layout { display: block; }
-.dance-page .dance-about-heading h2 { margin-bottom: 0; }
+.dance-page .dance-about-heading h2 { margin-bottom: 30px; }
 .dance-page .dance-about-copy p:last-child { margin-bottom: 0; }
-.dance-page .dance-about-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); align-items: center; gap: clamp(24px, 5vw, 64px); margin-bottom: 40px; }
-.dance-page .dance-about-heading h2 { font-size: clamp(40px, 5.5vw, 72px); line-height: 1.04; }
-.dance-page .dance-about-photos { width: 100%; margin: 0; }
-@media (max-width: 540px) {
-  .dance-page .dance-about-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .dance-page .dance-about-photos { width: 100%; margin: 0; }
-}
+.dance-page .dance-about-photos { width: min(520px, 100%); margin: 36px auto 0; }
 .dance-page .dance-about-portrait { display: block; width: 100%; height: auto; border-radius: 4px 48px 4px 4px; border: 1px solid var(--line); }
 
 .dance-page .dance-hero-photo {
