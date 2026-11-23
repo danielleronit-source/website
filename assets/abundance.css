@@ -220,8 +220,8 @@
 .abundance-page .abundance-waitlist { max-width: 520px; margin: 30px auto 0; text-align: start; scroll-margin-top: 32px; }
 .abundance-page .waitlist-field { display: grid; gap: 8px; margin-bottom: 20px; }
 .abundance-page .waitlist-field label { font-size: 17px; color: var(--ink); }
-.abundance-page .waitlist-field input { width: 100%; padding: 12px 14px; min-height: 48px; border: 1px solid var(--sage-deep); border-radius: 4px; background: #fffdf9; color: var(--ink); font: inherit; font-size: 17px; }
-.abundance-page .waitlist-field input:focus { outline: 2px solid var(--sage-deep); outline-offset: 3px; }
+.abundance-page .waitlist-field input, .abundance-page .waitlist-field textarea { width: 100%; padding: 12px 14px; min-height: 48px; border: 1px solid var(--sage-deep); border-radius: 4px; background: #fffdf9; color: var(--ink); font: inherit; font-size: 17px; }
+.abundance-page .waitlist-field input:focus, .abundance-page .waitlist-field textarea:focus { outline: 2px solid var(--sage-deep); outline-offset: 3px; }
 .abundance-page .waitlist-note { font-size: 15px; line-height: 1.6; }
 .abundance-page .abundance-waitlist .button { width: 100%; min-width: 0; white-space: normal; cursor: pointer; }
 .abundance-page .abundance-waitlist .button:disabled { opacity: .7; cursor: wait; }
@@ -316,3 +316,5 @@
 .abundance-page .friend-offer { margin: 18px 0 14px; padding: 18px 20px; background: var(--salmon-soft); border-left: 3px solid var(--salmon-deep); border-radius: 0 14px 14px 0; color: var(--ink); }
 .abundance-page .friend-offer > strong { display: block; margin-bottom: 7px; font-weight: 700; }
 .abundance-page .friend-offer p { margin: 0; font-size: 17px; line-height: 1.6; }
+
+.abundance-page .waitlist-field textarea { resize: vertical; min-height: 140px; }
