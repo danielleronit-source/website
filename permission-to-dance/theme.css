@@ -90,3 +90,5 @@
   .dance-page .dance-about-photos { grid-template-columns: minmax(0, 1fr); }
   .dance-page .dance-about-photos .dance-about-portrait { max-width: 520px; height: auto; margin-inline: auto; aspect-ratio: 3 / 2; }
 }
+
+.dance-page .dance-about-photos .dance-about-portrait { aspect-ratio: auto; height: auto; }
