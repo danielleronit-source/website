@@ -14,8 +14,11 @@
 .abundance-page .dream-hero {background-color: var(--sage); background-image: linear-gradient(rgba(191,207,180,.48),rgba(225,234,217,.66)),url('media/iemt-silk-hero.png'); background-blend-mode: normal, luminosity;}
 .abundance-page .dream-hero h1 {color: #334c36;}
 .abundance-page .dream-hero .dream-program-title {
-  font-size: clamp(36px, 8vw, 108px);
-  line-height: 1;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(52px, 9vw, 104px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.025em;
   text-transform: uppercase;
   text-wrap: balance;
 }
