@@ -271,3 +271,23 @@
   .abundance-page .abundance-outcome-card:last-child { display: block; }
   .abundance-page .abundance-outcome-card:last-child .outcome-icon { margin-bottom: 22px; }
 }
+
+/* A deeper sage feature for Danielle’s introduction. */
+.abundance-page main > section.abundance-about.abundance-intro {
+  background: #52664e;
+  --ink: #fbf8f2;
+  --muted: #f0f2e8;
+  --sage-deep: #f1c8b8;
+  --line: rgba(251,248,242,.35);
+  color: var(--ink);
+}
+.abundance-page .abundance-intro .eyebrow { color: #f1c8b8; }
+.abundance-page .abundance-intro .dream-about-photo { border-color: rgba(251,248,242,.45); }
+.abundance-page .abundance-intro .facilitator-story-content {
+  --ink: #293d30;
+  --muted: #566354;
+  --sage-deep: #46583b;
+  --line: rgba(70,88,59,.24);
+  color: var(--ink);
+  background: #fbf8f2;
+}
