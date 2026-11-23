@@ -74,3 +74,27 @@
   border: 1px solid var(--line);
   border-radius: 48px 4px 48px 4px;
 }
+
+.dance-page .dance-story { margin-top: 28px; }
+.dance-page .dance-story > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 24px;
+  border: 1px solid var(--plum);
+  border-radius: 4px;
+  color: var(--plum);
+  font: inherit;
+  font-size: 17px;
+  cursor: pointer;
+  list-style: none;
+}
+.dance-page .dance-story > summary::-webkit-details-marker { display: none; }
+.dance-page .dance-story > summary::after { content: '+'; font-size: 22px; line-height: 1; }
+.dance-page .dance-story[open] > summary::after { content: '−'; }
+.dance-page .dance-story > summary:hover { background: var(--lilac); }
+.dance-page .dance-story > summary:focus-visible { outline: 2px solid var(--plum); outline-offset: 4px; }
+.dance-page .dance-story-less,
+.dance-page .dance-story[open] .dance-story-more { display: none; }
+.dance-page .dance-story[open] .dance-story-less { display: inline; }
+.dance-page .dance-story-content { padding-top: 28px; }
