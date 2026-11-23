@@ -227,3 +227,5 @@
 .abundance-page .abundance-waitlist .button:disabled { opacity: .7; cursor: wait; }
 .abundance-page .waitlist-status { margin-top: 20px; font-size: 17px; }
 .abundance-page .waitlist-status:empty, .abundance-page .waitlist-honeypot { display: none; }
+
+.abundance-page .financial-note { display: block; margin-top: 10px; font-size: 14px; font-weight: 300; line-height: 1.6; }
