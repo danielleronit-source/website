@@ -60,23 +60,11 @@
 }
 
 .dance-page .dance-about { background: #eee4d9; }
-.dance-page .dance-about-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+.dance-page .dance-about-layout { display: block; }
 .dance-page .dance-about-copy h2 { margin-bottom: 30px; }
 .dance-page .dance-about-copy p:last-child { margin-bottom: 0; }
-.dance-page .dance-about-photos { display: grid; gap: 28px; padding-top: 60px; }
-.dance-page .dance-about-photos img { display: block; width: 100%; height: auto; border-radius: 4px 48px 4px 4px; border: 1px solid var(--line); }
-.dance-page .dance-about-photos .dance-about-portrait { aspect-ratio: 4 / 5; height: 100%; object-fit: cover; object-position: 50% 45%; }
-.dance-page .dance-about-photos .dance-about-joy { border-radius: 40px 4px 4px 4px; }
-@media (max-width: 800px) {
-  .dance-page .dance-about-layout { grid-template-columns: minmax(0, 1fr); }
-  .dance-page .dance-about-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding-top: 0; }
-  .dance-page .dance-about-photos img { aspect-ratio: 4 / 5; height: 100%; object-fit: cover; object-position: 45% center; }
-}
-@media (max-width: 440px) {
-  .dance-page .dance-about-photos { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .dance-page .dance-about-photos img,
-  .dance-page .dance-about-photos .dance-about-portrait { aspect-ratio: 3 / 2; height: auto; }
-}
+.dance-page .dance-about-photos { width: min(520px, 100%); margin: 36px auto 0; }
+.dance-page .dance-about-portrait { display: block; width: 100%; height: auto; border-radius: 4px 48px 4px 4px; border: 1px solid var(--line); }
 
 .dance-page .dance-hero-photo {
   display: block;
@@ -86,9 +74,3 @@
   border: 1px solid var(--line);
   border-radius: 48px 4px 48px 4px;
 }
-@media (max-width: 800px) {
-  .dance-page .dance-about-photos { grid-template-columns: minmax(0, 1fr); }
-  .dance-page .dance-about-photos .dance-about-portrait { max-width: 520px; height: auto; margin-inline: auto; aspect-ratio: 3 / 2; }
-}
-
-.dance-page .dance-about-photos .dance-about-portrait { aspect-ratio: auto; height: auto; }
