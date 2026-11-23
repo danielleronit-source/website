@@ -273,7 +273,8 @@
 }
 
 /* A deeper sage feature for Danielle’s introduction. */
-.abundance-page main > section.abundance-about.abundance-intro {
+.abundance-page main > section.abundance-about.abundance-intro,
+.abundance-page main > section.abundance-faq {
   background: #52664e;
   --ink: #fbf8f2;
   --muted: #f0f2e8;
@@ -291,3 +292,23 @@
   color: var(--ink);
   background: #fbf8f2;
 }
+
+/* Stronger contrast at key moments, while keeping the page’s softer palette. */
+.abundance-page .abundance-faq .eyebrow { color: #f8d9cd; }
+.abundance-page .abundance-faq .faq-item summary { font-weight: 500; }
+.abundance-page .abundance-faq .faq-item summary::after { border-color: #f8d9cd; color: #f8d9cd; }
+.abundance-page .abundance-faq .faq-item[open] summary::after { background: #f8d9cd; color: #293d30; }
+.abundance-page .abundance-faq .faq-item summary:focus-visible { outline: 2px solid #f8d9cd; outline-offset: 8px; border-radius: 3px; }
+.abundance-page .abundance-faq .faq-answer a { color: #f8d9cd; text-underline-offset: 4px; }
+.abundance-page .abundance-faq .integration-note {
+  --ink: #293d30;
+  --muted: #566354;
+  color: var(--ink);
+  background: #edf1e8;
+  border-left-color: var(--salmon);
+}
+.abundance-page .abundance-faq .integration-note a { color: #46583b; }
+.abundance-page main h2 { font-weight: 500; }
+.abundance-page main .eyebrow { font-weight: 700; }
+.abundance-page main .button { font-weight: 700; box-shadow: 0 5px 0 rgba(70,88,59,.15); }
+.abundance-page main > section.dream-closing { background: #f5e1d7; }
