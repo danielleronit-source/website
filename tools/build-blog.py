@@ -45,7 +45,7 @@ def document(title,description,path,body,schema,image=None):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/IEMT/style.css?v=iemt-moshe-1">
-  <link rel="stylesheet" href="/assets/site-header.css?v=group-programs-1">
+  <link rel="stylesheet" href="/assets/site-header.css?v=menu-click-fix-2">
   <link rel="stylesheet" href="/assets/blog.css?v=portrait-crop-1">
   <script type="application/ld+json">{schema_json}</script>
 </head>
@@ -54,7 +54,7 @@ def document(title,description,path,body,schema,image=None):
 {HEADER}
 <main id="main">{body}</main>
 {FOOTER}
-<script src="/assets/site-navigation.js?v=1" defer></script>
+<script src="/assets/site-navigation.js?v=menu-click-fix-2" defer></script>
 </body>
 </html>
 '''

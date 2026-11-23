@@ -29,3 +29,6 @@
 .site-header .site-program-unavailable {opacity: .62;}
 .site-header .site-programs-menu a:hover,
 .site-header .site-programs-menu a:focus-visible {background: #f0e8df;}
+
+.site-header .site-programs-menu { z-index: 30; pointer-events: auto; }
+.site-header .site-programs-menu a { position: relative; min-height: 44px; box-sizing: border-box; }
